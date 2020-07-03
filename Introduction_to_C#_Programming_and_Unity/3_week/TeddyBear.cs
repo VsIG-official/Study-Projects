@@ -1,0 +1,19 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+/// <summary>
+/// A teddy bear
+/// </summary>
+public class TeddyBear : MonoBehaviour
+{
+	/// <summary>
+    /// Use this for initialization
+    /// </summary>
+	void Start()
+    {
+        // get the teddy bear moving
+
+    }
+	
+}
