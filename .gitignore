@@ -662,3 +662,4 @@ InitTestScene*.unity
 *.json
 *.htm
 *.css
+build.bc
