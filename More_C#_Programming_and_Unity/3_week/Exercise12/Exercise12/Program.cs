@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercise12
 {
@@ -15,7 +11,7 @@ namespace Exercise12
         /// Tests the Matherator methods
         /// </summary>
         /// <param name="args">command-line arguments</param>
-        static void Main(string[] args)
+        static void Main()
         {
             Matherator math = new Matherator();
 
@@ -38,6 +34,8 @@ namespace Exercise12
             Console.WriteLine();
 
             Console.WriteLine();
+
+            Console.Read();
         }
     }
 }

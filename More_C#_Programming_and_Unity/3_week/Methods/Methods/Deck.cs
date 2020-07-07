@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Methods
 {
@@ -70,7 +73,7 @@ namespace Methods
 
         /// <summary>
         /// Shuffles the deck
-        ///
+        /// 
         /// Reference: http://download.oracle.com/javase/1.5.0/docs/api/java/util/Collections.html#shuffle%28java.util.List%29
         /// </summary>
         public void Shuffle()
@@ -110,6 +113,10 @@ namespace Methods
         /// <returns>the card at the given location</returns>
         public Card TakeCard(int location)
         {
+            // demonstration output
+            Console.WriteLine("Inside the method, the parameter is " +
+                location);
+
             if (Empty ||
                 location < 0 ||
                 location > cards.Count - 1)

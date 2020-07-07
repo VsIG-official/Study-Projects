@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Methods
 {
@@ -8,31 +12,32 @@ namespace Methods
     class Program
     {
         /// <summary>
-        /// Demonstrates various methods
+        /// Demonstrates passing an object as an argument
         /// </summary>
         /// <param name="args">command-line arguments</param>
         static void Main(string[] args)
         {
-            Deck deck = new Deck();
+            // build a hand of cards
+            List<Card> hand = new List<Card>();
+            hand.Add(new Card(Rank.Two, Suit.Clubs));
+            hand.Add(new Card(Rank.Three, Suit.Diamonds));
+            hand.Add(new Card(Rank.Four, Suit.Hearts));
+            hand.Add(new Card(Rank.Three, Suit.Spades));
+            hand.Add(new Card(Rank.Two, Suit.Clubs));
 
-            // method with no return value, no parameters
-            deck.Shuffle();
+            // cheat
+            CardChanger cardChanger = new CardChanger();
+            foreach (Card card in hand)
+            {
+                cardChanger.ChangeCard(card);
+            }
 
-            // method with return value, no parameters
-            Card topCard = deck.TakeTopCard();
-            topCard.FlipOver();
-            topCard.Print();
-
-            // method with no return value, with parameters
-            deck.Cut(deck.Count / 2);
-
-            // method with return value, with parameters
-            Card card = deck.TakeCard(deck.Count - 1);
-            card.FlipOver();
-            card.Print();
-            card = deck.TakeCard(0);
-            card.FlipOver();
-            card.Print();
+            // print cheating results
+            foreach (Card card in hand)
+            {
+                card.FlipOver();
+                card.Print();
+            }
 
             Console.WriteLine();
         }

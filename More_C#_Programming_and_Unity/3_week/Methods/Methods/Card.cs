@@ -38,11 +38,12 @@ namespace Methods
         #region Properties
 
         /// <summary>
-        /// Gets the card rank
+        /// Gets and sets the card rank
         /// </summary>
         public Rank Rank
         {
             get { return rank; }
+            set { rank = value; }
         }
 
         /// <summary>

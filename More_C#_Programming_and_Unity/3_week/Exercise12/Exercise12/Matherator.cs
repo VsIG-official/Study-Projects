@@ -27,8 +27,9 @@ namespace Exercise12
         /// <summary>
         /// Prints the numbers from 1 to 10
         /// </summary>
-        public void PrintOneToTen() : PrintMToN(1,10)
+        public void PrintOneToTen()
         {
+            PrintMToN(1, 10);
         }
 
         /// <summary>
@@ -38,7 +39,10 @@ namespace Exercise12
         /// <param name="n">n</param>
         public void PrintMToN(int m, int n)
         {
-           
+			for (int i = m; i <= n; i++)
+			{
+                Console.WriteLine(i);
+			}
         }
 
         /// <summary>
@@ -47,7 +51,7 @@ namespace Exercise12
         /// <returns>tenth even number</returns>
         public int GetTenthEvenNumber()
         {
-           
+            return GetNthEvenNumber(10);
         }
 
         /// <summary>
@@ -57,7 +61,17 @@ namespace Exercise12
         /// <returns>nth even number</returns>
         public int GetNthEvenNumber(int n)
         {
-          
+            int count = 0;
+            int i = 0;
+			while (count < n)
+			{
+                i++;
+				if (i % 2 == 0)
+				{
+                    count++;
+				}
+			}
+            return i;
         }
 
         #endregion
