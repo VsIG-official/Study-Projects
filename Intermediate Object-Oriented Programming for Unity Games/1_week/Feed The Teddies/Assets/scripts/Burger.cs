@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// A burger
@@ -18,7 +19,7 @@ public class Burger : MonoBehaviour
 	bool burgerDead = false;
 	GUIText healthText;
     const string HealthPrefix = "Health: ";
-        
+
     // shooting support
 	bool canShoot = true;
 	float elapsedCooldownTime = 0;
@@ -61,7 +62,7 @@ public class Burger : MonoBehaviour
 			}
 		}
 	}
-        
+
     /// <summary>
     /// Use this for initialization
     /// </summary>
@@ -86,17 +87,17 @@ public class Burger : MonoBehaviour
 		// save audio sources
 		AudioSource[] audioSources = gameObject.GetComponents<AudioSource>();
 		foreach (AudioSource audioSource in audioSources)
-        {			
+        {
 			if (audioSource.clip.name == "BurgerDamage")
-            {				
+            {
 				damageSound = audioSource;
-			} 
+			}
             else if (audioSource.clip.name == "BurgerDeath")
-            {				
-				deathSound = audioSource;			
+            {
+				deathSound = audioSource;
 			}
             else if (audioSource.clip.name == "BurgerShot")
-            {				
+            {
 				shootSound = audioSource;
 			}
 		}
@@ -105,12 +106,12 @@ public class Burger : MonoBehaviour
 		healthText = GameObject.Find("health").GetComponent<GUIText>();
 		healthText.text = HealthPrefix + health;
 	}
-	
+
     /// <summary>
     /// Update is called once per frame
     /// </summary>
 	void Update()
-    {	
+    {
 		// burger should only respond to input if it still has health
 		if (health > 0)
         {
@@ -139,13 +140,13 @@ public class Burger : MonoBehaviour
 					elapsedCooldownTime = 0;
 				}
 			}
-		
+
 			// shoot if appropriate
 			if (Input.GetAxis("Fire1") != 0 &&
 			    canShoot)
             {
 				canShoot = false;
-			
+
 				// create and place projectile
 				GameObject projectile = Instantiate(prefabProjectile) as GameObject;
 				Vector3 projectilePos = transform.position;

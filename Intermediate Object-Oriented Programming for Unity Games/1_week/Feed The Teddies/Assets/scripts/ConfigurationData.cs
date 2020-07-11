@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -50,7 +48,7 @@ public class ConfigurationData
     /// <value>teddy bear projectile damage</value>
     public int TeddyBearProjectileDamage
     {
-        get { return teddyBearProjectileDamage; }    
+        get { return teddyBearProjectileDamage; }
     }
 
     /// <summary>
@@ -59,7 +57,7 @@ public class ConfigurationData
     /// <value>french fries projectile impulse force</value>
     public float FrenchFriesProjectileImpulseForce
     {
-        get { return frenchFriesProjectileImpulseForce; }    
+        get { return frenchFriesProjectileImpulseForce; }
     }
 
     /// <summary>
@@ -81,7 +79,7 @@ public class ConfigurationData
     /// <value>max bears</value>
     public int MaxBears
     {
-        get { return maxBears; }    
+        get { return maxBears; }
     }
 
     /// <summary>
@@ -90,7 +88,7 @@ public class ConfigurationData
     /// <value>bear points</value>
     public int BearPoints
     {
-        get { return bearPoints; }    
+        get { return bearPoints; }
     }
 
     /// <summary>
@@ -117,7 +115,7 @@ public class ConfigurationData
     /// <value>bear minimum firing delay</value>
     public float BearMinFiringDelay
     {
-        get { return bearMinFiringDelay; }    
+        get { return bearMinFiringDelay; }
     }
 
     /// <summary>
@@ -139,7 +137,7 @@ public class ConfigurationData
     /// <value>burger move units per second</value>
     public float BurgerMoveUnitsPerSecond
     {
-        get { return burgerMoveUnitsPerSecond; }    
+        get { return burgerMoveUnitsPerSecond; }
     }
 
     /// <summary>
@@ -182,7 +180,7 @@ public class ConfigurationData
         {
         }
         finally
-        {               
+        {
             // always close input file
             if (input != null)
             {
@@ -203,7 +201,7 @@ public class ConfigurationData
         // values appear in the string. We could do something more
         // complicated with the names and values, but that's not
         // necessary here
-        string[] values = csvValues.Split(','); 
+        string[] values = csvValues.Split(',');
 
         // projectile characteristics
         teddyBearProjectileImpulseForce = float.Parse(values[0]);
