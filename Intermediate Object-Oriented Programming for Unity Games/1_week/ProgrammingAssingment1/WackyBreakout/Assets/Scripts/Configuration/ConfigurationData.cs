@@ -59,7 +59,9 @@ public class ConfigurationData
 
 		    string names = input.ReadLine();
 		    string values = input.ReadLine();
-	    }
+            SetConfigurationDataFields(values);
+
+        }
 	    catch (Exception e)
 	    {
 		    Console.WriteLine(e.Message);
