@@ -16,11 +16,11 @@ public static class ConfigurationUtils
 	/// <value>paddle move units per second</value>
 	public static float PaddleMoveUnitsPerSecond
 	{
-		get { return configurationData.PaddleMoveUnitsPerSecond; }
+		get { return 1; }
 	}
 	public static float BallImpulseForce
 	{
-		get { return configurationData.BallImpulseForce; }
+		get { return 10; }
 	}
 
     #endregion
