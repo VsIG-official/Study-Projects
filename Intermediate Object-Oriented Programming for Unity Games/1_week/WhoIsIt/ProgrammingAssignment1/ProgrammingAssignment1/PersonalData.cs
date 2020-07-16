@@ -76,13 +76,20 @@ namespace ProgrammingAssignment1
 				input = File.OpenText(fileName);
 
 				line = input.ReadLine();
+
+				string[] CSVvalues = line.Split(',');
+				FirstName = CSVvalues[0];
+				MiddleName = CSVvalues[1];
+				LastName = CSVvalues[2];
+				StreetAddress = CSVvalues[3];
+				City = CSVvalues[4];
+				State = CSVvalues[5];
+				PostalCode = CSVvalues[6];
+				Country = CSVvalues[7];
+				PhoneNumber = CSVvalues[8];
 			}
 			catch (Exception e)
 			{
-				if (input == null)
-				{
-					Console.WriteLine(e.Message);
-				}
 			}
 			finally
 			{
@@ -92,16 +99,6 @@ namespace ProgrammingAssignment1
 				}
 			}
 
-			string[] CSVvalues = line.Split(',');
-			FirstName = CSVvalues[0];
-			MiddleName = CSVvalues[1];
-			LastName = CSVvalues[2];
-			StreetAddress = CSVvalues[3];
-			City = CSVvalues[4];
-			State = CSVvalues[5];
-			PostalCode = CSVvalues[6];
-			Country = CSVvalues[7];
-			PhoneNumber = CSVvalues[8];
 		}
 
 		#endregion
