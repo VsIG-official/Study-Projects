@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -13,13 +11,22 @@ public class ConfigurationData
 
     const string ConfigurationDataFileName = "ConfigurationData.csv";
 
-    // configuration data
-    float paddleMoveUnitsPerSecond = 10;
-    float ballImpulseForce = 200;
+	// configuration data
+	private float paddleMoveUnitsPerSecond = 10;
+	private float ballImpulseForce = 200;
+	private float ballLifetime = 10;
+    private float minSpawnSeconds = 5;
+	private float maxSpawnSeconds = 10;
 
     #endregion
 
     #region Properties
+
+    // but You can use auto property (probably will use it in next assignment):
+    /*
+    *delete private float paddleMoveUnitsPerSecond = 10; and add:
+    public float PaddleMoveUnitsPerSecond { get; private set; } = 10;
+    */
 
     /// <summary>
     /// Gets the paddle move units per second
@@ -36,7 +43,34 @@ public class ConfigurationData
     /// <value>impulse force</value>
     public float BallImpulseForce
     {
-        get { return ballImpulseForce; }    
+        get { return ballImpulseForce; }
+    }
+
+    /// <summary>
+    /// Gets the lifetime
+    /// </summary>
+    /// <value>impulse force</value>
+    public float BallLifetime
+    {
+	    get { return ballLifetime; }
+    }
+
+    /// <summary>
+    /// Gets the min seconds to spawn
+    /// </summary>
+    /// <value>impulse force</value>
+    public float MinSpawnSeconds
+    {
+	    get { return minSpawnSeconds; }
+    }
+
+    /// <summary>
+    /// Gets the max seconds to spawn
+    /// </summary>
+    /// <value>impulse force</value>
+    public float MaxSpawnSeconds
+    {
+	    get { return maxSpawnSeconds; }
     }
 
     #endregion
@@ -64,13 +98,13 @@ public class ConfigurationData
             string values = input.ReadLine();
 
             // set configuration data fields
-            SetConfigurationDataFields(values);
+            SetConfigurationDataFields(names,values);
         }
         catch (Exception e)
         {
         }
         finally
-        {               
+        {
             // always close input file
             if (input != null)
             {
@@ -85,15 +119,28 @@ public class ConfigurationData
     /// csv string
     /// </summary>
     /// <param name="csvValues">csv string of values</param>
-    void SetConfigurationDataFields(string csvValues)
+    void SetConfigurationDataFields(string csvNames,string csvValues)
     {
         // the code below assumes we know the order in which the
         // values appear in the string. We could do something more
         // complicated with the names and values, but that's not
         // necessary here
-        string[] values = csvValues.Split(','); 
+        string[] names = csvNames.Split(',');
+        string[] values = csvValues.Split(',');
+
+        // will use there loop instead of paddleMoveUnitsPerSecond = float.Parse(values[0]);
+        for (int i = 0; i <= values.Length; i++)
+        {
+			names[i] = values[i];
+        }
+
+        /*
         paddleMoveUnitsPerSecond = float.Parse(values[0]);
         ballImpulseForce = float.Parse(values[1]);
+        ballLifetime = float.Parse(values[2]);
+        minSpawnSeconds = float.Parse(values[3]);
+        maxSpawnSeconds = float.Parse(values[4]);
+        */
     }
 
     #endregion
