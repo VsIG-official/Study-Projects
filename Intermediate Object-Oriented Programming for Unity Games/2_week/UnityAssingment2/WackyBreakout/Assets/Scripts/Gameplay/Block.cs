@@ -7,23 +7,12 @@ using UnityEngine;
 /// </summary>
 public class Block : MonoBehaviour
 {
-	/// <summary>
-	/// Use this for initialization
-	/// </summary>
+
 	void Start()
 	{
-		
-	}
-	
-	/// <summary>
-	/// Update is called once per frame
-	/// </summary>
-	void Update()
-	{
-		
 	}
 
-    /// <summary>
+	/// <summary>
     /// Destroys the block on collision with a ball
     /// </summary>
     /// <param name="coll">Coll.</param>
@@ -31,6 +20,7 @@ public class Block : MonoBehaviour
     {
         if (coll.gameObject.CompareTag("Ball"))
         {
+			HUDScript.AddPoints();
             Destroy(gameObject);
         }
     }

@@ -11,6 +11,8 @@ public class Ball : MonoBehaviour
 	private BoxCollider2D rb2d;
 	private float halfColliderHeight;
 
+	private HUDScript hudScript;
+
 	/// <summary>
 	/// Use this for initialization
 	/// </summary>
@@ -27,6 +29,8 @@ public class Ball : MonoBehaviour
 
         moveTimer.Run();
         deathTimer.Run();
+
+        HUDScript.AddBalls();
 	}
 
 	/// <summary>
@@ -77,6 +81,8 @@ public class Ball : MonoBehaviour
 	    {
 		    Camera.main.GetComponent<BallSpawner>().SpawnBall();
 		}
-	    Destroy(gameObject);
+
+	    HUDScript.ReduceBalls();
+		Destroy(gameObject);
 	}
 }

@@ -1,26 +1,37 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 
 public class BallSpawner : MonoBehaviour
 {
 	[SerializeField] private GameObject ballPrefab;
 	private Timer timer;
 	float spawnRange;
-	private bool retryToSpawn;
+	private bool retryToSpawn = false;
 	private BoxCollider2D rb2d;
 	private float halfWidthOfCollider;
 	private float halfHeightOfCollider;
+	private Vector2 minSpawnLocation;
+	private Vector2 maxSpawnLocation;
 
 	void Start()
 	{
-		rb2d = GetComponent<BoxCollider2D>();
+		GameObject tempBall = Instantiate(ballPrefab);
+		rb2d = tempBall.GetComponent<BoxCollider2D>();
 		halfWidthOfCollider = rb2d.size.x / 2;
 		halfHeightOfCollider = rb2d.size.y / 2;
+		minSpawnLocation = new Vector2(tempBall.transform.position.x - halfWidthOfCollider,
+			tempBall.transform.position.y - halfHeightOfCollider);
+		maxSpawnLocation = new Vector2(tempBall.transform.position.x + halfWidthOfCollider,
+			tempBall.transform.position.y + halfHeightOfCollider);
+		Destroy(tempBall);
 
-		timer = gameObject.AddComponent<Timer>();
 		spawnRange = ConfigurationUtils.MaxSpawnSeconds -
 		             ConfigurationUtils.MinSpawnSeconds;
+		timer = gameObject.AddComponent<Timer>();
 		timer.Duration = GetSpawnDelay();
 		timer.Run();
+
+		SpawnBall();
 	}
 
 	/// <summary>
@@ -35,15 +46,14 @@ public class BallSpawner : MonoBehaviour
 
 	public void SpawnBall()
 	{
-		if (Physics2D.OverlapArea(new Vector2(rb2d.size.x, rb2d.size.y),
-			new Vector2(0, 0)) == null)
+		if (Physics2D.OverlapArea(minSpawnLocation,maxSpawnLocation) == null)
 		{
+			retryToSpawn = false;
 			Instantiate(ballPrefab);
 		}
 		else
 		{
-			Instantiate(ballPrefab, new Vector3(rb2d.size.x * 2,
-				rb2d.size.y * 2, 0),Quaternion.identity);
+			retryToSpawn = true;
 		}
 	}
 
@@ -51,9 +61,14 @@ public class BallSpawner : MonoBehaviour
 	{
 		if (timer.Finished)
 		{
+			retryToSpawn = false;
 			SpawnBall();
 			timer.Duration = GetSpawnDelay();
 			timer.Run();
+		}
+		if (retryToSpawn)
+		{
+			SpawnBall();
 		}
 	}
 }
