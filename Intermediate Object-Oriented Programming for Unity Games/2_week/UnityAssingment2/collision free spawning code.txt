@@ -1,0 +1,49 @@
+------------------
+BallSpawner fields
+------------------
+
+bool retrySpawn = false;
+Vector2 spawnLocationMin;
+Vector2 spawnLocationMax;
+
+-----------------------------------------
+Saving lower left and upper right corners
+in Start method
+-----------------------------------------
+
+GameObject tempBall = Instantiate<GameObject>(prefabBall);
+BoxCollider2D collider = tempBall.GetComponent<BoxCollider2D>();
+float ballColliderHalfWidth = collider.size.x / 2;
+float ballColliderHalfHeight = collider.size.y / 2;
+spawnLocationMin = new Vector2(
+    tempBall.transform.position.x - ballColliderHalfWidth,
+    tempBall.transform.position.y - ballColliderHalfHeight);
+spawnLocationMax = new Vector2(
+    tempBall.transform.position.x + ballColliderHalfWidth,
+    tempBall.transform.position.y + ballColliderHalfHeight);
+Destroy(tempBall);
+
+-----------------------------------
+Checking for retry in Update method
+-----------------------------------
+
+if (retrySpawn)
+{
+    SpawnBall();
+}
+
+------------------------
+My SpawnBall method body
+------------------------
+
+// make sure we don't spawn into a collision
+if (Physics2D.OverlapArea(spawnLocationMin, spawnLocationMax) == null)
+{
+    retrySpawn = false;
+    Instantiate(prefabBall);
+}
+else
+{
+    retrySpawn = true;
+}
+
