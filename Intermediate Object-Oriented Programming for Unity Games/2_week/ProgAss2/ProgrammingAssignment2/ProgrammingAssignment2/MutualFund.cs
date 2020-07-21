@@ -12,6 +12,7 @@ namespace ProgrammingAssignment2
     public class MutualFund : InvestmentAccount
     {
         const float ServiceChargePercent = 0.01f;
+        private const float Growth = 6f;
 
         #region Contructor
 
@@ -25,6 +26,8 @@ namespace ProgrammingAssignment2
 
         public override void AddMoney(float amount)
         {
+	        amount -= amount * ServiceChargePercent;
+
 	        base.AddMoney(amount);
         }
 
@@ -33,8 +36,7 @@ namespace ProgrammingAssignment2
         /// </summary>
         public override void UpdateBalance()
         {
-            // delete code below and replace with your code
-            throw new NotImplementedException();
+            balance += (balance / 100) * Growth;
         }
 
         /// <summary>

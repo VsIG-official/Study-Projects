@@ -71,7 +71,7 @@ namespace ProgrammingAssignment2
                             Console.WriteLine("FAILED");
                         }
                         break;
-	                        /*
+
                     case 4:
                         account = new EmployerSponsoredAccount(100);
                         if (WithinOnePenny(account.Balance, 100))
@@ -84,82 +84,81 @@ namespace ProgrammingAssignment2
                         }
                         break;
                     case 5:
-                        account = new EmployerSponsoredAccount(100);
-                        account.AddMoney(100);
-                        if (WithinOnePenny(account.Balance, 298))
-                        {
-                            Console.WriteLine("Passed");
-                        }
-                        else
-                        {
-                            Console.WriteLine("FAILED");
-                        }
-                        break;
-                    case 6:
-                        account = new EmployerSponsoredAccount(100);
-                        account.UpdateBalance();
-                        if (WithinOnePenny(account.Balance, 106))
-                        {
-                            Console.WriteLine("Passed");
-                        }
-                        else
-                        {
-                            Console.WriteLine("FAILED");
-                        }
-                        break;
-                    case 7:
-                        account = new MutualFund(100);
-                        account.AddMoney(100);
-                        account.UpdateBalance();
-                        if (WithinOnePenny(account.Balance, 210.94f))
-                        {
-                            Console.WriteLine("Passed");
-                        }
-                        else
-                        {
-                            Console.WriteLine("FAILED");
-                        }
-                        break;
-                    case 8:
-                        account = new MutualFund(100);
-                        account.UpdateBalance();
-                        account.UpdateBalance();
-                        if (WithinOnePenny(account.Balance, 112.36f))
-                        {
-                            Console.WriteLine("Passed");
-                        }
-                        else
-                        {
-                            Console.WriteLine("FAILED");
-                        }
-                        break;
-                    case 9:
-                        account = new EmployerSponsoredAccount(100);
-                        account.AddMoney(100);
-                        account.UpdateBalance();
-                        if (WithinOnePenny(account.Balance, 315.88f))
-                        {
-                            Console.WriteLine("Passed");
-                        }
-                        else
-                        {
-                            Console.WriteLine("FAILED");
-                        }
-                        break;
-                    case 10:
-                        account = new EmployerSponsoredAccount(100);
-                        account.UpdateBalance();
-                        account.UpdateBalance();
-                        if (WithinOnePenny(account.Balance, 112.36f))
-                        {
-                            Console.WriteLine("Passed");
-                        }
-                        else
-                        {
-                            Console.WriteLine("FAILED");
-                        }
-                        break;
-                            */
+                          account = new EmployerSponsoredAccount(100);
+                          account.AddMoney(100);
+                          if (WithinOnePenny(account.Balance, 298))
+                          {
+                              Console.WriteLine("Passed");
+                          }
+                          else
+                          {
+                              Console.WriteLine("FAILED");
+                          }
+                          break;
+                      case 6:
+                          account = new EmployerSponsoredAccount(100);
+                          account.UpdateBalance();
+                          if (WithinOnePenny(account.Balance, 106))
+                          {
+                              Console.WriteLine("Passed");
+                          }
+                          else
+                          {
+                              Console.WriteLine("FAILED");
+                          }
+                          break;
+                      case 7:
+                          account = new MutualFund(100);
+                          account.AddMoney(100);
+                          account.UpdateBalance();
+                          if (WithinOnePenny(account.Balance, 210.94f))
+                          {
+                              Console.WriteLine("Passed");
+                          }
+                          else
+                          {
+                              Console.WriteLine("FAILED");
+                          }
+                          break;
+                      case 8:
+                          account = new MutualFund(100);
+                          account.UpdateBalance();
+                          account.UpdateBalance();
+                          if (WithinOnePenny(account.Balance, 112.36f))
+                          {
+                              Console.WriteLine("Passed");
+                          }
+                          else
+                          {
+                              Console.WriteLine("FAILED");
+                          }
+                          break;
+                      case 9:
+                          account = new EmployerSponsoredAccount(100);
+                          account.AddMoney(100);
+                          account.UpdateBalance();
+                          if (WithinOnePenny(account.Balance, 315.88f))
+                          {
+                              Console.WriteLine("Passed");
+                          }
+                          else
+                          {
+                              Console.WriteLine("FAILED");
+                          }
+                          break;
+                      case 10:
+                          account = new EmployerSponsoredAccount(100);
+                          account.UpdateBalance();
+                          account.UpdateBalance();
+                          if (WithinOnePenny(account.Balance, 112.36f))
+                          {
+                              Console.WriteLine("Passed");
+                          }
+                          else
+                          {
+                              Console.WriteLine("FAILED");
+                          }
+                          break;
                 }
 
                 input = Console.ReadLine();
