@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.Events;
 
 /// <summary>
-/// A no argument event
+/// An event for when the destroy button is clicked
 /// </summary>
-public class MessageEvent : UnityEvent
+public class DestroyEvent : UnityEvent
 {
 }
