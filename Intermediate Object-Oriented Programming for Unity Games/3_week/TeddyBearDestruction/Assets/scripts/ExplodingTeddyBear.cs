@@ -14,7 +14,7 @@ public class ExplodingTeddyBear : AnimatedTeddyBear
 	/// </summary>
 	protected override void ProcessMouseOver()
     {
-		teddyBearDestruction.AddPoints(pointValue);
+		pointsAddedEvent.Invoke(pointValue);
 		Instantiate(prefabAnimation, transform.position, Quaternion.identity);
 		Destroy(gameObject);
 	}

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// An abstract class for a teddy bear
@@ -12,8 +13,8 @@ public abstract class TeddyBear : MonoBehaviour
 	[SerializeField]
 	protected int pointValue;
 
-	// score support
-	protected TeddyBearDestruction teddyBearDestruction;
+	// events fired by the class
+	protected PointsAddedEvent pointsAddedEvent = new PointsAddedEvent();
 
     #endregion
 
@@ -33,8 +34,8 @@ public abstract class TeddyBear : MonoBehaviour
             direction * magnitude,
             ForceMode2D.Impulse);
 
-		// score support
-		teddyBearDestruction = Camera.main.GetComponent<TeddyBearDestruction>();
+		// add as a PointsAddedEvent invoker
+		EventManager.AddInvoker(this);
 	}
 
     /// <summary>
@@ -44,6 +45,19 @@ public abstract class TeddyBear : MonoBehaviour
     {
 		ProcessMouseOver();
 	}
+
+	#region Public methods
+
+	/// <summary>
+	/// Adds the given event handler as a listener
+	/// </summary>
+	/// <param name="handler">the event handler</param>
+	public void AddListener(UnityAction<int> handler)
+    {
+		pointsAddedEvent.AddListener(handler);
+	}
+
+	#endregion
 
 	#region Protected methods
 

@@ -11,7 +11,7 @@ public class Explosion : MonoBehaviour
 	Animator anim;
 
     /// <summary>
-    /// Use for initialization
+    /// Use this for initialization
     /// </summary>
     void Start()
     {		

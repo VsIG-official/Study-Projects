@@ -38,7 +38,7 @@ public class BurningTeddyBear : AnimatedTeddyBear
 		// check for burn complete
 		if (burnTimer.Finished)
         {
-			Destroy(gameObject);
+			Destroy (gameObject);
 		}
 	}
 
@@ -53,7 +53,7 @@ public class BurningTeddyBear : AnimatedTeddyBear
     {
 		if (!burnTimer.Running)
         {
-			teddyBearDestruction.AddPoints (pointValue);
+			pointsAddedEvent.Invoke(pointValue);
 
 			// make fire animation visible
 			SpriteRenderer fireRenderer = prefabAnimation.GetComponent<SpriteRenderer>();

@@ -73,8 +73,6 @@ public class TeddyBearSpawner : MonoBehaviour
 
 		// spawn random teddy bear type at location
 		GameObject teddyBear;
-        Instantiate(prefabExplodingTeddyBear, worldLocation, Quaternion.identity);
-        /*
 		int typeNumber = Random.Range(0, 3);
 		if (typeNumber < 1)
         {
@@ -87,8 +85,7 @@ public class TeddyBearSpawner : MonoBehaviour
         else
         {
 			teddyBear = Instantiate(prefabBurningTeddyBear) as GameObject;
-		}     
+		}
 		teddyBear.transform.position = worldLocation;
-        */      
 	}
 }

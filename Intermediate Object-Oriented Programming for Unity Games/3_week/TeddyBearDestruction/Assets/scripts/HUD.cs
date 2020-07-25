@@ -4,32 +4,43 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// Game manager
+/// The HUD for the game
 /// </summary>
-public class TeddyBearDestruction : MonoBehaviour
+public class HUD : MonoBehaviour
 {
+	#region Fields
+
 	// score support
 	[SerializeField]
 	Text scoreText;
 	int score = 0;
     const string ScorePrefix = "Score: ";
 
+    #endregion
+
     /// <summary>
     /// Use this for initialization
     /// </summary>
     void Start()
-    {		
-		// set initial score text
+    {
+		// add listener for PointsAddedEvent
+		EventManager.AddListener(HandlePointsAddedEvent);
+
+		// initialize score text
 		scoreText.text = ScorePrefix + score;
 	}
 
+	#region Private methods
+
 	/// <summary>
-	/// Adds the given points to the score
+	/// Handles the points added event by updating the displayed score
 	/// </summary>
 	/// <param name="points">points to add</param>
-	public void AddPoints(int points)
+	void HandlePointsAddedEvent(int points)
     {
 		score += points;
 		scoreText.text = ScorePrefix + score;
 	}
+
+	#endregion
 }

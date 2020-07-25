@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// A timer
 /// </summary>
 public class Timer : MonoBehaviour
-{	
+{
 	#region Fields
 
 	// timer duration
@@ -29,11 +27,11 @@ public class Timer : MonoBehaviour
 	/// </summary>
 	/// <value>duration</value>
 	public float Duration
-    {
+	{
 		set
-        {
+		{
 			if (!running)
-            {
+			{
 				totalSeconds = value;
 			}
 		}
@@ -43,36 +41,36 @@ public class Timer : MonoBehaviour
 	/// Gets whether or not the timer has finished running
 	/// This property returns false if the timer has never been started
 	/// </summary>
-	/// <value><c>true</c> if finished; otherwise, <c>false</c>.</value>
+	/// <value>true if finished; otherwise, false.</value>
 	public bool Finished
-    {
-		get { return started && !running; } 
+	{
+		get { return started && !running; }
 	}
 
 	/// <summary>
 	/// Gets whether or not the timer is currently running
 	/// </summary>
-	/// <value><c>true</c> if running; otherwise, <c>false</c>.</value>
+	/// <value>true if running; otherwise, false.</value>
 	public bool Running
-    {
+	{
 		get { return running; }
 	}
 
-    #endregion
+	#endregion
 
-    #region Methods
+	#region Methods
 
-    /// <summary>
-    /// Update is called once per frame
-    /// </summary>
-    void Update()
-    {
+	/// <summary>
+	/// Update is called once per frame
+	/// </summary>
+	void Update()
+	{
 		// update timer and check for finished
 		if (running)
-        {
+		{
 			elapsedSeconds += Time.deltaTime;
 			if (elapsedSeconds >= totalSeconds)
-            {
+			{
 				running = false;
 			}
 		}
@@ -82,14 +80,14 @@ public class Timer : MonoBehaviour
 	/// Runs the timer
 	/// Because a timer of 0 duration doesn't really make sense,
 	/// the timer only runs if the total seconds is larger than 0
-	/// This also makes sure the consumer of the class has actually 
+	/// This also makes sure the consumer of the class has actually
 	/// set the duration to something higher than 0
 	/// </summary>
 	public void Run()
-    {
+	{
 		// only run with valid duration
 		if (totalSeconds > 0)
-        {
+		{
 			started = true;
 			running = true;
 			elapsedSeconds = 0;

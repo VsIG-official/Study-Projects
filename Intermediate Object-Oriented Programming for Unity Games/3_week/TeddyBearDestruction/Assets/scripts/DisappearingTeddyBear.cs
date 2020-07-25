@@ -14,7 +14,7 @@ public class DisappearingTeddyBear : TeddyBear
 	/// </summary>
 	protected override void ProcessMouseOver()
     {
-		teddyBearDestruction.AddPoints(pointValue);
+		pointsAddedEvent.Invoke(pointValue);
 		Destroy(gameObject);
 	}
 
