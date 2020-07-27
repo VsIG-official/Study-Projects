@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_programming_assignment3" kind="namespace">
+    <compoundname>ProgrammingAssignment3</compoundname>
+    <innerclass refid="class_programming_assignment3_1_1_count_message_event" prot="public">ProgrammingAssignment3::CountMessageEvent</innerclass>
+    <innerclass refid="class_programming_assignment3_1_1_event_manager" prot="public">ProgrammingAssignment3::EventManager</innerclass>
+    <innerclass refid="class_programming_assignment3_1_1_invoker" prot="public">ProgrammingAssignment3::Invoker</innerclass>
+    <innerclass refid="class_programming_assignment3_1_1_listener" prot="public">ProgrammingAssignment3::Listener</innerclass>
+    <innerclass refid="class_programming_assignment3_1_1_message_event" prot="public">ProgrammingAssignment3::MessageEvent</innerclass>
+    <innerclass refid="class_programming_assignment3_1_1_program" prot="public">ProgrammingAssignment3::Program</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/CountMessageEvent.cs" line="4" column="1"/>
+  </compounddef>
+</doxygen>
