@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_programming_assignment3_1_1_message_event" kind="class" prot="public">
+    <compoundname>ProgrammingAssignment3::MessageEvent</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UnityEvent</basecompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="20">
+        <label>ProgrammingAssignment3.MessageEvent</label>
+        <link refid="class_programming_assignment3_1_1_message_event"/>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>UnityEvent</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="22">
+        <label>ProgrammingAssignment3.MessageEvent</label>
+        <link refid="class_programming_assignment3_1_1_message_event"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>UnityEvent</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/MessageEvent.cs" line="6" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/MessageEvent.cs" bodystart="5" bodyend="7"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

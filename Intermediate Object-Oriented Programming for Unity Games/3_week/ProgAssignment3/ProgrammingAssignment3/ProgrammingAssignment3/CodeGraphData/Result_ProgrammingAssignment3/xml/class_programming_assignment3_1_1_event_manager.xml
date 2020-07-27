@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_programming_assignment3_1_1_event_manager" kind="class" prot="public">
+    <compoundname>ProgrammingAssignment3::EventManager</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_programming_assignment3_1_1_event_manager_1af3e9823468b49075f5c946e0efba996a" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_programming_assignment3_1_1_invoker" kindref="compound">Invoker</ref></type>
+        <definition>Invoker ProgrammingAssignment3.EventManager.noArgumentInvoker</definition>
+        <argsstring></argsstring>
+        <name>noArgumentInvoker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" line="17" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_programming_assignment3_1_1_event_manager_1a5d19217ba9c864aba3fe1b3d93a8dfa2" compoundref="_event_manager_8cs" startline="101" endline="108">ProgrammingAssignment3.EventManager.AddNoArgumentInvoker</referencedby>
+        <referencedby refid="class_programming_assignment3_1_1_event_manager_1a17e7566d4d7c0a7f6f636f481da04840" compoundref="_event_manager_8cs" startline="114" endline="121">ProgrammingAssignment3.EventManager.AddNoArgumentListener</referencedby>
+        <referencedby refid="class_programming_assignment3_1_1_event_manager_1a24dc68cad817a34bd7fccefc98a71d94" compoundref="_event_manager_8cs" startline="70" endline="95">ProgrammingAssignment3.EventManager.ClearInvokersAndListeners</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_programming_assignment3_1_1_event_manager_1abfa669183d8682d6f11456e5e57a58f5" prot="private" static="yes" mutable="no">
+        <type>UnityAction</type>
+        <definition>UnityAction ProgrammingAssignment3.EventManager.noArgumentListener</definition>
+        <argsstring></argsstring>
+        <name>noArgumentListener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" line="18" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_programming_assignment3_1_1_event_manager_1a5d19217ba9c864aba3fe1b3d93a8dfa2" compoundref="_event_manager_8cs" startline="101" endline="108">ProgrammingAssignment3.EventManager.AddNoArgumentInvoker</referencedby>
+        <referencedby refid="class_programming_assignment3_1_1_event_manager_1a17e7566d4d7c0a7f6f636f481da04840" compoundref="_event_manager_8cs" startline="114" endline="121">ProgrammingAssignment3.EventManager.AddNoArgumentListener</referencedby>
+        <referencedby refid="class_programming_assignment3_1_1_event_manager_1a24dc68cad817a34bd7fccefc98a71d94" compoundref="_event_manager_8cs" startline="70" endline="95">ProgrammingAssignment3.EventManager.ClearInvokersAndListeners</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_programming_assignment3_1_1_event_manager_1a1e9ed25479336674533dc144104deb1c" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_programming_assignment3_1_1_invoker" kindref="compound">Invoker</ref></type>
+        <definition>Invoker ProgrammingAssignment3.EventManager.intArgumentInvoker</definition>
+        <argsstring></argsstring>
+        <name>intArgumentInvoker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" line="21" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_programming_assignment3_1_1_event_manager_1a85356cc00c5b0dbf0c4a3713a6430d33" compoundref="_event_manager_8cs" startline="127" endline="134">ProgrammingAssignment3.EventManager.AddIntArgumentInvoker</referencedby>
+        <referencedby refid="class_programming_assignment3_1_1_event_manager_1a505c9d1a6e064b363d7bee5db6ff39af" compoundref="_event_manager_8cs" startline="140" endline="147">ProgrammingAssignment3.EventManager.AddIntArgumentListener</referencedby>
+        <referencedby refid="class_programming_assignment3_1_1_event_manager_1a24dc68cad817a34bd7fccefc98a71d94" compoundref="_event_manager_8cs" startline="70" endline="95">ProgrammingAssignment3.EventManager.ClearInvokersAndListeners</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_programming_assignment3_1_1_event_manager_1a71c297e1f6d90eabb937f0b00504f0c2" prot="private" static="yes" mutable="no">
+        <type>UnityAction&lt; int &gt;</type>
+        <definition>UnityAction&lt;int&gt; ProgrammingAssignment3.EventManager.intArgumentListener</definition>
+        <argsstring></argsstring>
+        <name>intArgumentListener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" line="22" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_programming_assignment3_1_1_event_manager_1a85356cc00c5b0dbf0c4a3713a6430d33" compoundref="_event_manager_8cs" startline="127" endline="134">ProgrammingAssignment3.EventManager.AddIntArgumentInvoker</referencedby>
+        <referencedby refid="class_programming_assignment3_1_1_event_manager_1a505c9d1a6e064b363d7bee5db6ff39af" compoundref="_event_manager_8cs" startline="140" endline="147">ProgrammingAssignment3.EventManager.AddIntArgumentListener</referencedby>
+        <referencedby refid="class_programming_assignment3_1_1_event_manager_1a24dc68cad817a34bd7fccefc98a71d94" compoundref="_event_manager_8cs" startline="70" endline="95">ProgrammingAssignment3.EventManager.ClearInvokersAndListeners</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_programming_assignment3_1_1_event_manager_1a69fa3fd03a333773c67a1de162b8e5cf" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_programming_assignment3_1_1_invoker" kindref="compound">Invoker</ref></type>
+        <definition>Invoker ProgrammingAssignment3.EventManager.NoArgumentInvoker</definition>
+        <argsstring></argsstring>
+        <name>NoArgumentInvoker</name>
+        <briefdescription>
+<para>Gets the no argument invoker </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" line="31" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_programming_assignment3_1_1_event_manager_1aee894bb21414a61e016bf9e01d60fbc7" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>UnityAction</type>
+        <definition>UnityAction ProgrammingAssignment3.EventManager.NoArgumentListener</definition>
+        <argsstring></argsstring>
+        <name>NoArgumentListener</name>
+        <briefdescription>
+<para>Gets the no argument listener </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" line="39" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_programming_assignment3_1_1_event_manager_1a9ae990ffe0d37259544c5ce20161bf7a" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_programming_assignment3_1_1_invoker" kindref="compound">Invoker</ref></type>
+        <definition>Invoker ProgrammingAssignment3.EventManager.IntArgumentInvoker</definition>
+        <argsstring></argsstring>
+        <name>IntArgumentInvoker</name>
+        <briefdescription>
+<para>Gets the int argument invoker </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" line="47" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_programming_assignment3_1_1_event_manager_1a0ce4b91d00874edbd134a31ab87a4be2" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>UnityAction&lt; int &gt;</type>
+        <definition>UnityAction&lt;int&gt; ProgrammingAssignment3.EventManager.IntArgumentListener</definition>
+        <argsstring></argsstring>
+        <name>IntArgumentListener</name>
+        <briefdescription>
+<para>Gets the int argument listener </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" line="55" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_programming_assignment3_1_1_event_manager_1a24dc68cad817a34bd7fccefc98a71d94" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ProgrammingAssignment3.EventManager.ClearInvokersAndListeners</definition>
+        <argsstring>()</argsstring>
+        <name>ClearInvokersAndListeners</name>
+        <briefdescription>
+<para>Clears all the invokers and listeners from the event manager. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note: We need this functionality so the autograder can start with a &quot;clean&quot; event manager at the start of each test case </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" line="70" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" bodystart="70" bodyend="95"/>
+        <references refid="class_programming_assignment3_1_1_event_manager_1a1e9ed25479336674533dc144104deb1c" compoundref="_event_manager_8cs" startline="21">ProgrammingAssignment3.EventManager.intArgumentInvoker</references>
+        <references refid="class_programming_assignment3_1_1_event_manager_1a71c297e1f6d90eabb937f0b00504f0c2" compoundref="_event_manager_8cs" startline="22">ProgrammingAssignment3.EventManager.intArgumentListener</references>
+        <references refid="class_programming_assignment3_1_1_event_manager_1af3e9823468b49075f5c946e0efba996a" compoundref="_event_manager_8cs" startline="17">ProgrammingAssignment3.EventManager.noArgumentInvoker</references>
+        <references refid="class_programming_assignment3_1_1_event_manager_1abfa669183d8682d6f11456e5e57a58f5" compoundref="_event_manager_8cs" startline="18">ProgrammingAssignment3.EventManager.noArgumentListener</references>
+      </memberdef>
+      <memberdef kind="function" id="class_programming_assignment3_1_1_event_manager_1a5d19217ba9c864aba3fe1b3d93a8dfa2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ProgrammingAssignment3.EventManager.AddNoArgumentInvoker</definition>
+        <argsstring>(Invoker invoker)</argsstring>
+        <name>AddNoArgumentInvoker</name>
+        <param>
+          <type><ref refid="class_programming_assignment3_1_1_invoker" kindref="compound">Invoker</ref></type>
+          <declname>invoker</declname>
+        </param>
+        <briefdescription>
+<para>Adds the invoker for the no argument event </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>invoker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>invoker</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" line="101" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" bodystart="101" bodyend="108"/>
+        <references refid="class_programming_assignment3_1_1_event_manager_1af3e9823468b49075f5c946e0efba996a" compoundref="_event_manager_8cs" startline="17">ProgrammingAssignment3.EventManager.noArgumentInvoker</references>
+        <references refid="class_programming_assignment3_1_1_event_manager_1abfa669183d8682d6f11456e5e57a58f5" compoundref="_event_manager_8cs" startline="18">ProgrammingAssignment3.EventManager.noArgumentListener</references>
+      </memberdef>
+      <memberdef kind="function" id="class_programming_assignment3_1_1_event_manager_1a17e7566d4d7c0a7f6f636f481da04840" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ProgrammingAssignment3.EventManager.AddNoArgumentListener</definition>
+        <argsstring>(UnityAction listener)</argsstring>
+        <name>AddNoArgumentListener</name>
+        <param>
+          <type>UnityAction</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+<para>Adds the listener for the no argument event </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listener</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>listener</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" line="114" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" bodystart="114" bodyend="121"/>
+        <references refid="class_programming_assignment3_1_1_event_manager_1af3e9823468b49075f5c946e0efba996a" compoundref="_event_manager_8cs" startline="17">ProgrammingAssignment3.EventManager.noArgumentInvoker</references>
+        <references refid="class_programming_assignment3_1_1_event_manager_1abfa669183d8682d6f11456e5e57a58f5" compoundref="_event_manager_8cs" startline="18">ProgrammingAssignment3.EventManager.noArgumentListener</references>
+      </memberdef>
+      <memberdef kind="function" id="class_programming_assignment3_1_1_event_manager_1a85356cc00c5b0dbf0c4a3713a6430d33" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ProgrammingAssignment3.EventManager.AddIntArgumentInvoker</definition>
+        <argsstring>(Invoker invoker)</argsstring>
+        <name>AddIntArgumentInvoker</name>
+        <param>
+          <type><ref refid="class_programming_assignment3_1_1_invoker" kindref="compound">Invoker</ref></type>
+          <declname>invoker</declname>
+        </param>
+        <briefdescription>
+<para>Adds the invoker for the int argument event </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>invoker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>invoker</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" line="127" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" bodystart="127" bodyend="134"/>
+        <references refid="class_programming_assignment3_1_1_event_manager_1a1e9ed25479336674533dc144104deb1c" compoundref="_event_manager_8cs" startline="21">ProgrammingAssignment3.EventManager.intArgumentInvoker</references>
+        <references refid="class_programming_assignment3_1_1_event_manager_1a71c297e1f6d90eabb937f0b00504f0c2" compoundref="_event_manager_8cs" startline="22">ProgrammingAssignment3.EventManager.intArgumentListener</references>
+      </memberdef>
+      <memberdef kind="function" id="class_programming_assignment3_1_1_event_manager_1a505c9d1a6e064b363d7bee5db6ff39af" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ProgrammingAssignment3.EventManager.AddIntArgumentListener</definition>
+        <argsstring>(UnityAction&lt; int &gt; listener)</argsstring>
+        <name>AddIntArgumentListener</name>
+        <param>
+          <type>UnityAction&lt; int &gt;</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+<para>Adds the listener for the int argument event </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listener</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>listener</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" line="140" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" bodystart="140" bodyend="147"/>
+        <references refid="class_programming_assignment3_1_1_event_manager_1a1e9ed25479336674533dc144104deb1c" compoundref="_event_manager_8cs" startline="21">ProgrammingAssignment3.EventManager.intArgumentInvoker</references>
+        <references refid="class_programming_assignment3_1_1_event_manager_1a71c297e1f6d90eabb937f0b00504f0c2" compoundref="_event_manager_8cs" startline="22">ProgrammingAssignment3.EventManager.intArgumentListener</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The event manager </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>ProgrammingAssignment3.CountMessageEvent</label>
+        <link refid="class_programming_assignment3_1_1_count_message_event"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ProgrammingAssignment3.MessageEvent</label>
+        <link refid="class_programming_assignment3_1_1_message_event"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ProgrammingAssignment3.Invoker</label>
+        <link refid="class_programming_assignment3_1_1_invoker"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>countMessageEvent</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>messageEvent</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>UnityEvent</label>
+      </node>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>ProgrammingAssignment3.EventManager</label>
+        <link refid="class_programming_assignment3_1_1_event_manager"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>intArgumentInvoker</edgelabel>
+          <edgelabel>noArgumentInvoker</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>UnityEvent&lt; int &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" line="9" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/EventManager.cs" bodystart="8" bodyend="150"/>
+    <listofallmembers>
+      <member refid="class_programming_assignment3_1_1_event_manager_1a85356cc00c5b0dbf0c4a3713a6430d33" prot="public" virt="non-virtual"><scope>ProgrammingAssignment3::EventManager</scope><name>AddIntArgumentInvoker</name></member>
+      <member refid="class_programming_assignment3_1_1_event_manager_1a505c9d1a6e064b363d7bee5db6ff39af" prot="public" virt="non-virtual"><scope>ProgrammingAssignment3::EventManager</scope><name>AddIntArgumentListener</name></member>
+      <member refid="class_programming_assignment3_1_1_event_manager_1a5d19217ba9c864aba3fe1b3d93a8dfa2" prot="public" virt="non-virtual"><scope>ProgrammingAssignment3::EventManager</scope><name>AddNoArgumentInvoker</name></member>
+      <member refid="class_programming_assignment3_1_1_event_manager_1a17e7566d4d7c0a7f6f636f481da04840" prot="public" virt="non-virtual"><scope>ProgrammingAssignment3::EventManager</scope><name>AddNoArgumentListener</name></member>
+      <member refid="class_programming_assignment3_1_1_event_manager_1a24dc68cad817a34bd7fccefc98a71d94" prot="public" virt="non-virtual"><scope>ProgrammingAssignment3::EventManager</scope><name>ClearInvokersAndListeners</name></member>
+      <member refid="class_programming_assignment3_1_1_event_manager_1a1e9ed25479336674533dc144104deb1c" prot="private" virt="non-virtual"><scope>ProgrammingAssignment3::EventManager</scope><name>intArgumentInvoker</name></member>
+      <member refid="class_programming_assignment3_1_1_event_manager_1a9ae990ffe0d37259544c5ce20161bf7a" prot="public" virt="non-virtual"><scope>ProgrammingAssignment3::EventManager</scope><name>IntArgumentInvoker</name></member>
+      <member refid="class_programming_assignment3_1_1_event_manager_1a0ce4b91d00874edbd134a31ab87a4be2" prot="public" virt="non-virtual"><scope>ProgrammingAssignment3::EventManager</scope><name>IntArgumentListener</name></member>
+      <member refid="class_programming_assignment3_1_1_event_manager_1a71c297e1f6d90eabb937f0b00504f0c2" prot="private" virt="non-virtual"><scope>ProgrammingAssignment3::EventManager</scope><name>intArgumentListener</name></member>
+      <member refid="class_programming_assignment3_1_1_event_manager_1a69fa3fd03a333773c67a1de162b8e5cf" prot="public" virt="non-virtual"><scope>ProgrammingAssignment3::EventManager</scope><name>NoArgumentInvoker</name></member>
+      <member refid="class_programming_assignment3_1_1_event_manager_1af3e9823468b49075f5c946e0efba996a" prot="private" virt="non-virtual"><scope>ProgrammingAssignment3::EventManager</scope><name>noArgumentInvoker</name></member>
+      <member refid="class_programming_assignment3_1_1_event_manager_1abfa669183d8682d6f11456e5e57a58f5" prot="private" virt="non-virtual"><scope>ProgrammingAssignment3::EventManager</scope><name>noArgumentListener</name></member>
+      <member refid="class_programming_assignment3_1_1_event_manager_1aee894bb21414a61e016bf9e01d60fbc7" prot="public" virt="non-virtual"><scope>ProgrammingAssignment3::EventManager</scope><name>NoArgumentListener</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

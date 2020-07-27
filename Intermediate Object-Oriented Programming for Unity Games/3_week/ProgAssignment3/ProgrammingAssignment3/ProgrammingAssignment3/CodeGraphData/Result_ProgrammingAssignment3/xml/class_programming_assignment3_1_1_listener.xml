@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_programming_assignment3_1_1_listener" kind="class" prot="public">
+    <compoundname>ProgrammingAssignment3::Listener</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_programming_assignment3_1_1_listener_1a5b5b8a9ddc206ca249ebdf81e41d20f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProgrammingAssignment3.Listener.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+<para>Use this for initialization </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/Listener.cs" line="13" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/Listener.cs" bodystart="13" bodyend="20"/>
+        <references refid="class_programming_assignment3_1_1_listener_1a2b65d07764656b78304affe17b7669be" compoundref="_listener_8cs" startline="34" endline="37">ProgrammingAssignment3.Listener.HandleCountMessageEvent</references>
+        <references refid="class_programming_assignment3_1_1_listener_1a4191d81a6ab2ff081c10a3a0633dd758" compoundref="_listener_8cs" startline="25" endline="28">ProgrammingAssignment3.Listener.HandleMessageEvent</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_programming_assignment3_1_1_listener_1a4191d81a6ab2ff081c10a3a0633dd758" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProgrammingAssignment3.Listener.HandleMessageEvent</definition>
+        <argsstring>()</argsstring>
+        <name>HandleMessageEvent</name>
+        <briefdescription>
+<para>Handles the no argument event </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/Listener.cs" line="25" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/Listener.cs" bodystart="25" bodyend="28"/>
+        <referencedby refid="class_programming_assignment3_1_1_listener_1a5b5b8a9ddc206ca249ebdf81e41d20f0" compoundref="_listener_8cs" startline="13" endline="20">ProgrammingAssignment3.Listener.Start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_programming_assignment3_1_1_listener_1a2b65d07764656b78304affe17b7669be" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProgrammingAssignment3.Listener.HandleCountMessageEvent</definition>
+        <argsstring>(int number)</argsstring>
+        <name>HandleCountMessageEvent</name>
+        <param>
+          <type>int</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+<para>Handles the one argument event </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number&lt;/number&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/Listener.cs" line="34" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/Listener.cs" bodystart="34" bodyend="37"/>
+        <referencedby refid="class_programming_assignment3_1_1_listener_1a5b5b8a9ddc206ca249ebdf81e41d20f0" compoundref="_listener_8cs" startline="13" endline="20">ProgrammingAssignment3.Listener.Start</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An event listener </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="16">
+        <label>ProgrammingAssignment3.Listener</label>
+        <link refid="class_programming_assignment3_1_1_listener"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="18">
+        <label>ProgrammingAssignment3.Listener</label>
+        <link refid="class_programming_assignment3_1_1_listener"/>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/Listener.cs" line="9" column="1" bodyfile="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/Listener.cs" bodystart="8" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_programming_assignment3_1_1_listener_1a2b65d07764656b78304affe17b7669be" prot="private" virt="non-virtual"><scope>ProgrammingAssignment3::Listener</scope><name>HandleCountMessageEvent</name></member>
+      <member refid="class_programming_assignment3_1_1_listener_1a4191d81a6ab2ff081c10a3a0633dd758" prot="private" virt="non-virtual"><scope>ProgrammingAssignment3::Listener</scope><name>HandleMessageEvent</name></member>
+      <member refid="class_programming_assignment3_1_1_listener_1a5b5b8a9ddc206ca249ebdf81e41d20f0" prot="public" virt="non-virtual"><scope>ProgrammingAssignment3::Listener</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

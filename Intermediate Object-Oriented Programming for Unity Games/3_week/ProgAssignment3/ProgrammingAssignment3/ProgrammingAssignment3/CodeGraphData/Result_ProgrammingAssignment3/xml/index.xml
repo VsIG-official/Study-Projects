@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+  <compound refid="class_programming_assignment3_1_1_count_message_event" kind="class"><name>ProgrammingAssignment3::CountMessageEvent</name>
+  <compound refid="class_programming_assignment3_1_1_event_manager" kind="class"><name>ProgrammingAssignment3::EventManager</name>
+    <member refid="class_programming_assignment3_1_1_event_manager_1af3e9823468b49075f5c946e0efba996a" kind="variable"><name>noArgumentInvoker</name></member>
+    <member refid="class_programming_assignment3_1_1_event_manager_1abfa669183d8682d6f11456e5e57a58f5" kind="variable"><name>noArgumentListener</name></member>
+    <member refid="class_programming_assignment3_1_1_event_manager_1a1e9ed25479336674533dc144104deb1c" kind="variable"><name>intArgumentInvoker</name></member>
+    <member refid="class_programming_assignment3_1_1_event_manager_1a71c297e1f6d90eabb937f0b00504f0c2" kind="variable"><name>intArgumentListener</name></member>
+    <member refid="class_programming_assignment3_1_1_event_manager_1a69fa3fd03a333773c67a1de162b8e5cf" kind="property"><name>NoArgumentInvoker</name></member>
+    <member refid="class_programming_assignment3_1_1_event_manager_1aee894bb21414a61e016bf9e01d60fbc7" kind="property"><name>NoArgumentListener</name></member>
+    <member refid="class_programming_assignment3_1_1_event_manager_1a9ae990ffe0d37259544c5ce20161bf7a" kind="property"><name>IntArgumentInvoker</name></member>
+    <member refid="class_programming_assignment3_1_1_event_manager_1a0ce4b91d00874edbd134a31ab87a4be2" kind="property"><name>IntArgumentListener</name></member>
+    <member refid="class_programming_assignment3_1_1_event_manager_1a24dc68cad817a34bd7fccefc98a71d94" kind="function"><name>ClearInvokersAndListeners</name></member>
+    <member refid="class_programming_assignment3_1_1_event_manager_1a5d19217ba9c864aba3fe1b3d93a8dfa2" kind="function"><name>AddNoArgumentInvoker</name></member>
+    <member refid="class_programming_assignment3_1_1_event_manager_1a17e7566d4d7c0a7f6f636f481da04840" kind="function"><name>AddNoArgumentListener</name></member>
+    <member refid="class_programming_assignment3_1_1_event_manager_1a85356cc00c5b0dbf0c4a3713a6430d33" kind="function"><name>AddIntArgumentInvoker</name></member>
+    <member refid="class_programming_assignment3_1_1_event_manager_1a505c9d1a6e064b363d7bee5db6ff39af" kind="function"><name>AddIntArgumentListener</name></member>
+  </compound>
+  <compound refid="class_programming_assignment3_1_1_invoker" kind="class"><name>ProgrammingAssignment3::Invoker</name>
+    <member refid="class_programming_assignment3_1_1_invoker_1a4654d08b9d10e827b718507423619c00" kind="variable"><name>count</name></member>
+    <member refid="class_programming_assignment3_1_1_invoker_1a093c6b0df00e8b7b7c3f0ee3881c0f26" kind="variable"><name>messageEventTimer</name></member>
+    <member refid="class_programming_assignment3_1_1_invoker_1ab64315f3dccccbc0875bfdbe5a322b8d" kind="variable"><name>messageEvent</name></member>
+    <member refid="class_programming_assignment3_1_1_invoker_1a80a1ddf55619406ebd503c2fab8b0638" kind="variable"><name>countMessageEventTimer</name></member>
+    <member refid="class_programming_assignment3_1_1_invoker_1a60229be75e1f2277807f7f71cfed3d19" kind="variable"><name>countMessageEvent</name></member>
+    <member refid="class_programming_assignment3_1_1_invoker_1a31a7d3702dffe461db2e50eb944a1b51" kind="function"><name>Awake</name></member>
+    <member refid="class_programming_assignment3_1_1_invoker_1acdb7a03157ec61a7d34ad6a19ddfed45" kind="function"><name>Start</name></member>
+    <member refid="class_programming_assignment3_1_1_invoker_1a8711f5e90c7f2321a137bde5d1653057" kind="function"><name>AddNoArgumentListener</name></member>
+    <member refid="class_programming_assignment3_1_1_invoker_1a341ce86a03a16df3cd8eadb6305c1f91" kind="function"><name>AddOneArgumentListener</name></member>
+    <member refid="class_programming_assignment3_1_1_invoker_1a7a16cf6bd04d2534b5427304d0601539" kind="function"><name>RemoveNoArgumentListener</name></member>
+    <member refid="class_programming_assignment3_1_1_invoker_1af591f49b652ee24f6dbc089c0d4b5dbd" kind="function"><name>RemoveOneArgumentListener</name></member>
+    <member refid="class_programming_assignment3_1_1_invoker_1a3328ef11fcb070de3eb3a804124e3201" kind="function"><name>InvokeNoArgumentEvent</name></member>
+    <member refid="class_programming_assignment3_1_1_invoker_1ae221c4ebadf29fa16a07baa198ab36fd" kind="function"><name>InvokeOneArgumentEvent</name></member>
+    <member refid="class_programming_assignment3_1_1_invoker_1a9ef8021b8e50f6d02e1fe44251d4659b" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_programming_assignment3_1_1_listener" kind="class"><name>ProgrammingAssignment3::Listener</name>
+    <member refid="class_programming_assignment3_1_1_listener_1a5b5b8a9ddc206ca249ebdf81e41d20f0" kind="function"><name>Start</name></member>
+    <member refid="class_programming_assignment3_1_1_listener_1a4191d81a6ab2ff081c10a3a0633dd758" kind="function"><name>HandleMessageEvent</name></member>
+    <member refid="class_programming_assignment3_1_1_listener_1a2b65d07764656b78304affe17b7669be" kind="function"><name>HandleCountMessageEvent</name></member>
+  </compound>
+  <compound refid="class_programming_assignment3_1_1_message_event" kind="class"><name>ProgrammingAssignment3::MessageEvent</name>
+  </compound>
+  <compound refid="class_programming_assignment3_1_1_program" kind="class"><name>ProgrammingAssignment3::Program</name>
+    <member refid="class_programming_assignment3_1_1_program_1a41131ef398b5c37800a72d10b04efd1a" kind="variable"><name>testCaseNumber</name></member>
+    <member refid="class_programming_assignment3_1_1_program_1ace73a419668129d7217a17953b523f16" kind="variable"><name>logMessages</name></member>
+    <member refid="class_programming_assignment3_1_1_program_1abba16f308a3dd1c266327f99c0299e45" kind="function"><name>Main</name></member>
+    <member refid="class_programming_assignment3_1_1_program_1a6a750be2a6187e5852badeecaa571de2" kind="function"><name>GetInputValueFromString</name></member>
+    <member refid="class_programming_assignment3_1_1_program_1ae6b8561470eda81f2827c5059f43558a" kind="function"><name>HandleLogEvent</name></member>
+    <member refid="class_programming_assignment3_1_1_program_1a8790db7bec2bdae189abe4ec1a7a1465" kind="function"><name>InitializeTestCase</name></member>
+  </compound>
+  <compound refid="namespace_programming_assignment3" kind="namespace"><name>ProgrammingAssignment3</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_reflection" kind="namespace"><name>System::Reflection</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_compiler_services" kind="namespace"><name>System::Runtime::CompilerServices</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_interop_services" kind="namespace"><name>System::Runtime::InteropServices</name>
+  </compound>
+  <compound refid="namespace_unity_engine" kind="namespace"><name>UnityEngine</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_events" kind="namespace"><name>UnityEngine::Events</name>
+  </compound>
+  <compound refid="_count_message_event_8cs" kind="file"><name>CountMessageEvent.cs</name>
+  </compound>
+  <compound refid="_event_manager_8cs" kind="file"><name>EventManager.cs</name>
+  </compound>
+  <compound refid="_invoker_8cs" kind="file"><name>Invoker.cs</name>
+  </compound>
+  <compound refid="_listener_8cs" kind="file"><name>Listener.cs</name>
+  </compound>
+  <compound refid="_message_event_8cs" kind="file"><name>MessageEvent.cs</name>
+  </compound>
+  <compound refid="_program_8cs" kind="file"><name>Program.cs</name>
+  </compound>
+  <compound refid="_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="dir_38eed459e74ada5eb554a282973fc1a8" kind="dir"><name>D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week</name>
+  </compound>
+  <compound refid="dir_35f57355f303d3893b16fe6eff237bf1" kind="dir"><name>D:/ForStudy/Coursera</name>
+  </compound>
+  <compound refid="dir_7aec0a1bfa5e7f27bdd3440fcfe1b7e5" kind="dir"><name>D:/ForStudy/Coursera/Courses</name>
+  </compound>
+  <compound refid="dir_275089585c7fc1b5fd5d7d42c69cb1da" kind="dir"><name>D:</name>
+  </compound>
+  <compound refid="dir_91694b49233c1a7e9cc7c08912fdd139" kind="dir"><name>D:/ForStudy</name>
+  </compound>
+  <compound refid="dir_99d913f85253adeed5082ab9f1e12457" kind="dir"><name>D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games</name>
+  </compound>
+  <compound refid="dir_c3cf71aecd1fc644a3bdf993b098e846" kind="dir"><name>D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3</name>
+  </compound>
+  <compound refid="dir_5fdd4cc0f6d84cb2fc04343d82388196" kind="dir"><name>D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3</name>
+  </compound>
+  <compound refid="dir_f8705424bc04554c2c8a5d26363b00b1" kind="dir"><name>D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3</name>
+  </compound>
+  <compound refid="dir_589f0b7c1b149d9373caf5085d040075" kind="dir"><name>D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3</name>
+  </compound>
+  <compound refid="dir_b351a2c330e5f086f54eaa77f8b1c181" kind="dir"><name>D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/Properties</name>
+  </compound>
+</doxygenindex>
