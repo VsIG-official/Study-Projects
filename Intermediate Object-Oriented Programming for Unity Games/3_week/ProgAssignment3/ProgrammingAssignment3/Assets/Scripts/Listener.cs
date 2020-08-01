@@ -10,10 +10,10 @@ public class Listener : MonoBehaviour
 	/// </summary>
 	public void Start()
 	{
-		Invoker invokerMessageEvent = gameObject.GetComponent<Invoker>();
+		Invoker invokerMessageEvent = GameObject.Find("MainCamera").GetComponent<Camera>().GetComponent<Invoker>();
 		invokerMessageEvent.AddNoArgumentListener(HandleMessageEvent);
 
-		Invoker invokerCountMessageEvent = gameObject.GetComponent<Invoker>();
+		Invoker invokerCountMessageEvent = GameObject.Find("MainCamera").GetComponent<Camera>().GetComponent<Invoker>();
 		invokerCountMessageEvent.AddOneArgumentListener(HandleCountMessageEvent);
 	}
 
