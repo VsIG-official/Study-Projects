@@ -20,10 +20,10 @@ public class Invoker : MonoBehaviour
 	/// </summary>
 	public void Awake()
 	{
-		messageEventTimer = new Timer();
+		messageEventTimer = gameObject.AddComponent<Timer>();
 		messageEvent = new MessageEvent();
 
-		countMessageEventTimer = new Timer();
+		countMessageEventTimer = gameObject.AddComponent<Timer>();
 		countMessageEvent = new CountMessageEvent();
 	}
 
