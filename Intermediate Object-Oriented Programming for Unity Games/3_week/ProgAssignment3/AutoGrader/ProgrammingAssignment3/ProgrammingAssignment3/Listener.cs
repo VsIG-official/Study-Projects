@@ -1,23 +1,36 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// An event listener
 /// </summary>
 public class Listener : MonoBehaviour
 {
+	/// <summary>
+	/// Use this for initialization
+	/// </summary>
 	public void Start()
 	{
 		Invoker invoker = new Invoker();
+
 		invoker.AddNoArgumentListener(HandleMessageEvent);
+
 		invoker.AddOneArgumentListener(HandleCountMessageEvent);
 	}
 
-	public void HandleMessageEvent()
+	/// <summary>
+	/// Handles the no argument event
+	/// </summary>
+	void HandleMessageEvent()
 	{
 		print("MessageEvent");
 	}
 
-	public void HandleCountMessageEvent(int number)
+	/// <summary>
+	/// Handles the one argument event
+	/// </summary>
+	/// <param name="number">number</number>
+	void HandleCountMessageEvent(int number)
 	{
 		print("CountMessageEvent: " + number);
 	}

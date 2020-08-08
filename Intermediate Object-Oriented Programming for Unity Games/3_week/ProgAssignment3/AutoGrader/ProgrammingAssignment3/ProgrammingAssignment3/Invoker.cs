@@ -6,86 +6,100 @@ using UnityEngine.Events;
 /// </summary>
 public class Invoker : MonoBehaviour
 {
-	Listener listner = new Listener();
-	Timer MessageTimer;
-	Timer CountMessageTimer;
-	int count;
-	MessageEvent messageEvent = new MessageEvent();
+	public int count;
+	// add your fields for your message event support here
+	Timer messageEventTimer;
+	private MessageEvent messageEvent = new MessageEvent();
+
+	// add your fields for your count message event support here
+	Timer countMessageEventTimer;
 	private CountMessageEvent countMessageEvent = new CountMessageEvent();
 
 	/// <summary>
-	/// Awakes this instance.
+	/// Awake is called before Start
 	/// </summary>
 	public void Awake()
 	{
+		messageEventTimer = gameObject.AddComponent<Timer>();
 
+		countMessageEventTimer = gameObject.AddComponent<Timer>();
 	}
 
 	/// <summary>
-	/// Starts this instance.
+	/// Use this for initialization
 	/// </summary>
 	public void Start()
 	{
-		MessageTimer = gameObject.AddComponent<Timer>();
-		MessageTimer.Duration = 1;
-		MessageTimer.Run();
+		messageEventTimer.Duration = 1;
+		messageEventTimer.Run();
+
+		countMessageEventTimer.Duration = 1;
+		countMessageEventTimer.Run();
 
 		EventManager.AddNoArgumentInvoker(this);
 		EventManager.AddIntArgumentInvoker(this);
 	}
 
 	/// <summary>
-	/// Updates this instance.
+	/// Update is called once per frame
 	/// </summary>
 	void Update()
 	{
-		if (MessageTimer.Finished)
+		// no argument event
+		if (messageEventTimer.Finished)
 		{
-			messageEvent.Invoke();
-			MessageTimer.Run();
+			InvokeNoArgumentEvent();
+			messageEventTimer.Run();
+		}
+
+		// no argument event
+		if (countMessageEventTimer.Finished)
+		{
+			InvokeOneArgumentEvent(count);
+			countMessageEventTimer.Run();
 		}
 	}
 
 	/// <summary>
-	/// Adds the no argument listener.
+	/// Adds the given listener to the no argument event
 	/// </summary>
-	/// <param name="listener">The listener.</param>
+	/// <param name="listener">listener</param>
 	public void AddNoArgumentListener(UnityAction listener)
-
 	{
-		messageEvent = new MessageEvent();
 		messageEvent.AddListener(listener);
 	}
 
 	/// <summary>
-	/// Adds the one argument listener.
+	/// Adds the given listener to the one argument event
 	/// </summary>
-	/// <param name="listener">The listener.</param>
+	/// <param name="listener">listener</param>
 	public void AddOneArgumentListener(UnityAction<int> listener)
 	{
 		countMessageEvent.AddListener(listener);
 	}
 
 	/// <summary>
-	/// Removes the no argument listener.
+	/// Removes the given listener to the no argument event
 	/// </summary>
-	/// <param name="listener">The listener.</param>
+	/// <param name="listener">listener</param>
 	public void RemoveNoArgumentListener(UnityAction listener)
 	{
 		messageEvent.RemoveListener(listener);
 	}
 
 	/// <summary>
-	/// Removes the one argument listener.
+	/// Removes the given listener to the one argument event
 	/// </summary>
-	/// <param name="listener">The listener.</param>
+	/// <param name="listener">listener</param>
 	public void RemoveOneArgumentListener(UnityAction<int> listener)
 	{
 		countMessageEvent.RemoveListener(listener);
 	}
 
 	/// <summary>
-	/// Invokes the no argument event.
+	/// Invokes the no argument event
+	///
+	/// NOTE: We need this public method for the autograder to work
 	/// </summary>
 	public void InvokeNoArgumentEvent()
 	{
@@ -93,12 +107,14 @@ public class Invoker : MonoBehaviour
 	}
 
 	/// <summary>
-	/// Invokes the one argument event.
+	/// Invokes the one argument event
+	///
+	/// NOTE: We need this public method for the autograder to work
 	/// </summary>
-	/// <param name="argument">The argument.</param>
+	/// <param name="argument">argument to use for the Invoke</param>
 	public void InvokeOneArgumentEvent(int argument)
 	{
-		listner.HandleCountMessageEvent(argument);
 		countMessageEvent.Invoke(argument);
+		count++;
 	}
 }
