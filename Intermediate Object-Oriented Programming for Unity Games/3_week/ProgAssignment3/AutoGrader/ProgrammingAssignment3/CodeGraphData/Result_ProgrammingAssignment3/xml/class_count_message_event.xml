@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_count_message_event" kind="class" prot="public">
+    <compoundname>CountMessageEvent</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UnityEvent&lt; int &gt;</basecompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="0">
+        <label>CountMessageEvent</label>
+        <link refid="class_count_message_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>UnityEvent&lt; int &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>CountMessageEvent</label>
+        <link refid="class_count_message_event"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>UnityEvent&lt; int &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/CountMessageEvent.cs" line="4" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/CountMessageEvent.cs" bodystart="3" bodyend="5"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

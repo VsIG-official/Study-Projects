@@ -2,8 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
   <compounddef id="_count_message_event_8cs" kind="file">
     <compoundname>CountMessageEvent.cs</compoundname>
-    <innerclass refid="class_programming_assignment3_1_1_count_message_event" prot="public">ProgrammingAssignment3::CountMessageEvent</innerclass>
-    <innernamespace refid="namespace_programming_assignment3">ProgrammingAssignment3</innernamespace>
+    <innerclass refid="class_count_message_event" prot="public">CountMessageEvent</innerclass>
     <innernamespace refid="namespace_unity_engine_1_1_events">UnityEngine::Events</innernamespace>
     <briefdescription>
     </briefdescription>
@@ -12,13 +11,10 @@
     <programlisting>
 <codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>UnityEngine.Events;</highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3" refid="namespace_programming_assignment3" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">ProgrammingAssignment3</highlight></codeline>
+<codeline lineno="3" refid="class_count_message_event" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_count_message_event" kindref="compound">CountMessageEvent</ref><sp/>:<sp/>UnityEvent&lt;int&gt;</highlight></codeline>
 <codeline lineno="4"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="5" refid="class_programming_assignment3_1_1_count_message_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_programming_assignment3_1_1_count_message_event" kindref="compound">CountMessageEvent</ref><sp/>:<sp/>UnityEvent&lt;int&gt;</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/CountMessageEvent.cs"/>
+    <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/CountMessageEvent.cs"/>
   </compounddef>
 </doxygen>

@@ -3,7 +3,7 @@ PROJECT_NAME = ProgrammingAssignment3_ProgrammingAssignment3
 PROJECT_NUMBER = 
 PROJECT_BRIEF = 
 PROJECT_LOGO = 
-OUTPUT_DIRECTORY = "D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/CodeGraphData/Result_ProgrammingAssignment3"
+OUTPUT_DIRECTORY = "D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/CodeGraphData/Result_ProgrammingAssignment3"
 CREATE_SUBDIRS = NO
 OUTPUT_LANGUAGE = English
 BRIEF_MEMBER_DESC = YES
@@ -83,8 +83,8 @@ WARN_IF_DOC_ERROR = YES
 WARN_NO_PARAMDOC = NO
 WARN_FORMAT = "$file:$line: $text"
 WARN_LOGFILE = 
-INPUT = "D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3" \
-     "D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Properties"
+INPUT = "D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3" \
+     "D:/ForStudy/Coursera/Courses/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/ProgrammingAssignment3/Properties"
 INPUT_ENCODING = UTF-8
 FILE_PATTERNS = *.c \
      *.cc \
@@ -292,10 +292,3 @@ INTERACTIVE_SVG = NO
 DOT_PATH = 
 DOTFILE_DIRS = 
 MSCFILE_DIRS = 
-DIAFILE_DIRS = 
-DOT_GRAPH_MAX_NODES = 50
-MAX_DOT_GRAPH_DEPTH = 0
-DOT_TRANSPARENT = NO
-DOT_MULTI_TARGETS = NO
-GENERATE_LEGEND = YES
-DOT_CLEANUP = YES

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_6b5aded91fd76f13db36b80f9f9b093d" kind="dir">
+    <compoundname>D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3</compoundname>
+    <innerdir refid="dir_5ea63427f0125f2e3d664e51ea678ed7">D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/"/>
+  </compounddef>
+</doxygen>

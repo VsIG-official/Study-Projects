@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_listener" kind="class" prot="public">
+    <compoundname>Listener</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_listener_1a0a779c556af47e56469a3ef49845e8ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Listener.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+<para>Starts this instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Listener.cs" line="11" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Listener.cs" bodystart="11" bodyend="16"/>
+        <references refid="class_listener_1aca6f678a640d25ff5199487a56c3e84e" compoundref="_listener_8cs" startline="30" endline="33">HandleCountMessageEvent</references>
+        <references refid="class_listener_1a78e3b3890c29c9ce0517658f4c289202" compoundref="_listener_8cs" startline="21" endline="24">HandleMessageEvent</references>
+      </memberdef>
+      <memberdef kind="function" id="class_listener_1a78e3b3890c29c9ce0517658f4c289202" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Listener.HandleMessageEvent</definition>
+        <argsstring>()</argsstring>
+        <name>HandleMessageEvent</name>
+        <briefdescription>
+<para>Handles the message event. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Listener.cs" line="21" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Listener.cs" bodystart="21" bodyend="24"/>
+        <referencedby refid="class_listener_1a0a779c556af47e56469a3ef49845e8ad" compoundref="_listener_8cs" startline="11" endline="16">Start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_listener_1aca6f678a640d25ff5199487a56c3e84e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Listener.HandleCountMessageEvent</definition>
+        <argsstring>(int number)</argsstring>
+        <name>HandleCountMessageEvent</name>
+        <param>
+          <type>int</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+<para>Handles the count message event. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Listener.cs" line="30" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Listener.cs" bodystart="30" bodyend="33"/>
+        <referencedby refid="class_listener_1a0a779c556af47e56469a3ef49845e8ad" compoundref="_listener_8cs" startline="11" endline="16">Start</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An event listener </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="23">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="22">
+        <label>Listener</label>
+        <link refid="class_listener"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="25">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="24">
+        <label>Listener</label>
+        <link refid="class_listener"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Listener.cs" line="7" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Listener.cs" bodystart="6" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_listener_1aca6f678a640d25ff5199487a56c3e84e" prot="public" virt="non-virtual"><scope>Listener</scope><name>HandleCountMessageEvent</name></member>
+      <member refid="class_listener_1a78e3b3890c29c9ce0517658f4c289202" prot="public" virt="non-virtual"><scope>Listener</scope><name>HandleMessageEvent</name></member>
+      <member refid="class_listener_1a0a779c556af47e56469a3ef49845e8ad" prot="public" virt="non-virtual"><scope>Listener</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -39,7 +39,7 @@ using System.Collections.Generic;
 				switch (testCaseNumber)
 				{
 					case 1:
-						// invoker added to event manager first for no argument event
+						// invoker added to event managers first for no argument event
 						InitializeTestCase(invoker, listener);
 						EventManager.NoArgumentInvoker.InvokeNoArgumentEvent();
 						if (logMessages[0] == "MessageEvent" &&

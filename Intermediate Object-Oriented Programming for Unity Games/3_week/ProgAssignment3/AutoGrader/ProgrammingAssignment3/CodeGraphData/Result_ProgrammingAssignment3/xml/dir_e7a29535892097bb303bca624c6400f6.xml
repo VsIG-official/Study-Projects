@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
-  <compounddef id="dir_91694b49233c1a7e9cc7c08912fdd139" kind="dir">
-    <compoundname>D:/ForStudy</compoundname>
-    <innerdir refid="dir_e7a29535892097bb303bca624c6400f6">D:/ForStudy/Courses</innerdir>
+  <compounddef id="dir_e7a29535892097bb303bca624c6400f6" kind="dir">
+    <compoundname>D:/ForStudy/Courses</compoundname>
+    <innerdir refid="dir_bba4e378914c58a6501f3aef868a4386">D:/ForStudy/Courses/Coursera</innerdir>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/ForStudy/"/>
+    <location file="D:/ForStudy/Courses/"/>
   </compounddef>
 </doxygen>

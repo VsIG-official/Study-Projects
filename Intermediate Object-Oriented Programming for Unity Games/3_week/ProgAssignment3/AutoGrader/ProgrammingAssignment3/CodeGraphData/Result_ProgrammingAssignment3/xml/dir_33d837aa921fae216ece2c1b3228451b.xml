@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_33d837aa921fae216ece2c1b3228451b" kind="dir">
+    <compoundname>D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3</compoundname>
+    <innerdir refid="dir_44aa446c94fd6e1428313206561ee5b1">D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Properties</innerdir>
+    <innerfile refid="_count_message_event_8cs">CountMessageEvent.cs</innerfile>
+    <innerfile refid="_event_manager_8cs">EventManager.cs</innerfile>
+    <innerfile refid="_invoker_8cs">Invoker.cs</innerfile>
+    <innerfile refid="_listener_8cs">Listener.cs</innerfile>
+    <innerfile refid="_message_event_8cs">MessageEvent.cs</innerfile>
+    <innerfile refid="_program_8cs">Program.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/"/>
+  </compounddef>
+</doxygen>

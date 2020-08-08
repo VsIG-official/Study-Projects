@@ -1,0 +1,363 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_invoker" kind="class" prot="public">
+    <compoundname>Invoker</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_invoker_1a17bbe284cf38498ed48208cc1046823c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_listener" kindref="compound">Listener</ref></type>
+        <definition>Listener Invoker.listner</definition>
+        <argsstring></argsstring>
+        <name>listner</name>
+        <initializer>= new <ref refid="class_listener" kindref="compound">Listener</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" line="9" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_invoker_1afc5a857866da3305cab75f1bf5365ac8" prot="private" static="no" mutable="no">
+        <type>Timer</type>
+        <definition>Timer Invoker.MessageTimer</definition>
+        <argsstring></argsstring>
+        <name>MessageTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" line="10" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_invoker_1ae598c77a6ae6ba1cc297b1f1e1cb948a" compoundref="_invoker_8cs" startline="27" endline="34">Start</referencedby>
+        <referencedby refid="class_invoker_1abb30350e3c95c2ff8a0dd7ea83f606e1" compoundref="_invoker_8cs" startline="39" endline="63">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_invoker_1afa0de9d0372b4a3b67dee1072c5571aa" prot="private" static="no" mutable="no">
+        <type><ref refid="class_message_event" kindref="compound">MessageEvent</ref></type>
+        <definition>MessageEvent Invoker.messageEvent</definition>
+        <argsstring></argsstring>
+        <name>messageEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" line="11" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" bodystart="11" bodyend="-1"/>
+        <referencedby refid="class_invoker_1ab71c0f0f8ed88ae39436b9e7578d5027" compoundref="_invoker_8cs" startline="69" endline="73">AddNoArgumentListener</referencedby>
+        <referencedby refid="class_invoker_1ab316bef384637c53ff16626e5edc0fb2" compoundref="_invoker_8cs" startline="19" endline="22">Awake</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_invoker_1a020cb333113d10e56660540da3cb5aee" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Invoker.count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" line="12" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_invoker_1abb30350e3c95c2ff8a0dd7ea83f606e1" compoundref="_invoker_8cs" startline="39" endline="63">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_invoker_1a8f2ccee8d472f61ccb62709209eaa0cd" prot="private" static="no" mutable="no">
+        <type>Timer</type>
+        <definition>Timer Invoker.CountMessageTimer</definition>
+        <argsstring></argsstring>
+        <name>CountMessageTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" line="13" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_invoker_1abb30350e3c95c2ff8a0dd7ea83f606e1" compoundref="_invoker_8cs" startline="39" endline="63">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_invoker_1afb0e06b858ab7c4fb309a3b7b5426b83" prot="private" static="no" mutable="no">
+        <type><ref refid="class_count_message_event" kindref="compound">CountMessageEvent</ref></type>
+        <definition>CountMessageEvent Invoker.countMessageEvent</definition>
+        <argsstring></argsstring>
+        <name>countMessageEvent</name>
+        <initializer>= new <ref refid="class_count_message_event" kindref="compound">CountMessageEvent</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" line="14" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_invoker_1ab316bef384637c53ff16626e5edc0fb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Invoker.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <briefdescription>
+<para>Awakes this instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" line="19" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" bodystart="19" bodyend="22"/>
+        <references refid="class_invoker_1afa0de9d0372b4a3b67dee1072c5571aa" compoundref="_invoker_8cs" startline="11">messageEvent</references>
+      </memberdef>
+      <memberdef kind="function" id="class_invoker_1ae598c77a6ae6ba1cc297b1f1e1cb948a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Invoker.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+<para>Starts this instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" line="27" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" bodystart="27" bodyend="34"/>
+        <references refid="class_invoker_1afc5a857866da3305cab75f1bf5365ac8" compoundref="_invoker_8cs" startline="10">MessageTimer</references>
+      </memberdef>
+      <memberdef kind="function" id="class_invoker_1ab71c0f0f8ed88ae39436b9e7578d5027" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Invoker.AddNoArgumentListener</definition>
+        <argsstring>(UnityAction listener)</argsstring>
+        <name>AddNoArgumentListener</name>
+        <param>
+          <type>UnityAction</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+<para>Adds the no argument listener. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listener</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The listener.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" line="69" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" bodystart="69" bodyend="73"/>
+        <references refid="class_invoker_1afa0de9d0372b4a3b67dee1072c5571aa" compoundref="_invoker_8cs" startline="11">messageEvent</references>
+      </memberdef>
+      <memberdef kind="function" id="class_invoker_1a303cdcc32d3e2d78caca4a79b0c6312e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Invoker.AddOneArgumentListener</definition>
+        <argsstring>(UnityAction&lt; int &gt; listener)</argsstring>
+        <name>AddOneArgumentListener</name>
+        <param>
+          <type>UnityAction&lt; int &gt;</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+<para>Adds the one argument listener. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listener</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The listener.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" line="79" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_invoker_1a6b3de0e0257575ede19983e590cf6a16" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Invoker.RemoveNoArgumentListener</definition>
+        <argsstring>(UnityAction listener)</argsstring>
+        <name>RemoveNoArgumentListener</name>
+        <param>
+          <type>UnityAction</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+<para>Removes the no argument listener. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listener</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The listener.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" line="88" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_invoker_1a1c4e3c8e6974edd397e6fc949cb467b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Invoker.RemoveOneArgumentListener</definition>
+        <argsstring>(UnityAction&lt; int &gt; listener)</argsstring>
+        <name>RemoveOneArgumentListener</name>
+        <param>
+          <type>UnityAction&lt; int &gt;</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+<para>Removes the one argument listener. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listener</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The listener.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" line="97" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_invoker_1ab0dc1c9fb2903ee3c8b5b76042ee5bf0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Invoker.InvokeNoArgumentEvent</definition>
+        <argsstring>()</argsstring>
+        <name>InvokeNoArgumentEvent</name>
+        <briefdescription>
+<para>Invokes the no argument event. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" line="105" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" bodystart="105" bodyend="108"/>
+        <referencedby refid="class_invoker_1abb30350e3c95c2ff8a0dd7ea83f606e1" compoundref="_invoker_8cs" startline="39" endline="63">Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_invoker_1a65b30876c6d44c014c35e01076c56871" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Invoker.InvokeOneArgumentEvent</definition>
+        <argsstring>(int argument)</argsstring>
+        <name>InvokeOneArgumentEvent</name>
+        <param>
+          <type>int</type>
+          <declname>argument</declname>
+        </param>
+        <briefdescription>
+<para>Invokes the one argument event. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The argument.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" line="114" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" bodystart="114" bodyend="118"/>
+        <referencedby refid="class_invoker_1abb30350e3c95c2ff8a0dd7ea83f606e1" compoundref="_invoker_8cs" startline="39" endline="63">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_invoker_1abb30350e3c95c2ff8a0dd7ea83f606e1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Invoker.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+<para>Updates this instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" line="39" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" bodystart="39" bodyend="63"/>
+        <references refid="class_invoker_1a020cb333113d10e56660540da3cb5aee" compoundref="_invoker_8cs" startline="12">count</references>
+        <references refid="class_invoker_1a8f2ccee8d472f61ccb62709209eaa0cd" compoundref="_invoker_8cs" startline="13">CountMessageTimer</references>
+        <references refid="class_invoker_1ab0dc1c9fb2903ee3c8b5b76042ee5bf0" compoundref="_invoker_8cs" startline="105" endline="108">InvokeNoArgumentEvent</references>
+        <references refid="class_invoker_1a65b30876c6d44c014c35e01076c56871" compoundref="_invoker_8cs" startline="114" endline="118">InvokeOneArgumentEvent</references>
+        <references refid="class_invoker_1afc5a857866da3305cab75f1bf5365ac8" compoundref="_invoker_8cs" startline="10">MessageTimer</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An event invoker </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="13">
+        <label>Invoker</label>
+        <link refid="class_invoker"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15">
+        <label>Invoker</label>
+        <link refid="class_invoker"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>listner</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>countMessageEvent</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>messageEvent</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>UnityEvent</label>
+      </node>
+      <node id="16">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="18">
+        <label>CountMessageEvent</label>
+        <link refid="class_count_message_event"/>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>UnityEvent&lt; int &gt;</label>
+      </node>
+      <node id="20">
+        <label>MessageEvent</label>
+        <link refid="class_message_event"/>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Listener</label>
+        <link refid="class_listener"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" line="8" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Invoker.cs" bodystart="7" bodyend="119"/>
+    <listofallmembers>
+      <member refid="class_invoker_1ab71c0f0f8ed88ae39436b9e7578d5027" prot="public" virt="non-virtual"><scope>Invoker</scope><name>AddNoArgumentListener</name></member>
+      <member refid="class_invoker_1a303cdcc32d3e2d78caca4a79b0c6312e" prot="public" virt="non-virtual"><scope>Invoker</scope><name>AddOneArgumentListener</name></member>
+      <member refid="class_invoker_1ab316bef384637c53ff16626e5edc0fb2" prot="public" virt="non-virtual"><scope>Invoker</scope><name>Awake</name></member>
+      <member refid="class_invoker_1a020cb333113d10e56660540da3cb5aee" prot="private" virt="non-virtual"><scope>Invoker</scope><name>count</name></member>
+      <member refid="class_invoker_1afb0e06b858ab7c4fb309a3b7b5426b83" prot="private" virt="non-virtual"><scope>Invoker</scope><name>countMessageEvent</name></member>
+      <member refid="class_invoker_1a8f2ccee8d472f61ccb62709209eaa0cd" prot="private" virt="non-virtual"><scope>Invoker</scope><name>CountMessageTimer</name></member>
+      <member refid="class_invoker_1ab0dc1c9fb2903ee3c8b5b76042ee5bf0" prot="public" virt="non-virtual"><scope>Invoker</scope><name>InvokeNoArgumentEvent</name></member>
+      <member refid="class_invoker_1a65b30876c6d44c014c35e01076c56871" prot="public" virt="non-virtual"><scope>Invoker</scope><name>InvokeOneArgumentEvent</name></member>
+      <member refid="class_invoker_1a17bbe284cf38498ed48208cc1046823c" prot="private" virt="non-virtual"><scope>Invoker</scope><name>listner</name></member>
+      <member refid="class_invoker_1afa0de9d0372b4a3b67dee1072c5571aa" prot="private" virt="non-virtual"><scope>Invoker</scope><name>messageEvent</name></member>
+      <member refid="class_invoker_1afc5a857866da3305cab75f1bf5365ac8" prot="private" virt="non-virtual"><scope>Invoker</scope><name>MessageTimer</name></member>
+      <member refid="class_invoker_1a6b3de0e0257575ede19983e590cf6a16" prot="public" virt="non-virtual"><scope>Invoker</scope><name>RemoveNoArgumentListener</name></member>
+      <member refid="class_invoker_1a1c4e3c8e6974edd397e6fc949cb467b2" prot="public" virt="non-virtual"><scope>Invoker</scope><name>RemoveOneArgumentListener</name></member>
+      <member refid="class_invoker_1ae598c77a6ae6ba1cc297b1f1e1cb948a" prot="public" virt="non-virtual"><scope>Invoker</scope><name>Start</name></member>
+      <member refid="class_invoker_1abb30350e3c95c2ff8a0dd7ea83f606e1" prot="private" virt="non-virtual"><scope>Invoker</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

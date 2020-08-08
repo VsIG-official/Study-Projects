@@ -8,14 +8,11 @@ public static class EventManager
 	// DON'T change the fields, properties, or ClearInvokersAndListeners
 	// method; if you do, you'll break the autograder!
 	// All your work in this class is in the last 4 methods
-
 	#region Fields
 
-	// no argument event support
 	static Invoker noArgumentInvoker;
 	static UnityAction noArgumentListener;
 
-	// int argument event support
 	static Invoker intArgumentInvoker;
 	static UnityAction<int> intArgumentListener;
 
@@ -27,6 +24,7 @@ public static class EventManager
 	/// Gets the no argument invoker
 	/// </summary>
 	public static Invoker NoArgumentInvoker
+
 	{
 		get { return noArgumentInvoker; }
 	}
@@ -67,7 +65,6 @@ public static class EventManager
 	/// </summary>
 	public static void ClearInvokersAndListeners()
 	{
-		// no argument invoker and listener
 		if (noArgumentInvoker != null)
 		{
 			if (noArgumentListener != null)
@@ -78,7 +75,6 @@ public static class EventManager
 			noArgumentInvoker = null;
 		}
 
-		// int argument invoker and listener
 		if (intArgumentInvoker != null)
 		{
 			if (intArgumentListener != null)
@@ -97,10 +93,6 @@ public static class EventManager
 	public static void AddNoArgumentInvoker(Invoker invoker)
 	{
 		noArgumentInvoker = invoker;
-		if (noArgumentListener != null)
-		{
-			noArgumentInvoker.AddNoArgumentListener(noArgumentListener);
-		}
 	}
 
 	/// <summary>
@@ -109,11 +101,7 @@ public static class EventManager
 	/// <param name="listener">listener</param>
 	public static void AddNoArgumentListener(UnityAction listener)
 	{
-		noArgumentListener = listener;
-		if (noArgumentInvoker != null)
-		{
-			noArgumentInvoker.AddNoArgumentListener(listener);
-		}
+		listener = noArgumentListener;
 	}
 
 	/// <summary>
@@ -123,10 +111,6 @@ public static class EventManager
 	public static void AddIntArgumentInvoker(Invoker invoker)
 	{
 		intArgumentInvoker = invoker;
-		if (intArgumentListener != null)
-		{
-			intArgumentInvoker.AddOneArgumentListener(intArgumentListener);
-		}
 	}
 
 	/// <summary>
@@ -136,11 +120,6 @@ public static class EventManager
 	public static void AddIntArgumentListener(UnityAction<int> listener)
 	{
 		intArgumentListener = listener;
-		if (intArgumentInvoker != null)
-		{
-			intArgumentInvoker.AddOneArgumentListener(listener);
-		}
 	}
-
 	#endregion
 }

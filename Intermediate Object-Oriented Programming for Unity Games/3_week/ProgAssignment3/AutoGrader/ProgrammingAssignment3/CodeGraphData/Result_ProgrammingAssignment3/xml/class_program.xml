@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_program" kind="class" prot="public">
+    <compoundname>Program</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_program_1af5fe0f8ab6f995ca81fa493ce8f81a05" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Program.testCaseNumber</definition>
+        <argsstring></argsstring>
+        <name>testCaseNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Program.cs" line="10" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Program.cs" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_program_1a7ea3c004d94f9cd0c32cf6d2b5580bcf" compoundref="_program_8cs" startline="222" endline="225">GetInputValueFromString</referencedby>
+        <referencedby refid="class_program_1ada72f8d1518f89bc2e6ad807d5059564" compoundref="_program_8cs" startline="19" endline="216">Main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_program_1a771b764a8676bdbb3e125bcf92cca0c0" prot="private" static="yes" mutable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; Program.logMessages</definition>
+        <argsstring></argsstring>
+        <name>logMessages</name>
+        <initializer>= new List&lt;string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Program.cs" line="13" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Program.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_program_1ada72f8d1518f89bc2e6ad807d5059564" compoundref="_program_8cs" startline="19" endline="216">Main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_program_1ada72f8d1518f89bc2e6ad807d5059564" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Program.Main</definition>
+        <argsstring>(string[] args)</argsstring>
+        <name>Main</name>
+        <param>
+          <type>string[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Tests the Programming Assignment 3 classes </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>command-line args</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Program.cs" line="19" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Program.cs" bodystart="19" bodyend="216"/>
+        <references refid="class_program_1a7ea3c004d94f9cd0c32cf6d2b5580bcf" compoundref="_program_8cs" startline="222" endline="225">GetInputValueFromString</references>
+        <references refid="class_program_1a2782adc20595bf9ea2eac9166f74ec27" compoundref="_program_8cs" startline="231" endline="234">HandleLogEvent</references>
+        <references refid="class_program_1aa3a3594979017440e4c81559a02fb9f1" compoundref="_program_8cs" startline="239" endline="245">InitializeTestCase</references>
+        <references refid="class_program_1a771b764a8676bdbb3e125bcf92cca0c0" compoundref="_program_8cs" startline="13">logMessages</references>
+        <references refid="class_program_1af5fe0f8ab6f995ca81fa493ce8f81a05" compoundref="_program_8cs" startline="10">testCaseNumber</references>
+      </memberdef>
+      <memberdef kind="function" id="class_program_1a7ea3c004d94f9cd0c32cf6d2b5580bcf" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Program.GetInputValueFromString</definition>
+        <argsstring>(string input)</argsstring>
+        <name>GetInputValueFromString</name>
+        <param>
+          <type>string</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Extracts the test case number from the given input string </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input string</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Program.cs" line="222" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Program.cs" bodystart="222" bodyend="225"/>
+        <references refid="class_program_1af5fe0f8ab6f995ca81fa493ce8f81a05" compoundref="_program_8cs" startline="10">testCaseNumber</references>
+        <referencedby refid="class_program_1ada72f8d1518f89bc2e6ad807d5059564" compoundref="_program_8cs" startline="19" endline="216">Main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_program_1a2782adc20595bf9ea2eac9166f74ec27" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Program.HandleLogEvent</definition>
+        <argsstring>(string message)</argsstring>
+        <name>HandleLogEvent</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Handles the log event from the Debug mock </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>message to log</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Program.cs" line="231" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Program.cs" bodystart="231" bodyend="234"/>
+        <referencedby refid="class_program_1ada72f8d1518f89bc2e6ad807d5059564" compoundref="_program_8cs" startline="19" endline="216">Main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_program_1aa3a3594979017440e4c81559a02fb9f1" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Program.InitializeTestCase</definition>
+        <argsstring>(Invoker invoker, Listener listener)</argsstring>
+        <name>InitializeTestCase</name>
+        <param>
+          <type><ref refid="class_invoker" kindref="compound">Invoker</ref></type>
+          <declname>invoker</declname>
+        </param>
+        <param>
+          <type><ref refid="class_listener" kindref="compound">Listener</ref></type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+<para>Initializes test case </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Program.cs" line="239" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Program.cs" bodystart="239" bodyend="245"/>
+        <referencedby refid="class_program_1ada72f8d1518f89bc2e6ad807d5059564" compoundref="_program_8cs" startline="19" endline="216">Main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Programming Assignment 3 </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Program.cs" line="8" column="1" bodyfile="D:/ForStudy/Courses/Coursera/Intermediate Object-Oriented Programming for Unity Games/3_week/ProgAssignment3/AutoGrader/ProgrammingAssignment3/ProgrammingAssignment3/Program.cs" bodystart="7" bodyend="246"/>
+    <listofallmembers>
+      <member refid="class_program_1a7ea3c004d94f9cd0c32cf6d2b5580bcf" prot="private" virt="non-virtual"><scope>Program</scope><name>GetInputValueFromString</name></member>
+      <member refid="class_program_1a2782adc20595bf9ea2eac9166f74ec27" prot="private" virt="non-virtual"><scope>Program</scope><name>HandleLogEvent</name></member>
+      <member refid="class_program_1aa3a3594979017440e4c81559a02fb9f1" prot="private" virt="non-virtual"><scope>Program</scope><name>InitializeTestCase</name></member>
+      <member refid="class_program_1a771b764a8676bdbb3e125bcf92cca0c0" prot="private" virt="non-virtual"><scope>Program</scope><name>logMessages</name></member>
+      <member refid="class_program_1ada72f8d1518f89bc2e6ad807d5059564" prot="private" virt="non-virtual"><scope>Program</scope><name>Main</name></member>
+      <member refid="class_program_1af5fe0f8ab6f995ca81fa493ce8f81a05" prot="private" virt="non-virtual"><scope>Program</scope><name>testCaseNumber</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
