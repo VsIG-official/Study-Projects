@@ -9,11 +9,19 @@ public class Invoker : MonoBehaviour
 	public int count;
 	// add your fields for your message event support here
 	Timer messageEventTimer;
+<<<<<<< HEAD
 	private MessageEvent messageEvent = new MessageEvent();
 
 	// add your fields for your count message event support here
 	Timer countMessageEventTimer;
 	private CountMessageEvent countMessageEvent = new CountMessageEvent();
+=======
+	private MessageEvent messageEvent;
+
+	// add your fields for your count message event support here
+	Timer countMessageEventTimer;
+	private CountMessageEvent countMessageEvent;
+>>>>>>> parent of 9e8e406... feat: some update
 
 	/// <summary>
 	/// Awake is called before Start
@@ -21,8 +29,15 @@ public class Invoker : MonoBehaviour
 	public void Awake()
 	{
 		messageEventTimer = gameObject.AddComponent<Timer>();
+<<<<<<< HEAD
 
 		countMessageEventTimer = gameObject.AddComponent<Timer>();
+=======
+		messageEvent = new MessageEvent();
+
+		countMessageEventTimer = gameObject.AddComponent<Timer>();
+		countMessageEvent = new CountMessageEvent();
+>>>>>>> parent of 9e8e406... feat: some update
 	}
 
 	/// <summary>
@@ -32,12 +47,15 @@ public class Invoker : MonoBehaviour
 	{
 		messageEventTimer.Duration = 1;
 		messageEventTimer.Run();
+<<<<<<< HEAD
 
 		countMessageEventTimer.Duration = 1;
 		countMessageEventTimer.Run();
+=======
+>>>>>>> parent of 9e8e406... feat: some update
 
-		EventManager.AddNoArgumentInvoker(this);
-		EventManager.AddIntArgumentInvoker(this);
+		countMessageEventTimer.Duration = 1;
+		countMessageEventTimer.Run();
 	}
 
 	/// <summary>
@@ -47,6 +65,7 @@ public class Invoker : MonoBehaviour
 	{
 		// no argument event
 		if (messageEventTimer.Finished)
+<<<<<<< HEAD
 		{
 			InvokeNoArgumentEvent();
 			messageEventTimer.Run();
@@ -55,6 +74,16 @@ public class Invoker : MonoBehaviour
 		// no argument event
 		if (countMessageEventTimer.Finished)
 		{
+=======
+		{
+			InvokeNoArgumentEvent();
+			messageEventTimer.Run();
+		}
+
+		// no argument event
+		if (countMessageEventTimer.Finished)
+		{
+>>>>>>> parent of 9e8e406... feat: some update
 			InvokeOneArgumentEvent(count);
 			countMessageEventTimer.Run();
 		}

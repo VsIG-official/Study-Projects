@@ -6,16 +6,28 @@ using UnityEngine.Events;
 /// </summary>
 public class Listener : MonoBehaviour
 {
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 9e8e406... feat: some update
 	/// <summary>
 	/// Use this for initialization
 	/// </summary>
 	public void Start()
 	{
+<<<<<<< HEAD
 		Invoker invoker = new Invoker();
 
 		invoker.AddNoArgumentListener(HandleMessageEvent);
 
 		invoker.AddOneArgumentListener(HandleCountMessageEvent);
+=======
+		Invoker invokerMessageEvent = new Invoker();
+		invokerMessageEvent.AddNoArgumentListener(HandleMessageEvent);
+
+		Invoker invokerCountMessageEvent = new Invoker();
+		invokerCountMessageEvent.AddOneArgumentListener(HandleCountMessageEvent);
+>>>>>>> parent of 9e8e406... feat: some update
 	}
 
 	/// <summary>
