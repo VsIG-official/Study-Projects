@@ -1,98 +1,103 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercise2
 {
-    /// <remarks>
-    /// Provides a dynamically-sized array of a data type
-    /// </remarks>
-    abstract class DynamicArray<T>
-    {
-        const int ExpandMultiplyFactor = 2;
-        protected T[] items;
-        protected int count;
+	/// <remarks>
+	/// Provides a dynamically-sized array of a data type
+	/// </remarks>
+	abstract class DynamicArray<T>
+	{
+		const int ExpandMultiplyFactor = 2;
+		protected T[] items;
+		protected int count;
 
-        #region Constructor
+		#region Constructor
 
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        protected DynamicArray()
-        {
-            items = new T[4];
-            count = 0;
-        }
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		protected DynamicArray()
+		{
+			items = new T[4];
+			count = 0;
+		}
 
-        #endregion
+		#endregion
 
-        #region Properties
+		#region Properties
 
-        /// <summary>
-        /// Gets the number of elements
-        /// </summary>
-        public int Count
-        {
-            get { return count; }
-        }
+		/// <summary>
+		/// Gets the number of elements
+		/// </summary>
+		public int Count
+		{
+			get { return count; }
+		}
 
-        #endregion
+		#endregion
 
-        #region Public methods
+		#region Public methods
 
-        public abstract void Add(T item);
-        public abstract bool Remove(T item);
-        public abstract int IndexOf(T item);
+		public abstract void Add(T item);
+		public abstract bool Remove(T item);
+		public abstract int IndexOf(T item);
 
-        /// <summary>
-        /// Removes all the items from the DynamicArray
-        /// </summary>
-        public void Clear()
-        {
-            count = 0;
-        }
+		/// <summary>
+		/// Removes all the items from the DynamicArray
+		/// </summary>
+		public void Clear()
+		{
+			count = 0;
+		}
 
-        /// <summary>
-        /// Converts the DynamicArray to a comma-separated string of values
-        /// </summary>
-        /// <returns>the comma-separated string of values</returns>
-        public override String ToString()
-        {
-            StringBuilder builder = new StringBuilder();
-            for (int i = 0; i < count; i++)
-            {
-                builder.Append(items[i]);
-                if (i < count - 1)
-                {
-                    builder.Append(",");
-                }
-            }
-            return builder.ToString();
-        }
+		/// <summary>
+		/// Converts the DynamicArray to a comma-separated string of values
+		/// </summary>
+		/// <returns>the comma-separated string of values</returns>
+		public override String ToString()
+		{
+			StringBuilder builder = new StringBuilder();
+			for (int i = 0; i < count; i++)
+			{
+				builder.Append(items[i]);
+				if (i < count - 1)
+				{
+					builder.Append(",");
+				}
+			}
+			return builder.ToString();
+		}
 
-        #endregion
+		public void Print()
+		{
+			for (int i = 0; i <= items.Length; i++)
+			{
+				Console.WriteLine(items[i]);
+			}
+		}
 
-        #region Protected methods
+		#endregion
 
-        /// <summary>
-        /// Expands the array
-        /// </summary>
-        protected void Expand()
-        {
-            T[] newItems = new T[items.Length * ExpandMultiplyFactor];
+		#region Protected methods
 
-            // copy elements from old array into new array
-            for (int i = 0; i < items.Length; i++)
-            {
-                newItems[i] = items[i];
-            }
+		/// <summary>
+		/// Expands the array
+		/// </summary>
+		protected void Expand()
+		{
+			T[] newItems = new T[items.Length * ExpandMultiplyFactor];
 
-            // change to use new array
-            items = newItems;
-        }
+			// copy elements from old array into new array
+			for (int i = 0; i < items.Length; i++)
+			{
+				newItems[i] = items[i];
+			}
 
-        #endregion
-    }
+			// change to use new array
+			items = newItems;
+		}
+
+		#endregion
+	}
 }
