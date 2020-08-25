@@ -53,6 +53,8 @@ public class Target : IComparable
 
 	#region Public methods
 
+
+
 	/// <summary>
 	/// Updates the distance from the target game object to
 	/// the given position
@@ -74,8 +76,37 @@ public class Target : IComparable
 	/// <param name="obj">object to compare to</param>
 	public int CompareTo(object obj)
 	{
-		// replace the code below with your implementation
-		return 0;
+		// this instance is greater than a null object
+		if (obj == null)
+		{
+			return 1;
+		}
+
+		// check for same object type
+		Target otherTarget = obj as Target;
+		if (otherTarget != null)
+		{
+			// return relative order
+			float thisDistance = distance;
+			float otherDistance = otherTarget.distance;
+			if (thisDistance < otherDistance)
+			{
+				return -1;
+			}
+			else if (thisDistance == otherDistance)
+			{
+				return 0;
+			}
+			else
+			{
+				return 1;
+			}
+		}
+		else
+		{
+			// comparing to wrong object type
+			throw new ArgumentException("Object is not a Target");
+		}
 	}
 
 	/// <summary>
