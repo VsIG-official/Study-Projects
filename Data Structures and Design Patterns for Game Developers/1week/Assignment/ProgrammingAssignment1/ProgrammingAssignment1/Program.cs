@@ -350,7 +350,7 @@ namespace ProgrammingAssignment1
 					// make sure correct list isn't exhausted
 					if (commaIndex != -1)
 					{
-						correctValue = float.Parse(correctList.Substring(0, commaIndex));
+						correctValue = float.Parse(correctList.Substring(0, commaIndex), System.Globalization.CultureInfo.InvariantCulture);
 						correctList = correctList.Substring(commaIndex + 1);
 					}
 					else
@@ -380,7 +380,7 @@ namespace ProgrammingAssignment1
 						}
 						else
 						{
-							correctValue = float.Parse(correctList);
+							correctValue = float.Parse(correctList, System.Globalization.CultureInfo.InvariantCulture);
 						}
 					}
 				}
