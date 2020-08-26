@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// A collecting game object
@@ -38,6 +39,7 @@ public class Collector : MonoBehaviour
 		rb2d = GetComponent<Rigidbody2D>();
 
 		// add as listener for pickup spawned event
+		EventManager.AddListener();
 	}
 
 	/// <summary>

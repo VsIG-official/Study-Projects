@@ -53,8 +53,6 @@ public class Target : IComparable
 
 	#region Public methods
 
-
-
 	/// <summary>
 	/// Updates the distance from the target game object to
 	/// the given position
