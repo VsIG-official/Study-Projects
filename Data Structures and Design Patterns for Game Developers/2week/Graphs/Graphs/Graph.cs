@@ -105,8 +105,7 @@ namespace Graphs
         {
             GraphNode<T> node1 = Find(value1);
             GraphNode<T> node2 = Find(value2);
-            if (node1 == null ||
-                node2 == null)
+            if (node1 == null || node2 == null)
             {
                 return false;
             }
