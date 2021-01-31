@@ -13,6 +13,7 @@ namespace GraphSearching
 
 		T value;
 		List<GraphNode<T>> neighbors;
+		List<int> weights;
 
 		#endregion
 
@@ -26,6 +27,7 @@ namespace GraphSearching
 		{
 			this.value = value;
 			neighbors = new List<GraphNode<T>>();
+			weights = new List<int>();
 		}
 
 		#endregion
@@ -57,7 +59,7 @@ namespace GraphSearching
 		/// </summary>
 		/// <param name="neighbor">neighbor to add</param>
 		/// <returns>true if the neighbor was added, false otherwise</returns>
-		public bool AddNeighbor(GraphNode<T> neighbor)
+		public bool AddNeighbor(GraphNode<T> neighbor, int weight)
 		{
 			// don't add duplicate nodes
 			if (neighbors.Contains(neighbor))
@@ -67,6 +69,7 @@ namespace GraphSearching
 			else
 			{
 				neighbors.Add(neighbor);
+				weights.Add(weight);
 				return true;
 			}
 		}
