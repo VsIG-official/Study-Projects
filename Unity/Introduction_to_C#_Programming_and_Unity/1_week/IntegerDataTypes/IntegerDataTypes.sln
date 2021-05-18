@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegerDataTypes", "IntegerDataTypes.csproj", "{27145471-0EE4-4812-AD6E-3C19D94E5CF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise3", "..\Exercise3\Exercise3.csproj", "{224FCD85-41D4-47FB-B558-C1B2F7647050}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27145471-0EE4-4812-AD6E-3C19D94E5CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27145471-0EE4-4812-AD6E-3C19D94E5CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27145471-0EE4-4812-AD6E-3C19D94E5CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27145471-0EE4-4812-AD6E-3C19D94E5CF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{224FCD85-41D4-47FB-B558-C1B2F7647050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{224FCD85-41D4-47FB-B558-C1B2F7647050}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{224FCD85-41D4-47FB-B558-C1B2F7647050}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{224FCD85-41D4-47FB-B558-C1B2F7647050}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4AB3B70-0B62-483E-AB9B-F7C9CF4A0B07}
+	EndGlobalSection
+EndGlobal
