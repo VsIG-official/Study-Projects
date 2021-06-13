@@ -84,3 +84,9 @@ Microsoft and others provide disassembler tools that can open an assembly and re
 
 ### Comparing .NET technologies
 
+| Technology    | Description   | Host OSes |
+|:-------------:|:-------------:|:-:|
+| .NET 5        | Modern feature set, full C# 9 support, port existing and create new Windows and Web apps and services | Windows, macOS, Linux |
+| .NET Framework| Legacy feature set, limited C# 8 support, no C# 9 support, maintain existing applications | Windows only |
+| Xamarin       | Mobile and desktop apps only | Android, iOS, macOS |
+
