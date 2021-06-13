@@ -56,3 +56,12 @@ Microsoft's primary goal is not to make .NET smaller than .NET Framework. The go
 | .NET Core     | For cross-platform and new apps |
 | .NET Framework| For legacy apps |
 | Xamarin       | For mobile apps |
+
+Each had strengths and weaknesses because they were all designed for different scenarios. This led to the problem that a developer had to learn three platforms, each with annoying quirks and limitations.
+Because of that, Microsoft defined .NET Standard: a specification for a set of APIs that all .NET platforms could implement to indicate what level of compatibility they have. 
+For example, basic support is indicated by a platform being compliant with .NET Standard 1.4
+
+To use .NET Standard, you must install a .NET platform that implements the .NET Standard specification. .NET Standard 2.0 is implemented by the latest versions of .NET Framework, .NET Core, and Xamarin
+
+Once .NET 6 is released in November 2021, the need for .NET Standard will significantly reduce, because there will be a single .NET for all platforms, including mobile. Even then, apps and websites created for .NET Framework will need to be supported so understanding that you can create .NET Standard 2.0 class libraries that are backward compatible with legacy .NET platforms is important to know
+
