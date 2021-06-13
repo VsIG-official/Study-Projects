@@ -6,7 +6,7 @@ Microsoft originally designed .NET Framework to have the possibility of being cr
 
 All of the apps on a computer written for .NET Framework share the same version of the CLR and libraries stored in the `Global Assembly Cache (GAC)`, which can lead to issues if some of them need a specific version for compatibility
 
-`Good Practice`: Practically speaking, .NET Framework is Windows-only and a legacy platform. Do not create new apps using it
+- `Good Practice`: Practically speaking, .NET Framework is Windows-only and a legacy platform. Do not create new apps using it
 
 ### Understanding the Mono and Xamarin projects
 
@@ -49,3 +49,10 @@ In addition to removing large pieces from .NET Framework in order to make .NET C
 
 Microsoft's primary goal is not to make .NET smaller than .NET Framework. The goal is to `componentize .NET to support modern technologies and to have fewer dependencies`, so that `deployment requires only those packages that your application needs`.
 
+### Understanding .NET Standard
+
+| Version       | Usage         |
+|:-------------:|:-------------:|
+| .NET Core     | For cross-platform and new apps |
+| .NET Framework| For legacy apps |
+| Xamarin       | For mobile apps |
