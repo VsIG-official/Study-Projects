@@ -27,3 +27,25 @@ This new product was branded .NET Core and includes a cross-platform implementat
 
 ### Understanding .NET 5 and the journey to one .NET
 
+At the Microsoft Build developer conference in May 2020, the .NET team announced that their plans for the unification of .NET had been delayed. They said .NET 5 would be released on November 10, 2020 and `it would unify all the various .NET platforms except mobile`. It will not be until .NET 6 in November 2021 that `mobile will also be supported by the unified .NET platform`.
+
+.NET Core has been renamed .NET and the major version number has `skipped the number four` to `avoid confusion with .NET Framework 4.x`. Microsoft plans on annual major version releases every November, rather like Apple does major version number releases of iOS every September.
+
+### What is different about .NET Core and .NET 5?
+
+Modern .NET is smaller than the current version of .NET Framework due to the fact that `legacy and non-cross-platform technologies have been removed`.
+For example, `Windows Forms` and `Windows Presentation Foundation (WPF)` can be used to build graphical user interface (GUI) applications, but they are `tightly bound to the Windows ecosystem`, so they have been removed from .NET on macOS and Linux
+
+One of the features of .NET 5 is support for `running old Windows Forms and WPF applications` using the `Windows Desktop Pack` that is included with the Windows version of .NET 5, which is why it is bigger than the SDKs for macOS and Linux.
+
+`ASP.NET Web Forms` and `Windows Communication Foundation (WCF)` are old web application and service technologies that fewer developers are choosing to use for new
+development projects today, so they have also been removed from .NET 5.
+Instead, developers prefer to use `ASP.NET MVC` and `ASP.NET Web API`. These two technologies have been refactored and combined into a platform that runs on .NET 5, named `ASP.NET Core`
+
+`Entity Framework (EF) 6` is an object-relational mapping technology that is designed to work with data that is stored in relational databases such as Oracle and Microsoft SQL Server.
+It has gained baggage over the years, so the cross-platform API has been slimmed down, has been given support for non-relational databases like Microsoft Azure Cosmos DB, and has been renamed `Entity Framework Core`
+
+In addition to removing large pieces from .NET Framework in order to make .NET Core, Microsoft has `componentized .NET into NuGet packages`, those being small chunks of functionality that can be deployed independently
+
+Microsoft's primary goal is not to make .NET smaller than .NET Framework. The goal is to `componentize .NET to support modern technologies and to have fewer dependencies`, so that `deployment requires only those packages that your application needs`.
+
