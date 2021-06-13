@@ -65,3 +65,22 @@ To use .NET Standard, you must install a .NET platform that implements the .NET 
 
 Once .NET 6 is released in November 2021, the need for .NET Standard will significantly reduce, because there will be a single .NET for all platforms, including mobile. Even then, apps and websites created for .NET Framework will need to be supported so understanding that you can create .NET Standard 2.0 class libraries that are backward compatible with legacy .NET platforms is important to know
 
+### Understanding intermediate language or CLR
+
+The C# compiler (named Roslyn) used by the dotnet CLI tool converts your C# source code into `intermediate language (IL)` code and stores the IL in an assembly (a DLL or EXE file).
+IL code statements are like assembly language instructions, which are executed by .NET's virtual machine, known as CoreCLR.
+
+At runtime, CoreCLR loads the IL code from the assembly, the `just-in-time (JIT) compiler` compiles it into `native CPU instructions`, and then it is executed by the CPU on your machine.
+The benefit of this three-step compilation process is that Microsoft is able to create CLRs for Linux and macOS, as well as for Windows. **The same IL code runs everywhere because of the second compilation process, which generates code for the native operating system and CPU instruction set**.
+
+Regardless of which language the source code is written in, for example, C#, Visual Basic, or F#, `all .NET applications use IL code for their instructions stored in an assembly`.
+Microsoft and others provide disassembler tools that can open an assembly and reveal this IL code, such as the ILSpy .NET Decompiler extension.
+
+- CLR Steps
+  - Convert Your code into IL (Intermediate Language)/MSI (Microsoft Intermediate Language)/CIL (Common Intermediate Language)
+  - Store IL in assembly (DLL or EXE)
+  - At runtime CLR loads IL and JIT compiler compiles it into native CPU instructions (depending on Your machine)
+  - CPU executes this commands
+
+### Comparing .NET technologies
+
