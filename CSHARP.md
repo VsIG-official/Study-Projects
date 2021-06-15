@@ -90,3 +90,5 @@ Microsoft and others provide disassembler tools that can open an assembly and re
 | .NET Framework| Legacy feature set, limited C# 8 support, no C# 9 support, maintain existing applications | Windows only |
 | Xamarin       | Mobile and desktop apps only | Android, iOS, macOS |
 
+## Sources
+- C# 9 and .NET 5 - Modern Cross-Platform Development | [GitHub](https://github.com/markjprice/cs9dotnet5)
