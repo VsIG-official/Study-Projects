@@ -90,5 +90,13 @@ Microsoft and others provide disassembler tools that can open an assembly and re
 | .NET Framework| Legacy feature set, limited C# 8 support, no C# 9 support, maintain existing applications | Windows only |
 | Xamarin       | Mobile and desktop apps only | Android, iOS, macOS |
 
+## C#
+### Types
+It's important to know that C# cannot exist alone; after all, it's a language that runs on variants of .NET. In theory, someone could write a compiler for C# that uses a different platform, with different underlying types.
+In practice, the platform for C# is .NET, which provides tens of thousands of types to C#, including System.Int32, which is the C# keyword alias int maps to, as well as many more complex types, such as System.Xml.Linq.XDocument.
+
+It's worth taking note that the term type is often confused with class. Have you ever played the parlor game Twenty Questions, also known as Animal, Vegetable, or Mineral? In the game, everything can be categorized as an animal, vegetable, or mineral.
+In C#, every type can be categorized as a class, struct, enum, interface, or delegate. The C# keyword string is a class, but int is a struct. So, it is best to use the term type to refer to both
+
 ## Sources
 - C# 9 and .NET 5 - Modern Cross-Platform Development | [GitHub](https://github.com/markjprice/cs9dotnet5)
