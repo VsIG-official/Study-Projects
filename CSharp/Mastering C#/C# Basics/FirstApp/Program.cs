@@ -6,6 +6,17 @@ namespace FirstApp
 	{
 		static void Main(string[] args)
 		{
+			DateTime dt = DateTime.Parse("2021 june 17");
+
+			var dayofweek = dt.DayOfWeek;
+
+			Console.WriteLine(dayofweek);
+
+			var timeinfuture = dt.AddDays(6);
+
+			Console.WriteLine(timeinfuture);
+
+			/*
 			// s = ut + 0.5att
 			var u = double.Parse(Console.ReadLine());
 			var aNew = double.Parse(Console.ReadLine());
@@ -31,6 +42,8 @@ namespace FirstApp
 			Console.WriteLine("What's Your name?");
 			var Text = Console.ReadLine();
 			Console.WriteLine("Hello, " + Text);
+			*/
+
 			Console.ReadLine();
 		}
 	}
