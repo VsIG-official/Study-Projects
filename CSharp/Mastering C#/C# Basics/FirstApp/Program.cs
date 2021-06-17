@@ -7,11 +7,11 @@ namespace FirstApp
 		static void Main(string[] args)
 		{
 			// s = ut + 0.5att
-			var u = 50;
-			var aNew = -9.81;
-			var t = 2;
+			var u = double.Parse(Console.ReadLine());
+			var aNew = double.Parse(Console.ReadLine());
+			var t = double.Parse(Console.ReadLine());
 
-			var s = u * t + 0.5 * aNew * t * t;
+			var s = u * t + 0.5 * aNew * Math.Pow(t, 2);
 
 			Console.WriteLine(s);
 
