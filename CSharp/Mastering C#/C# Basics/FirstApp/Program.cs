@@ -21,12 +21,18 @@ namespace FirstApp
 			//Console.WriteLine(AddDays(dt1, 3));
 			//Console.WriteLine(AddDays(dt1, 8));
 
-			var dt1 = DateTime.Parse("2021 june 17");
-			DateTime dtf1, dtf2;
+			//var dt1 = DateTime.Parse("2021 june 17");
+			//DateTime dtf1, dtf2;
 
-			NewAddDays(dt1, out dtf1, out dtf2);
-			Console.WriteLine(dtf1);
-			Console.WriteLine(dtf2);
+			//NewAddDays(dt1, out dtf1, out dtf2);
+			//Console.WriteLine(dtf1);
+			//Console.WriteLine(dtf2);
+
+			var dt1 = DateTime.Parse("2021 june 17");
+
+			var fds = AddDays(dt1);
+			Console.WriteLine(fds.oneWeek);
+			Console.WriteLine(fds.twoWeeks);
 
 			/*
 			// s = ut + 0.5att
@@ -59,6 +65,12 @@ namespace FirstApp
 			Console.ReadLine();
 		}
 
+		public struct FutureDates
+		{
+			public DateTime oneWeek;
+			public DateTime twoWeeks;
+		}
+
 		static private DateTime AddDays(DateTime dateTime, int numOfDays)
 		{
 			var timeinfuture = dateTime.AddDays(numOfDays);
@@ -66,10 +78,19 @@ namespace FirstApp
 			return timeinfuture;
 		}
 
-		static private void NewAddDays(DateTime dateTime, out DateTime oneWeek, out DateTime twoWeek)
+		static private void AddDays(DateTime dateTime, out DateTime oneWeek, out DateTime twoWeeks)
 		{
 			oneWeek = dateTime.AddDays(7);
-			twoWeek = dateTime.AddDays(14);
+			twoWeeks = dateTime.AddDays(14);
+		}
+
+		static private FutureDates AddDays(DateTime dateTime)
+		{
+			FutureDates fd;
+			fd.oneWeek = dateTime.AddDays(7);
+			fd.twoWeeks = dateTime.AddDays(14);
+
+			return fd;
 		}
 	}
 }
