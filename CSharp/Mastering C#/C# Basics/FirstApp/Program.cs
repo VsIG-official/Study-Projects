@@ -28,7 +28,7 @@ namespace FirstApp
 			//Console.WriteLine(dtf1);
 			//Console.WriteLine(dtf2);
 
-			var dt1 = DateTime.Parse("2021 june 17");
+			var dt1 = DateTime.Parse(args[0]);
 
 			var fds = AddDays(dt1);
 			Console.WriteLine(fds.oneWeek);
