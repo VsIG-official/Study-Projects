@@ -6,15 +6,20 @@ namespace FirstApp
 	{
 		static void Main(string[] args)
 		{
-			DateTime dt = DateTime.Parse("2021 june 17");
+			//DateTime dt = DateTime.Parse("2021 june 17");
 
-			var dayofweek = dt.DayOfWeek;
+			//var dayofweek = dt.DayOfWeek;
 
-			Console.WriteLine(dayofweek);
+			//Console.WriteLine(dayofweek);
 
-			var timeinfuture = dt.AddDays(6);
+			//var timeinfuture = dt.AddDays(6);
 
-			Console.WriteLine(timeinfuture);
+			//Console.WriteLine(timeinfuture);
+
+			var dt1 = DateTime.Parse("2021 june 17");
+
+			Console.WriteLine(AddDays(dt1, 3));
+			Console.WriteLine(AddDays(dt1, 8));
 
 			/*
 			// s = ut + 0.5att
@@ -45,6 +50,13 @@ namespace FirstApp
 			*/
 
 			Console.ReadLine();
+		}
+
+		static private DateTime AddDays(DateTime dateTime, int numOfDays)
+		{
+			var timeinfuture = dateTime.AddDays(numOfDays);
+
+			return timeinfuture;
 		}
 	}
 }
