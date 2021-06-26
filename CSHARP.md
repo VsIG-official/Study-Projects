@@ -98,5 +98,14 @@ In practice, the platform for C# is .NET, which provides tens of thousands of ty
 It's worth taking note that the term type is often confused with class. Have you ever played the parlor game Twenty Questions, also known as Animal, Vegetable, or Mineral? In the game, everything can be categorized as an animal, vegetable, or mineral.
 In C#, every type can be categorized as a class, struct, enum, interface, or delegate. The C# keyword string is a class, but int is a struct. So, it is best to use the term type to refer to both
 
+### Naming
+#### Pascal case
+- Use pascal casing ("PascalCasing") when naming a `class`, `record`, or `struct`.
+- When naming an `interface`, use pascal casing in addition to prefixing the name with an `I`. This clearly indicates to consumers that it's an interface.
+- When naming `public` members of types, such as `fields`, `properties`, `events`, `methods`, and `local functions`
+- When writing positional records, use pascal casing for parameters as they're the public properties of the record
+
+#### Camel case
+
 ## Sources
 - C# 9 and .NET 5 - Modern Cross-Platform Development | [GitHub](https://github.com/markjprice/cs9dotnet5)
