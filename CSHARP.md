@@ -126,5 +126,21 @@ if ((val1 > val2) && (val1 > val3))
 }
 ```
 
+#### Commenting
+- Place the comment on a separate line, not at the end of a line of code
+- Begin comment text with an uppercase letter
+- End comment text with a period (.)
+- Insert one space between the comment delimiter (//) and the comment text, as shown in the following example:
+```csharp
+// The following declaration creates a query. It does not run
+// the query.
+```
+- Don't create formatted blocks of asterisks around comments:
+```csharp
+//***************************
+//* Fancy important comment *
+//***************************
+```
+
 ## Sources
 - C# 9 and .NET 5 - Modern Cross-Platform Development | [GitHub](https://github.com/markjprice/cs9dotnet5)
