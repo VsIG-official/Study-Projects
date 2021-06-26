@@ -142,5 +142,63 @@ if ((val1 > val2) && (val1 > val3))
 //***************************
 ```
 
+### Language guidelines
+> The following sections describe practices that the C# team follows to prepare code examples and samples
+
+#### String data type
+- Use string interpolation to concatenate short strings, as shown in the following code:
+```csharp
+string displayName = $"{nameList[n].LastName}, {nameList[n].FirstName}";
+```
+- To append strings in loops, especially when you're working with large amounts of text, use a StringBuilder object:
+```csharp
+var phrase = "lalalalalalalalalalalalalalalalalalalalalalalalalalalalalala";
+var manyPhrases = new StringBuilder();
+for (var i = 0; i < 10000; i++)
+{
+    manyPhrases.Append(phrase);
+}
+//Console.WriteLine("tra" + manyPhrases);
+```
+
+#### Implicitly typed local variables
+- Use implicit typing for local variables when the type of the variable is obvious from the right side of the assignment, or when the precise type is not important:
+```csharp
+var var1 = "This is clearly a string.";
+var var2 = 27;
+```
+- Don't use var when the type is not apparent from the right side of the assignment. Don't assume the type is clear from a method name. A variable type is considered clear if it's a new operator or an explicit cast:
+```csharp
+int var3 = Convert.ToInt32(Console.ReadLine()); 
+int var4 = ExampleClass.ResultSoFar();
+```
+- Don't rely on the variable name to specify the type of the variable. It might not be correct. In the following example, the variable name `inputInt` is misleading. It's a `string`:
+```csharp
+var inputInt = Console.ReadLine();
+Console.WriteLine(inputInt);
+```
+- Avoid the use of `var` in place of `dynamic`. Use dynamic when you want run-time type inference
+- `Use` implicit typing to determine the type of the loop variable in for loops. The following example uses implicit typing in a for statement:
+```csharp
+var phrase = "lalalalalalalalalalalalalalalalalalalalalalalalalalalalalala";
+var manyPhrases = new StringBuilder();
+for (var i = 0; i < 10000; i++)
+{
+    manyPhrases.Append(phrase);
+}
+//Console.WriteLine("tra" + manyPhrases);
+```
+- `Don't` use implicit typing to determine the type of the loop variable in foreach loops. The following example uses explicit typing in a foreach statement:
+```csharp
+foreach (char ch in laugh)
+{
+    if (ch == 'h')
+        Console.Write("H");
+    else
+        Console.Write(ch);
+}
+Console.WriteLine();
+```
+
 ## Sources
 - C# 9 and .NET 5 - Modern Cross-Platform Development | [GitHub](https://github.com/markjprice/cs9dotnet5)
