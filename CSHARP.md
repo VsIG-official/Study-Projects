@@ -106,6 +106,12 @@ In C#, every type can be categorized as a class, struct, enum, interface, or del
 - When writing positional records, use pascal casing for parameters as they're the public properties of the record
 
 #### Camel case
+- Use `camel casing` ("camelCasing") when naming `private` or `internal` fields, and prefix them with `_`
+- When writing method parameters
+
+- When working with `static` fields that are `private` or `internal`, use the `s_` prefix and for thread static use `t_`
+
+#### Layout 
 
 ## Sources
 - C# 9 and .NET 5 - Modern Cross-Platform Development | [GitHub](https://github.com/markjprice/cs9dotnet5)
