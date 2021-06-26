@@ -111,7 +111,18 @@ In C#, every type can be categorized as a class, struct, enum, interface, or del
 
 - When working with `static` fields that are `private` or `internal`, use the `s_` prefix and for thread static use `t_`
 
-#### Layout 
+#### Layout
+- Use the default Code Editor settings (smart indenting, four-character indents, tabs saved as spaces)
+- Write only one statement per line
+- Write only one declaration per line
+- If continuation lines are not indented automatically, indent them one tab stop (four spaces)
+- Add at least one blank line between method definitions and property definitions
+- Use parentheses to make clauses in an expression apparent, as shown in the following code:]
+
+`if ((val1 > val2) && (val1 > val3))`
+`{`
+    `// Take appropriate action.`
+`}`
 
 ## Sources
 - C# 9 and .NET 5 - Modern Cross-Platform Development | [GitHub](https://github.com/markjprice/cs9dotnet5)
