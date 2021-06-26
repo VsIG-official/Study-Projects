@@ -117,12 +117,14 @@ In C#, every type can be categorized as a class, struct, enum, interface, or del
 - Write only one declaration per line
 - If continuation lines are not indented automatically, indent them one tab stop (four spaces)
 - Add at least one blank line between method definitions and property definitions
-- Use parentheses to make clauses in an expression apparent, as shown in the following code:]
+- Use parentheses to make clauses in an expression apparent, as shown in the following code:
 
-`if ((val1 > val2) && (val1 > val3))`
-`{`
-    `// Take appropriate action.`
-`}`
+```csharp
+if ((val1 > val2) && (val1 > val3))
+{
+    // Take appropriate action.
+}
+```
 
 ## Sources
 - C# 9 and .NET 5 - Modern Cross-Platform Development | [GitHub](https://github.com/markjprice/cs9dotnet5)
