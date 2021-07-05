@@ -308,6 +308,27 @@ byte charset3 = font3.GdiCharSet;
 ```
 
 ### `&&` and `||` operators
+To avoid exceptions and increase performance by skipping unnecessary comparisons, use `&&` instead of `&` and `||` instead of `|` when you perform comparisons, as shown in the following example.
+```csharp
+Console.Write("Enter a dividend: ");
+int dividend = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Enter a divisor: ");
+int divisor = Convert.ToInt32(Console.ReadLine());
+
+if ((divisor != 0) && (dividend / divisor > 0))
+{
+    Console.WriteLine("Quotient: {0}", dividend / divisor);
+}
+else
+{
+    Console.WriteLine("Attempted division by 0 ends up here.");
+}
+```
+
+If the divisor is 0, the second clause in the if statement would cause a run-time error. But the && operator short-circuits when the first expression is false. That is, it doesn't evaluate the second expression. The & operator would evaluate both, resulting in a run-time error when `divisor` is 0
+
+### `new` operator
 
 ## [Coding Style](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md)
 1. We use [Allman style](http://en.wikipedia.org/wiki/Indent_style#Allman_style) braces, where each brace begins on a new line. A single line statement block can go without braces but the block must be properly indented on its own line and must not be nested in other statement blocks that use braces (See rule 18 for more details). One exception is that a `using` statement is permitted to be nested within another `using` statement by starting on the following line at the same indentation level, even if the nested `using` contains a controlled block.
