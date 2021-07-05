@@ -263,6 +263,51 @@ exampleDel1("Hey");
 ```
 
 ### try-catch and using statements in exception handling
+- Use a try-catch statement for most exception handling.
+```csharp
+static string GetValueFromArray(string[] array, int index)
+{
+    try
+    {
+        return array[index];
+    }
+    catch (System.IndexOutOfRangeException ex)
+    {
+        Console.WriteLine("Index is out of range: {0}", index);
+        throw;
+    }
+}
+```
+- Simplify your code by using the C# using statement. If you have a try-finally statement in which the only code in the `finally` block is a call to the Dispose method, use a `using` statement instead.
+In the following example, the `try-finally` statement only calls `Dispose` in the `finally` block.
+```csharp
+Font font1 = new Font("Arial", 10.0f);
+try
+{
+    byte charset = font1.GdiCharSet;
+}
+finally
+{
+    if (font1 != null)
+    {
+        ((IDisposable)font1).Dispose();
+    }
+}
+```
+You can do the same thing with a using statement.
+```csharp
+using (Font font2 = new Font("Arial", 10.0f))
+{
+    byte charset2 = font2.GdiCharSet;
+}
+```
+In C# 8 and later versions, use the new [using syntax](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement) that doesn't require braces:
+```csharp
+using Font font3 = new Font("Arial", 10.0f);
+byte charset3 = font3.GdiCharSet;
+```
+
+### `&&` and `||` operators
 
 ## [Coding Style](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md)
 1. We use [Allman style](http://en.wikipedia.org/wiki/Indent_style#Allman_style) braces, where each brace begins on a new line. A single line statement block can go without braces but the block must be properly indented on its own line and must not be nested in other statement blocks that use braces (See rule 18 for more details). One exception is that a `using` statement is permitted to be nested within another `using` statement by starting on the following line at the same indentation level, even if the nested `using` contains a controlled block.
