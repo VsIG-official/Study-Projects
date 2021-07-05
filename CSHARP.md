@@ -220,6 +220,50 @@ vowels3[1] = "e";
 // And so on.
 ```
 
+### Delegates
+- Use [Func<> and Action<>](https://docs.microsoft.com/en-us/dotnet/standard/delegates-lambdas) instead of defining delegate types. In a class, define the delegate method.
+```csharp
+public static Action<string> ActionExample1 = x => Console.WriteLine($"x is: {x}");
+
+public static Action<string, string> ActionExample2 = (x, y) => 
+    Console.WriteLine($"x is: {x}, y is {y}");
+
+public static Func<string, int> FuncExample1 = x => Convert.ToInt32(x);
+
+public static Func<int, int, int> FuncExample2 = (x, y) => x + y;
+```
+- Call the method using the signature defined by the `Func<>` or `Action<>` delegate.
+```csharp
+ActionExample1("string for x");
+
+ActionExample2("string for x", "string for y");
+
+Console.WriteLine($"The value is {FuncExample1("1")}");
+
+Console.WriteLine($"The sum is {FuncExample2(1, 2)}");
+```
+- If you create instances of a delegate type, use the concise syntax. In a class, define the delegate type and a method that has a matching signature.
+```csharp
+public delegate void Del(string message);
+
+public static void DelMethod(string str)
+{
+    Console.WriteLine("DelMethod argument: {0}", str);
+}
+```
+- Create an instance of the delegate type and call it. The following declaration shows the condensed syntax.
+```csharp
+Del exampleDel2 = DelMethod;
+exampleDel2("Hey");
+```
+- The following declaration uses the full syntax.
+```csharp
+Del exampleDel1 = new Del(DelMethod);
+exampleDel1("Hey");
+```
+
+### try-catch and using statements in exception handling
+
 ## [Coding Style](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md)
 1. We use [Allman style](http://en.wikipedia.org/wiki/Indent_style#Allman_style) braces, where each brace begins on a new line. A single line statement block can go without braces but the block must be properly indented on its own line and must not be nested in other statement blocks that use braces (See rule 18 for more details). One exception is that a `using` statement is permitted to be nested within another `using` statement by starting on the following line at the same indentation level, even if the nested `using` contains a controlled block.
 2. We use four spaces of indentation (no tabs).
