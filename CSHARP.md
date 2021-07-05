@@ -355,6 +355,31 @@ instance4.Age = 2.3;
 ```
 
 ### Event handling
+- If you're defining an event handler that you don't need to remove later, use a lambda expression.
+```csharp
+public Form2()
+{
+    this.Click += (s, e) =>
+        {
+            MessageBox.Show(
+                ((MouseEventArgs)e).Location.ToString());
+        };
+}
+```
+The lambda expression shortens the following traditional definition.
+```csharp
+public Form1()
+{
+    this.Click += new EventHandler(Form1_Click);
+}
+
+void Form1_Click(object sender, EventArgs e)
+{
+    MessageBox.Show(((MouseEventArgs)e).Location.ToString());
+}
+```
+
+### Static members
 
 
 ## [Coding Style](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md)
