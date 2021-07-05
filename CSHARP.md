@@ -380,7 +380,50 @@ void Form1_Click(object sender, EventArgs e)
 ```
 
 ### Static members
+- Call [static](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/static) members by using the class name: ClassName.StaticMember. This practice makes code more readable by making static access clear. Don't qualify a static member defined in a base class with the name of a derived class. While that code compiles, the code readability is misleading, and the code may break in the future if you add a static member with the same name to the derived class.
 
+### LINQ queries
+- Use meaningful names for query variables. The following example uses seattleCustomers for customers who are located in Seattle.
+```csharp
+var seattleCustomers = from customer in customers
+                       where customer.City == "Seattle"
+                       select customer.Name;
+```
+- Use aliases to make sure that property names of anonymous types are correctly capitalized, using Pascal casing.
+```csharp
+var localDistributors =
+    from customer in customers
+    join distributor in distributors on customer.City equals distributor.City
+    select new { Customer = customer, Distributor = distributor };
+```
+- Rename properties when the property names in the result would be ambiguous. For example, if your query returns a customer name and a distributor ID, instead of leaving them as Name and ID in the result, rename them to clarify that Name is the name of a customer, and ID is the ID of a distributor.
+```csharp
+var localDistributors2 =
+    from customer in customers
+    join distributor in distributors on customer.City equals distributor.City
+    select new { CustomerName = customer.Name, DistributorID = distributor.ID };
+```
+- Use implicit typing in the declaration of query variables and range variables.
+```csharp
+var seattleCustomers = from customer in customers
+                       where customer.City == "Seattle"
+                       select customer.Name;
+```
+- Align query clauses under the [from](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/from-clause) clause, as shown in the previous examples.
+- Use [where](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/where-clause) clauses before other query clauses to ensure that later query clauses operate on the reduced, filtered set of data.
+```csharp
+var seattleCustomers2 = from customer in customers
+                        where customer.City == "Seattle"
+                        orderby customer.Name
+                        select customer;
+```
+- Use multiple from clauses instead of a [join](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/join-clause) clause to access inner collections. For example, a collection of Student objects might each contain a collection of test scores. When the following query is executed, it returns each score that is over 90, along with the last name of the student who received the score.
+```csharp
+var scoreQuery = from student in students
+                 from score in student.Scores
+                 where score > 90
+                 select new { Last = student.LastName, score };
+```
 
 ## [Coding Style](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md)
 1. We use [Allman style](http://en.wikipedia.org/wiki/Indent_style#Allman_style) braces, where each brace begins on a new line. A single line statement block can go without braces but the block must be properly indented on its own line and must not be nested in other statement blocks that use braces (See rule 18 for more details). One exception is that a `using` statement is permitted to be nested within another `using` statement by starting on the following line at the same indentation level, even if the nested `using` contains a controlled block.
