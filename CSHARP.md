@@ -189,7 +189,7 @@ float realNumber = 2.3F;
 double anotherRealNumber = 2.3; // double literal
 ```
 
-#### Whole numbers
+#### Whole numbers (42)
 - The decimal number system, also known as Base 10, has 10 as its base, meaning there are ten digits, from 0 to 9. Although it is the number base most commonly used by human civilizations, other number-base systems are popular in science, engineering, and computing. The binary number system also known as Base 2 has two as its base, meaning there are two digits, 0 and 1.
 
 - The following table shows how computers store the decimal number 10. Take note of the bits with the value 1 in the 8 and the 2 columns; 8 + 2 = 10:
@@ -210,6 +210,20 @@ int decimalNotation = 2_000_000;
 int binaryNotation = 0b_0001_1110_1000_0100_1000_0000;
 int hexadecimalNotation = 0x_001E_8480;
 ```
+
+#### Real Numbers (3.9)
+- Computers cannot always exactly represent floating point numbers. The float and double types store real numbers using single- and double-precision floating points.
+
+- Most programming languages implement the IEEE Standard for Floating-Point Arithmetic. IEEE 754 ([1](),[2](),[3]()) (more information [there](https://ciechanow.ski/exposing-floating-point/)) is a technical standard for floating-point arithmetic established in 1985 by the Institute of Electrical and Electronics Engineers (IEEE)
+
+- The following table shows a simplification of how a computer represents the number 12.75 in binary notation. Note the bits with the value 1 in the 8, 4, ½, and ¼ columns.
+8 + 4 + ½ + ¼ = 12¾ = 12.75
+
+| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 | . | ½ | ¼ | 1/8 | 1/16 |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | . | 1 | 1 | 0 | 0 |
+
+- So, 12.75 in decimal is 00001100.1100 in binary. As you can see, the number 12.75 can be exactly represented using bits. However, some numbers can't.
 
 ### Language guidelines
 > The following sections describe practices that the C# team follows to prepare code examples and samples
