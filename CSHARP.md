@@ -557,6 +557,13 @@ namespace System.Collections.Generics
 }
 ```
 
+## Small Visual Studio Tips
+[1](https://www.youtube.com/watch?v=qv6ZflueASY&ab_channel=IAmTimCorey)
+- Use editor config
+- Use Code cleanup (and set it up)
+- Use intellicode
+- Use refactoring
+
 ## Sources
 - C# 9 and .NET 5 - Modern Cross-Platform Development | [GitHub](https://github.com/markjprice/cs9dotnet5)
 - C# Coding Conventions | [Site](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
