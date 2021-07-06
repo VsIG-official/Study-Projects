@@ -225,10 +225,47 @@ int hexadecimalNotation = 0x_001E_8480;
 
 - So, 12.75 in decimal is 00001100.1100 in binary. As you can see, the number 12.75 can be exactly represented using bits. However, some numbers can't.
 
-### Language guidelines
+#### Comparing some types
+- An int variable uses four bytes of memory and can store positive or negative numbers up to about 2 billion. A double variable uses eight bytes of memory and can store much bigger values! A decimal variable uses 16 bytes of memory and can store big numbers, but not as big as a double type.
+
+> But you may be asking yourself, why might a double variable be able to store bigger numbers than a decimal variable, yet it's only using half the space in memory? Well, let's now find out!
+
+- If You will write this code:
+```csharp
+Console.WriteLine("Using doubles:");
+double a = 0.1;
+double b = 0.2;
+if (a + b == 0.3)
+{
+ Console.WriteLine($"{a} + {b} equals 0.3");
+}
+else
+{
+ Console.WriteLine($"{a} + {b} does NOT equal 0.3");
+}
+```
+
+- then output will be like this:
+```csharp
+Using doubles:
+0.1 + 0.2 does NOT equal 0.3
+```
+
+- The double type is not guaranteed to be accurate because some [numbers literally cannot be represented as floating-point values](https://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/)
+
+- As a rule of thumb, you should only use double when accuracy, especially when comparing the equality of two numbers, is not important. An example of this may be when you're measuring a person's height.
+- The problem with the preceding code is illustrated by how the computer stores the number 0.1, or multiples of 0.1. To represent 0.1 in binary, the computer stores 1 in the 1/16 column, 1 in the 1/32 column, 1 in the 1/256 column, 1 in the 1/512 column, and so on.
+- The number 0.1 in decimal is 0.00011001100110011… repeating forever:
+| 4 | 2 | 1 | . | ½ | ¼ | 1/8 | 1/16 | 1/32 | 1/64 | 1/128 | 1/256 | 1/512 | 1/1024 | 1/2048 |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | . | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
+
+- `Good Practice`: Never compare double values using ==. During the First Gulf War, an American Patriot missile battery used double values in its calculations. The inaccuracy caused it to fail to track and intercept an incoming Iraqi Scud missile, and 28 soldiers were killed; you can read about this at https://www.ima.umn.edu/~arnold/disasters/patriot.html
+
+## Language guidelines
 > The following sections describe practices that the C# team follows to prepare code examples and samples
 
-#### String data type
+### String data type
 - Use string interpolation to concatenate short strings, as shown in the following code:
 ```csharp
 string displayName = $"{nameList[n].LastName}, {nameList[n].FirstName}";
@@ -244,7 +281,7 @@ for (var i = 0; i < 10000; i++)
 //Console.WriteLine("tra" + manyPhrases);
 ```
 
-#### Implicitly typed local variables
+### Implicitly typed local variables
 - Use implicit typing for local variables when the type of the variable is obvious from the right side of the assignment, or when the precise type is not important:
 ```csharp
 var var1 = "This is clearly a string.";
