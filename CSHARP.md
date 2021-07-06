@@ -99,6 +99,8 @@ It's worth taking note that the term type is often confused with class. Have you
 In C#, every type can be categorized as a class, struct, enum, interface, or delegate. The C# keyword string is a class, but int is a struct. So, it is best to use the term type to refer to both
 
 ### Naming
+- Use meaningful names without special characters
+
 #### Pascal case
 - Use pascal casing ("PascalCasing") when naming a `class`, `record`, or `struct`.
 - When naming an `interface`, use pascal casing in addition to prefixing the name with an `I`. This clearly indicates to consumers that it's an interface.
@@ -556,6 +558,20 @@ namespace System.Collections.Generics
     }
 }
 ```
+
+## [Best Practises](https://www.youtube.com/watch?v=-9b8NRqjUFM&t=474s&ab_channel=IAmTimCorey)
+- One class per file
+- Use properties - not public variables
+- One method do one job
+- Keep it simple (don't use "hard" things instead of "easy" ones)
+- Be consistent (if You write `var` in foreach loop, then do it everytime)
+- Use $ to concate strings instead of ""Hi " + smth "
+- Avoid global variables
+
+## Design Patterns
+- [Don't Repeat Yourself](https://www.youtube.com/watch?v=dhnsegiPXoo&ab_channel=IAmTimCorey)
+> You can use Your code as .NET dll
+ 
 
 ## Small Visual Studio Tips
 [1](https://www.youtube.com/watch?v=qv6ZflueASY&ab_channel=IAmTimCorey)
