@@ -214,7 +214,7 @@ int hexadecimalNotation = 0x_001E_8480;
 #### Real Numbers (3.9)
 - Computers cannot always exactly represent floating point numbers. The float and double types store real numbers using single- and double-precision floating points.
 
-- Most programming languages implement the IEEE Standard for Floating-Point Arithmetic. IEEE 754 ([1](),[2](),[3]()) (more information [there](https://ciechanow.ski/exposing-floating-point/)) is a technical standard for floating-point arithmetic established in 1985 by the Institute of Electrical and Electronics Engineers (IEEE)
+- Most programming languages implement the IEEE Standard for Floating-Point Arithmetic. IEEE 754 ([1](https://github.com/VsIG-official/Study-Projects/blob/master/Docs/IEEE754-97.PDF),[2](https://github.com/VsIG-official/Study-Projects/blob/master/Docs/ieee754.pdf),[3](https://github.com/VsIG-official/Study-Projects/blob/master/Docs/%D0%A1%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%20IEEE%20754.doc)) (more information [there](https://ciechanow.ski/exposing-floating-point/)) is a technical standard for floating-point arithmetic established in 1985 by the Institute of Electrical and Electronics Engineers (IEEE)
 
 - The following table shows a simplification of how a computer represents the number 12.75 in binary notation. Note the bits with the value 1 in the 8, 4, ½, and ¼ columns.
 8 + 4 + ½ + ¼ = 12¾ = 12.75
