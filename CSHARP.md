@@ -145,12 +145,13 @@ if ((val1 > val2) && (val1 > val3))
 ```
 
 ## Variables
-### Literal values
+### Strings
+#### Literal values
 - Literal string: Characters enclosed in double-quote characters. They can use escape characters like \t for tab.
 
 - When you assign to a variable, you often, but not always, assign a `literal` value. But what is a literal value? A `literal is a notation that represents a fixed value`. Data types have different notations for their literal values: True, false, 10, 'T', '\n' and etc.
 
-### Verbatim strings
+#### Verbatim strings
 - Verbatim string: A literal string prefixed with @ to disable escape characters so that a backslash is a backslash.
 
 - When storing text in a string variable, you can include escape sequences, which represent special characters like tabs and new lines using a backslash, as shown in the following code:
@@ -168,8 +169,47 @@ You must prefix with the @ symbol (verbatim = literally) to use a verbatim liter
 string filePath = @"C:\televisions\sony\bravia.txt";
 ```
 
-### Interpolated String
+#### Interpolated String
 - Interpolated string: A literal string prefixed with $ to enable embedded formattedvariables. You will learn more about this later in this chapter.
+
+### Numbers
+Numbers can be `natural` numbers, such as `42`, used for counting (also called `whole` numbers); they can also be `negative` numbers, such as `-42` (called `integers`); or, they can be `real` numbers, such as `3.9` (with a `fractional part`), which are called `single-` or `double-precision floating point` numbers in computing
+
+```csharp
+// unsigned integer means positive whole number
+// including 0
+uint naturalNumber = 23;
+// integer means negative or positive whole number
+// including 0
+int integerNumber = -23;
+// float means single-precision floating point
+// F suffix makes it a float literal
+float realNumber = 2.3F;
+// double means double-precision floating point
+double anotherRealNumber = 2.3; // double literal
+```
+
+#### Whole numbers
+- The decimal number system, also known as Base 10, has 10 as its base, meaning there are ten digits, from 0 to 9. Although it is the number base most commonly used by human civilizations, other number-base systems are popular in science, engineering, and computing. The binary number system also known as Base 2 has two as its base, meaning there are two digits, 0 and 1.
+
+- The following table shows how computers store the decimal number 10. Take note of the bits with the value 1 in the 8 and the 2 columns; 8 + 2 = 10:
+
+| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
+
+- So, 10 in decimal is 00001010 in binary.
+
+- Two of the improvements seen in C# 7.0 and later are the use of the underscore character, `_`, as a digit separator, and support for binary literals. You can insert underscores anywhere into the digits of a number literal, including decimal, binary, or hexadecimal notation, to improve legibility. For example, you could write the value for 1 million in decimal notation, that is, Base 10, as `1_000_000`
+
+- To use `binary notation`, that is, Base 2, using only 1s and 0s, start the number literal with `0b`. To use `hexadecimal notation`, that is, Base 16, using 0 to 9 and A to F, start the number literal with `0x`.
+
+```csharp
+// three variables that store the number 2 million
+int decimalNotation = 2_000_000;
+int binaryNotation = 0b_0001_1110_1000_0100_1000_0000;
+int hexadecimalNotation = 0x_001E_8480;
+```
 
 ### Language guidelines
 > The following sections describe practices that the C# team follows to prepare code examples and samples
