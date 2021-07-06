@@ -144,6 +144,33 @@ if ((val1 > val2) && (val1 > val3))
 //***************************
 ```
 
+## Variables
+### Literal values
+- Literal string: Characters enclosed in double-quote characters. They can use escape characters like \t for tab.
+
+- When you assign to a variable, you often, but not always, assign a `literal` value. But what is a literal value? A `literal is a notation that represents a fixed value`. Data types have different notations for their literal values: True, false, 10, 'T', '\n' and etc.
+
+### Verbatim strings
+- Verbatim string: A literal string prefixed with @ to disable escape characters so that a backslash is a backslash.
+
+- When storing text in a string variable, you can include escape sequences, which represent special characters like tabs and new lines using a backslash, as shown in the following code:
+```csharp
+string fullNameWithTabSeparator = "Bob\tSmith";
+```
+- But what if you are storing the path to a file, and one of the folder names starts with a T, as shown in the following code:
+```csharp
+string filePath = "C:\televisions\sony\bravia.txt";
+```
+
+- The compiler will convert the \t into a tab character and you will get errors!
+You must prefix with the @ symbol (verbatim = literally) to use a verbatim literal string, as shown in the following code:
+```csharp
+string filePath = @"C:\televisions\sony\bravia.txt";
+```
+
+### Interpolated String
+- Interpolated string: A literal string prefixed with $ to enable embedded formattedvariables. You will learn more about this later in this chapter.
+
 ### Language guidelines
 > The following sections describe practices that the C# team follows to prepare code examples and samples
 
