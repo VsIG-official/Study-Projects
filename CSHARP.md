@@ -251,16 +251,45 @@ Using doubles:
 0.1 + 0.2 does NOT equal 0.3
 ```
 
+>
+
 - The double type is not guaranteed to be accurate because some [numbers literally cannot be represented as floating-point values](https://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/)
 
 - As a rule of thumb, you should only use double when accuracy, especially when comparing the equality of two numbers, is not important. An example of this may be when you're measuring a person's height.
 - The problem with the preceding code is illustrated by how the computer stores the number 0.1, or multiples of 0.1. To represent 0.1 in binary, the computer stores 1 in the 1/16 column, 1 in the 1/32 column, 1 in the 1/256 column, 1 in the 1/512 column, and so on.
 - The number 0.1 in decimal is 0.00011001100110011… repeating forever:
+
 | 4 | 2 | 1 | . | ½ | ¼ | 1/8 | 1/16 | 1/32 | 1/64 | 1/128 | 1/256 | 1/512 | 1/1024 | 1/2048 |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 0 | 0 | 0 | . | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 
 - `Good Practice`: Never compare double values using ==. During the First Gulf War, an American Patriot missile battery used double values in its calculations. The inaccuracy caused it to fail to track and intercept an incoming Iraqi Scud missile, and 28 soldiers were killed; you can read about this at https://www.ima.umn.edu/~arnold/disasters/patriot.html
+
+>
+
+- But if We use this code:
+```csharp
+Console.WriteLine("Using decimals:");
+decimal c = 0.1M; // M suffix means a decimal literal value
+decimal d = 0.2M;
+if (c + d == 0.3M)
+{
+ Console.WriteLine($"{c} + {d} equals 0.3");
+}
+else
+{
+ Console.WriteLine($"{c} + {d} does NOT equal 0.3");
+}
+```
+
+- then output will be like this:
+```csharp
+Using decimals:
+0.1 + 0.2 equals 0.3
+```
+- The `decimal` type is accurate because it stores the number as a `large integer and shifts the decimal point`. For example, `0.1` is stored as `1`, with a note to shift the decimal point one place to the left. `12.75` is stored as `1275`, with a note to shift the decimal point two places to the left.
+
+- `Good Practice`: Use `int` for whole numbers and `double` for real numbers that will not be compared to other values. Use `decimal` for money, CAD drawings, general engineering, and wherever the accuracy of a real number is important
 
 ## Language guidelines
 > The following sections describe practices that the C# team follows to prepare code examples and samples
