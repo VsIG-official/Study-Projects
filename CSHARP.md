@@ -263,6 +263,32 @@ Using doubles:
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 0 | 0 | 0 | . | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 
+- Binary floating point math is like this. In most programming languages, it is based on the `IEEE 754 standard`. The crux of the problem is that numbers are represented in this format as a whole number times a `power of two`; rational numbers (such as 0.1, which is 1/10) whose denominator `is not a power of two` cannot be exactly represented.
+
+- There is another example with doubles:
+
+```csharp
+      Console.WriteLine("Using doubles:");
+      double a = 0.2;
+      double b = 0.2;
+      if (a + b == 0.4)
+      {
+          Console.WriteLine($"{a} + {b} equals 0.4");
+      }
+      else
+      {
+          Console.WriteLine($"{a} + {b} does NOT equal 0.4");
+      }
+```
+
+
+- then output will be like this:
+```csharp
+Using doubles:
+0.2 + 0.2 equals 0.4
+```
+- because 0.2 and 0.4 are numbers whose denominator is a power of two
+
 - `Good Practice`: Never compare double values using ==. During the First Gulf War, an American Patriot missile battery used double values in its calculations. The inaccuracy caused it to fail to track and intercept an incoming Iraqi Scud missile, and 28 soldiers were killed; you can read about this at https://www.ima.umn.edu/~arnold/disasters/patriot.html
 
 >
