@@ -268,6 +268,9 @@ Using doubles:
 - 0.1 is one-tenth, or 1/10. To show it in binary — that is, as a bicimal — divide binary 1 by binary 1010, using binary long division:
 
 - The division process would repeat forever — and so too the digits in the quotient — because 100 (“one-zero-zero”) reappears as the working portion of the dividend. Recognizing this, we can abort the division and write the answer in repeating bicimal notation, as 0.00011.
+<p align="center">
+  <img src="https://github.com/VsIG-official/Study-Projects/blob/master/Docs/OneTenthLongDivision.png" data-canonical-src="https://github.com/VsIG-official/Study-Projects/blob/master/Docs/OneTenthLongDivision.png"/>
+</p>
 
 - There is another example with doubles:
 
@@ -290,6 +293,7 @@ Using doubles:
 Using doubles:
 0.2 + 0.2 equals 0.4
 ```
+
 - because 0.2 and 0.4 are numbers whose denominator is a power of two
 
 - `Good Practice`: Never compare double values using ==. During the First Gulf War, an American Patriot missile battery used double values in its calculations. The inaccuracy caused it to fail to track and intercept an incoming Iraqi Scud missile, and 28 soldiers were killed; you can read about this at https://www.ima.umn.edu/~arnold/disasters/patriot.html
