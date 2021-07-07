@@ -294,8 +294,6 @@ Using doubles:
 0.2 + 0.2 equals 0.4
 ```
 
-- because 0.2 and 0.4 are numbers whose denominator is a power of two
-
 - `Good Practice`: Never compare double values using ==. During the First Gulf War, an American Patriot missile battery used double values in its calculations. The inaccuracy caused it to fail to track and intercept an incoming Iraqi Scud missile, and 28 soldiers were killed; you can read about this at https://www.ima.umn.edu/~arnold/disasters/patriot.html
 
 >
@@ -373,7 +371,7 @@ Console.WriteLine(c);
 Output will be 6: 2 + 4, but in the end a = 4
 
 ### Local variables vs Global variables (A.K.A. fields)
-| Local | Global (Fields) |
+| Local | Global (should be static) (Fields) |
 |:---:|:---:|
 | Need to be initialzed by user | Can be initialized by Default |
 | Exist inly in current method | Can be accessed from every part of code |
