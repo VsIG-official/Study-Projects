@@ -324,6 +324,28 @@ Using decimals:
 
 - `Good Practice`: Use `int` for whole numbers and `double` for real numbers that will not be compared to other values. Use `decimal` for money, CAD drawings, general engineering, and wherever the accuracy of a real number is important
 
+
+
+
+
+
+
+## Methods
+- Static method - called from class (Console.Write)
+- Dynamic method - called from variable (str.ToString)
+
+### Type Casting
+- Implicit Cast
+```csharp
+int myInt = 9;
+double myDouble = myInt;
+```
+- Explicit Cast
+```csharp
+double myDouble = 9.78;
+int myInt = (int) myDouble;
+```
+
 ## Language guidelines
 > The following sections describe practices that the C# team follows to prepare code examples and samples
 
