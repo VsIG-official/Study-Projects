@@ -324,11 +324,46 @@ Using decimals:
 
 - `Good Practice`: Use `int` for whole numbers and `double` for real numbers that will not be compared to other values. Use `decimal` for money, CAD drawings, general engineering, and wherever the accuracy of a real number is important
 
+#### Some arithmetic operataions and their explanation
+```csharp
+int a = 1;
+int b = 2;
 
+int c = b / a;
+double d = b / a;
+```
+- c and d will be the same, 'cause firstly We are doing `whole division` and then We cast this into int and double. But if We do like this:
 
+```csharp
+int a = 1;
+int b = 2;
 
+int c = b / a;
+double d = (double)b / a; or double d = 1.0 / 2;
+```
+- then We will cast to double / understand, that We work with double, and will get proper result
 
+#### Var
+- Var is some sort of syntactic sugar
+- Compilator will define type of the variable by itself - It doesn't mean, that type will be defined while the program is running or it's variable of general type and You could do everything You want
 
+#### =
+- = as +, - and etc. returns some value. For example:
+```csharp
+var a = 2;
+var b = 4;
+var c = 6;
+
+Console.WriteLine(b = c);
+
+a = b = c;
+
+Console.WriteLine(a);
+Console.WriteLine(b);
+Console.WriteLine(c);
+```
+
+- and result will be the same - `6`
 
 ## Methods
 - Static method - called from class (Console.Write)
@@ -344,6 +379,17 @@ double myDouble = myInt;
 ```csharp
 double myDouble = 9.78;
 int myInt = (int) myDouble;
+```
+- Type Conversion
+```csharp
+int myInt = 10;
+double myDouble = 5.25;
+bool myBool = true;
+
+Console.WriteLine(Convert.ToString(myInt));    // convert int to string
+Console.WriteLine(Convert.ToDouble(myInt));    // convert int to double
+Console.WriteLine(Convert.ToInt32(myDouble));  // convert double to int
+Console.WriteLine(Convert.ToString(myBool));   // convert bool to string
 ```
 
 ## Language guidelines
