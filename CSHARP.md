@@ -347,7 +347,7 @@ double d = (double)b / a; or double d = 1.0 / 2;
 - Var is some sort of syntactic sugar
 - Compilator will define type of the variable by itself - It doesn't mean, that type will be defined while the program is running or it's variable of general type and You could do everything You want
 
-#### =
+### =
 - = as +, - and etc. returns some value. For example:
 ```csharp
 var a = 2;
@@ -365,12 +365,20 @@ Console.WriteLine(c);
 
 - and result will be the same - `6`
 
-#### ++ Rebus
+### ++ Rebus
 ```csharp
       Console.WriteLine(a++ + ++a);
 ```
 
 Output will be 6: 2 + 4, but in the end a = 4
+
+### Local variables vs Global variables (A.K.A. fields)
+| Local | Global (Fields) |
+|:---:|:---:|
+| Need to be initialzed by user | Can be initialized by Default |
+| Exist inly in current method | Can be accessed from every part of code |
+
+P.S. Use global variables only when they are needed (follow Best practises)
 
 ## Methods
 - Static method - called from class (Console.Write)
