@@ -344,6 +344,7 @@ double d = (double)b / a; or double d = 1.0 / 2;
 #### Var
 - Var is some sort of syntactic sugar
 - Compilator will define type of the variable by itself - It doesn't mean, that type will be defined while the program is running or it's variable of general type and You could do everything You want
+- The contextual keyword `var` may only appear within a local variable declaration: We can't write `var a;` even as a field
 
 ### =
 - = as +, - and etc. returns some value. For example:
