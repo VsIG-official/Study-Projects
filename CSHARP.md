@@ -265,6 +265,10 @@ Using doubles:
 
 - Binary floating point math is like this. In most programming languages, it is based on the `IEEE 754 standard`. The crux of the problem is that numbers are represented in this format as a whole number times a `power of two`; rational numbers (such as 0.1, which is 1/10) whose denominator `is not a power of two` cannot be exactly represented.
 
+- 0.1 is one-tenth, or 1/10. To show it in binary — that is, as a bicimal — divide binary 1 by binary 1010, using binary long division:
+
+- The division process would repeat forever — and so too the digits in the quotient — because 100 (“one-zero-zero”) reappears as the working portion of the dividend. Recognizing this, we can abort the division and write the answer in repeating bicimal notation, as 0.00011.
+
 - There is another example with doubles:
 
 ```csharp
@@ -280,7 +284,6 @@ Using doubles:
           Console.WriteLine($"{a} + {b} does NOT equal 0.4");
       }
 ```
-
 
 - then output will be like this:
 ```csharp
