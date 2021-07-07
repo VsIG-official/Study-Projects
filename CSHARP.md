@@ -365,6 +365,13 @@ Console.WriteLine(c);
 
 - and result will be the same - `6`
 
+#### ++ Rebus
+```csharp
+      Console.WriteLine(a++ + ++a);
+```
+
+Output will be 6: 2 + 4, but in the end a = 4
+
 ## Methods
 - Static method - called from class (Console.Write)
 - Dynamic method - called from variable (str.ToString)
