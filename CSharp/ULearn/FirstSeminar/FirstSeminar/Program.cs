@@ -2,6 +2,7 @@
 // The VsIG licenses this file to you under the MIT license.
 
 using System;
+using System.Text;
 
 namespace FirstSeminar
 {
@@ -9,7 +10,9 @@ namespace FirstSeminar
     {
         private static void Main()
         {
-            FirstExcercise();
+            // FirstExcercise();
+            // Second1Excercise();
+            Second2Excercise();
         }
 
         private static void FirstExcercise()
@@ -30,6 +33,37 @@ namespace FirstSeminar
             a -= b; // a = 2, b = 1
             Console.WriteLine(a);
             Console.WriteLine(b);
+        }
+
+        private static void Second1Excercise()
+        {
+            int a = 123;
+            string aStr = a.ToString();
+            StringBuilder bStr = new();
+
+            for (int i = 2; i >= 0; i--)
+            {
+                bStr.Append(aStr[i]);
+            }
+
+            int b = int.Parse(bStr.ToString());
+
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+        }
+
+        private static void Second2Excercise()
+        {
+            string aStr = "123";
+            StringBuilder bStr = new();
+
+            for (int i = 2; i >= 0; i--)
+            {
+                bStr.Append(aStr[i]);
+            }
+
+            Console.WriteLine(aStr);
+            Console.WriteLine(bStr);
         }
     }
 }
