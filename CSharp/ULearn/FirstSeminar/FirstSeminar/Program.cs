@@ -12,7 +12,11 @@ namespace FirstSeminar
         {
             // FirstExcercise();
             // Second1Excercise();
-            Second2Excercise();
+            // Second2Excercise();
+            for (int i = 0; i <= 24; i++)
+            {
+                ThirdExcercise(i);
+            }
         }
 
         private static void FirstExcercise()
@@ -64,6 +68,31 @@ namespace FirstSeminar
 
             Console.WriteLine(aStr);
             Console.WriteLine(bStr);
+        }
+
+        private static void ThirdExcercise(int time)
+        {
+            int totalDegrees = 360;
+            int hours = 12;
+            int degreesPerHour = totalDegrees / hours;
+
+            int oldTime = time;
+            int degrees = 0;
+
+            if (time > 12)
+            {
+                time -= 12;
+            }
+            if (time != 12)
+            {
+                degrees = degreesPerHour * time;
+            }
+            if (degrees > 180)
+            {
+                degrees = 360 - degrees;
+            }
+
+            Console.WriteLine($"{oldTime}: {degrees}");
         }
     }
 }
