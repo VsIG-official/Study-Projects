@@ -13,10 +13,10 @@ namespace FirstSeminar
             // FirstExcercise();
             // Second1Excercise();
             // Second2Excercise();
-            for (int i = 0; i <= 24; i++)
-            {
-                ThirdExcercise(i);
-            }
+            //for (int i = 0; i <= 24; i++)
+            //{
+            //    ThirdExcercise(i);
+            //}
         }
 
         private static void FirstExcercise()
