@@ -43,15 +43,38 @@ namespace RefactorMe
             s_yPos = (float)(s_yPos + distance * Math.Sin(degree));
         }
 
-        public static void DrawSide(Pen color, int distance)
+        private enum SquareSide
         {
-            DrawPartOfTheSide(color, distance * 0.375f, 0);
-            DrawPartOfTheSide(color, distance * 0.04f * Math.Sqrt(2), Math.PI / 4);
-            DrawPartOfTheSide(color, distance * 0.375f, Math.PI);
-            DrawPartOfTheSide(color, distance * 0.375f - distance * 0.04f, Math.PI / 2);
+            Zero = 0,
+            One = 1,
+            MinusOne = -1,
+            Two = 2,
+        }
 
-            ChangePosition(distance * 0.04f, -Math.PI);
-            ChangePosition(distance * 0.04f * Math.Sqrt(2), 3 * Math.PI / 4);
+        public static void DrawSide(Pen color, int distance, int multiplier = 1, int divider = 1)
+        {
+            DrawPartOfTheSide(color, distance * 0.375f, multiplier * Math.PI / divider);
+            DrawPartOfTheSide(color, distance * 0.04f * Math.Sqrt(2),
+                (multiplier * Math.PI / divider) + Math.PI / 4);
+            DrawPartOfTheSide(color, distance * 0.375f, (multiplier
+                * Math.PI /divider) + Math.PI);
+            DrawPartOfTheSide(color, distance * 0.375f - distance * 0.04f,
+                (multiplier * Math.PI / divider) + Math.PI / 2);
+
+            ChangePosition(distance * 0.04f, (multiplier * Math.PI / divider) - Math.PI);
+            ChangePosition(distance * 0.04f * Math.Sqrt(2),
+                (multiplier * Math.PI / divider) + 3 * Math.PI / 4);
+        }
+
+        public static void DrawSquare(Pen color, int distance)
+        {
+            DrawSide(color, distance, (int)SquareSide.Zero, (int)SquareSide.One);
+
+            DrawSide(color, distance, (int)SquareSide.MinusOne, (int)SquareSide.Two);
+
+            DrawSide(color, distance, (int)SquareSide.One, (int)SquareSide.One);
+
+            DrawSide(color, distance, (int)SquareSide.One, (int)SquareSide.Two);
         }
     }
 
@@ -69,44 +92,7 @@ namespace RefactorMe
 
             Risovatel.SetPosition(x0, y0);
 
-            //Рисуем 1-ую сторону
-
-            Risovatel.DrawSide(Pens.Yellow, distance);
-
-            Risovatel.DrawPartOfTheSide(Pens.Yellow, distance * 0.375f, 0);
-            Risovatel.DrawPartOfTheSide(Pens.Yellow, distance * 0.04f * Math.Sqrt(2), Math.PI / 4);
-            Risovatel.DrawPartOfTheSide(Pens.Yellow, distance * 0.375f, Math.PI);
-            Risovatel.DrawPartOfTheSide(Pens.Yellow, distance * 0.375f - distance * 0.04f, Math.PI / 2);
-
-            Risovatel.ChangePosition(distance * 0.04f, -Math.PI);
-            Risovatel.ChangePosition(distance * 0.04f * Math.Sqrt(2), 3 * Math.PI / 4);
-
-            //Рисуем 2-ую сторону
-            Risovatel.DrawPartOfTheSide(Pens.Yellow, distance * 0.375f, -Math.PI / 2);
-            Risovatel.DrawPartOfTheSide(Pens.Yellow, distance * 0.04f * Math.Sqrt(2), -Math.PI / 2 + Math.PI / 4);
-            Risovatel.DrawPartOfTheSide(Pens.Yellow, distance * 0.375f, -Math.PI / 2 + Math.PI);
-            Risovatel.DrawPartOfTheSide(Pens.Yellow, distance * 0.375f - distance * 0.04f, -Math.PI / 2 + Math.PI / 2);
-
-            Risovatel.ChangePosition(distance * 0.04f, -Math.PI / 2 - Math.PI);
-            Risovatel.ChangePosition(distance * 0.04f * Math.Sqrt(2), -Math.PI / 2 + 3 * Math.PI / 4);
-
-            //Рисуем 3-ю сторону
-            Risovatel.DrawPartOfTheSide(Pens.Yellow, distance * 0.375f, Math.PI);
-            Risovatel.DrawPartOfTheSide(Pens.Yellow, distance * 0.04f * Math.Sqrt(2), Math.PI + Math.PI / 4);
-            Risovatel.DrawPartOfTheSide(Pens.Yellow, distance * 0.375f, Math.PI + Math.PI);
-            Risovatel.DrawPartOfTheSide(Pens.Yellow, distance * 0.375f - distance * 0.04f, Math.PI + Math.PI / 2);
-
-            Risovatel.ChangePosition(distance * 0.04f, Math.PI - Math.PI);
-            Risovatel.ChangePosition(distance * 0.04f * Math.Sqrt(2), Math.PI + 3 * Math.PI / 4);
-
-            //Рисуем 4-ую сторону
-            Risovatel.DrawPartOfTheSide(Pens.Yellow, distance * 0.375f, Math.PI / 2);
-            Risovatel.DrawPartOfTheSide(Pens.Yellow, distance * 0.04f * Math.Sqrt(2), Math.PI / 2 + Math.PI / 4);
-            Risovatel.DrawPartOfTheSide(Pens.Yellow, distance * 0.375f, Math.PI / 2 + Math.PI);
-            Risovatel.DrawPartOfTheSide(Pens.Yellow, distance * 0.375f - distance * 0.04f, Math.PI / 2 + Math.PI / 2);
-
-            Risovatel.ChangePosition(distance * 0.04f, Math.PI / 2 - Math.PI);
-            Risovatel.ChangePosition(distance * 0.04f * Math.Sqrt(2), Math.PI / 2 + 3 * Math.PI / 4);
+            Risovatel.DrawSquare(Pens.Yellow, distance);
         }
     }
 }

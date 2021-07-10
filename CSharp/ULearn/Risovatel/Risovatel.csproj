@@ -62,6 +62,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include=".editorconfig" />
     <None Include="expected-image.bmp" />
   </ItemGroup>
   <ItemGroup>
