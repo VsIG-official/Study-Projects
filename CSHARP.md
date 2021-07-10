@@ -376,6 +376,7 @@ Output will be 6: 2 + 4, but in the end a = 4
 |:---:|:---:|
 | Need to be initialzed by user | Can be initialized by Default |
 | Exist inly in current method | Can be accessed from every part of code |
+| Will be initialized after program starts | Will be initialized before program starts |
 
 P.S. Use global variables only when they are needed (follow Best practises)
 
