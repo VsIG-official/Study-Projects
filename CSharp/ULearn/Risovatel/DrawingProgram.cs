@@ -1,10 +1,6 @@
-﻿// Licensed to the VsIG under one or more agreements.
-// VsIG licenses this file to you under the MIT license.
-
-using System;
+﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-
 
 namespace RefactorMe
 {
@@ -13,6 +9,8 @@ namespace RefactorMe
         private static float s_xPos;
         private static float s_yPos;
         private static Graphics s_graphics;
+        private const float FirstSidePosition = 0.375f;
+        private const float SecondSidePosition = 0.4f;
 
         public static void Initialize(Graphics newGraphics)
         {
@@ -29,7 +27,6 @@ namespace RefactorMe
 
         public static void DrawPartOfTheSide(Pen pen, double distance, double degree)
         {
-            //Делает шаг длиной distance в направлении degree и рисует пройденную траекторию
             float x1 = (float)(s_xPos + distance * Math.Cos(degree));
             float y1 = (float)(s_yPos + distance * Math.Sin(degree));
             s_graphics.DrawLine(pen, s_xPos, s_yPos, x1, y1);
@@ -51,7 +48,8 @@ namespace RefactorMe
             Two = 2,
         }
 
-        public static void DrawSide(Pen color, int distance, int multiplier = 1, int divider = 1)
+        public static void DrawSide(Pen color, int distance,
+            int multiplier = 1, int divider = 1)
         {
             DrawPartOfTheSide(color, distance * 0.375f, multiplier * Math.PI / divider);
             DrawPartOfTheSide(color, distance * 0.04f * Math.Sqrt(2),
@@ -69,11 +67,8 @@ namespace RefactorMe
         public static void DrawSquare(Pen color, int distance)
         {
             DrawSide(color, distance, (int)SquareSide.Zero, (int)SquareSide.One);
-
             DrawSide(color, distance, (int)SquareSide.MinusOne, (int)SquareSide.Two);
-
             DrawSide(color, distance, (int)SquareSide.One, (int)SquareSide.One);
-
             DrawSide(color, distance, (int)SquareSide.One, (int)SquareSide.Two);
         }
     }
