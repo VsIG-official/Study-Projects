@@ -519,6 +519,13 @@ Console.WriteLine(thisCouldBeNull.GetValueOrDefault());
 - The most significant change to the language in C# 8.0 was the introduction of nullable and nonnullable reference types. "But wait!", you are probably thinking, "Reference types are already nullable!"
 - And you would be right, but in C# 8.0 and later, reference types can be configured to no longer allow the null value by setting a file- or project-level option to enable this useful new feature. Since this is a big change for C#, Microsoft decided to make the feature opt-in.
 
+- During the transition, you can choose between several approaches for your own projects:
+• Default: No changes are needed. Non-nullable reference types are not supported.
+• Opt-in project, opt-out files: Enable the feature at the project level and, for any files that
+need to remain compatible with old behavior, opt out. This is the approach Microsoft is
+using internally while it updates its own packages to use this new feature.
+• Opt-in files: Only enable the feature for individual files.
+
 ## Language guidelines
 > The following sections describe practices that the C# team follows to prepare code examples and samples
 
