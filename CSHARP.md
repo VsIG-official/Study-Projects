@@ -253,7 +253,7 @@ Using doubles:
 
 >
 
-- The double type is not guaranteed to be accurate because some [numbers literally cannot be represented as floating-point values](https://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/)
+- The double type is not guaranteed to be accurate because some [numbers literally cannot be represented as floating-point values](https://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/) or [this](https://floating-point-gui.de/basic/)
 
 - As a rule of thumb, you should only use double when accuracy, especially when comparing the equality of two numbers, is not important. An example of this may be when you're measuring a person's height.
 - The problem with the preceding code is illustrated by how the computer stores the number 0.1, or multiples of 0.1. To represent 0.1 in binary, the computer stores 1 in the 1/16 column, 1 in the 1/32 column, 1 in the 1/256 column, 1 in the 1/512 column, and so on.
@@ -293,6 +293,11 @@ Using doubles:
 Using doubles:
 0.2 + 0.2 equals 0.4
 ```
+
+- Why do other calculations like 0.1 + 0.4 work correctly?
+In that case, the result (0.5) can be represented exactly as a floating-point number, and it’s possible for rounding errors in the input numbers to cancel each other out - But that can’t necessarily be relied upon (e.g. when those two numbers were stored in differently sized floating point representations first, the rounding errors might not offset each other).
+
+In other cases like 0.1 + 0.3, the result actually isn’t really 0.4, but close enough that 0.4 is the shortest number that is closer to the result than to any other floating-point number. Many languages then display that number instead of converting the actual result back to the closest decimal fraction.
 
 - `Good Practice`: Never compare double values using ==. During the First Gulf War, an American Patriot missile battery used double values in its calculations. The inaccuracy caused it to fail to track and intercept an incoming Iraqi Scud missile, and 28 soldiers were killed; you can read about this at https://www.ima.umn.edu/~arnold/disasters/patriot.html
 
