@@ -830,6 +830,134 @@ namespace System.Collections.Generics
 - Be consistent (if You write `var` in foreach loop, then do it everytime)
 - Use $ to concate strings instead of ""Hi " + smth "
 - Avoid global variables
+[And This](https://docs.google.com/document/d/1GZX3_0Cq3RI2GmhvisUsB5l1QR6MDPIMqAlONgnG_2c/edit#)
+- Use the `plural` when naming collections:
+Not Right:
+```csharp
+Apple[] Apple
+```
+
+Right:
+```csharp
+Apple[] Apples
+```
+
+- Do not write the type of collection in the name. Exception if there is a collection of another type with the same data
+Not Right:
+```csharp
+Orange[] ArrayOfOranges
+List<Apple> AppleList
+```
+
+Right:
+```csharp
+Orange[] Oranges
+List<Apple> Apples
+```
+
+- Do not use `of`, `the` and a `in` names:
+Not Right:
+```csharp
+ColorOfCar
+theSun
+aStar
+```
+
+Right:
+```csharp
+CarColor
+sun
+star
+```
+
+- Name Boolean variables as questions that can be answered by yes or no. Do not use the name flag:
+Not Right:
+```csharp
+var flag = false;
+```
+
+Right:
+```csharp
+var isSorted = false;
+```
+
+- Don't leave blank lines after the method declaration and after return:
+Not Right:
+```csharp
+int GetOne()
+{
+
+   return 1;
+
+}
+```
+
+Right:
+```csharp
+int GetOne()
+{
+    return 1;
+}
+```
+
+- Don't write else if you leave the if body everywhere above
+Not Right:
+```csharp
+if (a > b)
+{
+   return 10;
+}
+else 
+{
+   … 
+   return 20;
+}
+```
+
+Right:
+```csharp
+if (a > b)
+{
+   return 10;
+}
+
+… 
+return 20;
+```
+
+- Do not compare a bool to a constant with ==
+Not Right:
+```csharp
+if (success == true)
+
+…
+
+if (success == false)
+```
+
+Right:
+```csharp
+if (success)
+
+…
+
+if (!success)
+```
+
+- The names of the methods must begin with a verb
+Not Right:
+```csharp
+public static double Length()
+```
+
+Right:
+```csharp
+public static double GetLength()
+```
+
+- Observe the order of elements within the class. First fields and properties, then constructor, then public methods, then private methods.
+
+- 
 
 ## Design Patterns
 - [Don't Repeat Yourself](https://www.youtube.com/watch?v=dhnsegiPXoo&ab_channel=IAmTimCorey)
