@@ -299,6 +299,36 @@ In that case, the result (0.5) can be represented exactly as a floating-point nu
 
 In other cases like 0.1 + 0.3, the result actually isn’t really 0.4, but close enough that 0.4 is the shortest number that is closer to the result than to any other floating-point number. Many languages then display that number instead of converting the actual result back to the closest decimal fraction.
 
+- Also to compare doubles right We can use instead of this code:
+
+```csharp
+public static void WrongMain()
+{
+    // в бинарном виде 0.1 представляется бесконечной дробью 0.00011001100...,
+    // в типах данных float и double хранится только начало этой дроби,
+    // поэтому число 0.1 представляется с погрешностью. 
+    double x = 1.0 / 10; 
+    double sum = 0;
+    for (int i = 0; i < 10; i++)
+        sum += x;
+    Console.WriteLine(sum == 1);
+}
+```
+
+- this:
+```csharp
+static void RightMain()
+{
+    double x = 1.0 / 10;
+    double sum = 0;
+    for (int i = 0; i < 10; i++)
+        sum += x;
+    Console.WriteLine(Math.Abs(sum - 1) < 1e-9);
+}
+```
+
+- but, in the end, use decimal
+
 - `Good Practice`: Never compare double values using ==. During the First Gulf War, an American Patriot missile battery used double values in its calculations. The inaccuracy caused it to fail to track and intercept an incoming Iraqi Scud missile, and 28 soldiers were killed; you can read about this at https://www.ima.umn.edu/~arnold/disasters/patriot.html
 
 >
