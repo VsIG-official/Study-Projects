@@ -442,6 +442,83 @@ Console.WriteLine(Convert.ToInt32(myDouble));  // convert double to int
 Console.WriteLine(Convert.ToString(myBool));   // convert bool to string
 ```
 
+### Object and Dynamic
+- There is a special type named `object` that can store any type of data, but its flexibility comes at the cost of messier code and possibly poor performance. Because of those two reasons, you should avoid it whenever possible
+
+```csharp
+object height = 1.88; // storing a double in an object
+object name = "Amir"; // storing a string in an object
+Console.WriteLine($"{name} is {height} metres tall.");
+
+int length1 = name.Length; // gives compile error!
+int length2 = ((string)name).Length; // tell compiler it is a string
+Console.WriteLine($"{name} has {length2} characters.");
+```
+
+- There is another special type named `dynamic` that can also store any type of data, but even more than object, its flexibility comes at the cost of performance. The dynamic keyword was introduced in C# 4.0. However, unlike object, the value stored in the variable can have its members invoked without an explicit cast
+
+```csharp
+// storing a string in a dynamic object
+dynamic anotherName = "Ahmed";
+
+// this compiles but would throw an exception at run-time
+// if you later store a data type that does not have a
+// property named Length
+int length = anotherName.Length;
+```
+
+One limitation of dynamic is that Visual Studio Code cannot show IntelliSense to help you write the code. This is because the compiler cannot check what the type is during build time. Instead, the CLR checks for the member at runtime and throws an exception if it is missing
+
+### Default values for types
+- Most of the primitive types except `string` are `value types`, which means that they must have a value. You can determine the default value of a type using the `default()` operator.
+- The `string` type is a `reference` type. This means that `string variables contain the memory address of a value, not the value itself`. A `reference type variable can have a null value`, which is a literal that indicates that the variable does not reference anything (yet). `null is the default for all reference types`.
+
+```csharp
+Console.WriteLine($"default(int) = {default(int)}");
+Console.WriteLine($"default(bool) = {default(bool)}");
+Console.WriteLine(
+ $"default(DateTime) = {default(DateTime)}");
+Console.WriteLine(
+ $"default(string) = {default(string)}");
+```
+
+Output:
+```csharp
+default(int) = 0
+default(bool) = False
+default(DateTime) = 01/01/0001 00:00:00
+default(string) = // null
+```
+
+### Nullable type
+- By default, value types like int and DateTime must always have a value, hence their name. Sometimes, for example, when reading values stored in a database that allows empty, missing, or null values, it is convenient to allow a value type to be null. We call this a nullable value type
+- You can enable this by adding a question mark as a suffix to the type when declaring a variable. Let's see an example:
+
+```csharp
+int thisCannotBeNull = 4;
+thisCannotBeNull = null; // compile error!
+
+int? thisCouldBeNull = null;
+Console.WriteLine(thisCouldBeNull);
+Console.WriteLine(thisCouldBeNull.GetValueOrDefault());
+
+thisCouldBeNull = 7;
+Console.WriteLine(thisCouldBeNull);
+Console.WriteLine(thisCouldBeNull.GetValueOrDefault());
+```
+
+- Output:
+```csharp
+// this blank line is null value
+0
+7
+7
+```
+
+### Nullable reference types
+- The most significant change to the language in C# 8.0 was the introduction of nullable and nonnullable reference types. "But wait!", you are probably thinking, "Reference types are already nullable!"
+- And you would be right, but in C# 8.0 and later, reference types can be configured to no longer allow the null value by setting a file- or project-level option to enable this useful new feature. Since this is a big change for C#, Microsoft decided to make the feature opt-in.
+
 ## Language guidelines
 > The following sections describe practices that the C# team follows to prepare code examples and samples
 
