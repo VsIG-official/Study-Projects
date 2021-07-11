@@ -832,6 +832,7 @@ namespace System.Collections.Generics
 - Avoid global variables
 [And This](https://docs.google.com/document/d/1GZX3_0Cq3RI2GmhvisUsB5l1QR6MDPIMqAlONgnG_2c/edit#)
 - Use the `plural` when naming collections:
+
 Not Right:
 ```csharp
 Apple[] Apple
@@ -843,6 +844,7 @@ Apple[] Apples
 ```
 
 - Do not write the type of collection in the name. Exception if there is a collection of another type with the same data
+
 Not Right:
 ```csharp
 Orange[] ArrayOfOranges
@@ -856,6 +858,7 @@ List<Apple> Apples
 ```
 
 - Do not use `of`, `the` and a `in` names:
+
 Not Right:
 ```csharp
 ColorOfCar
@@ -871,6 +874,7 @@ star
 ```
 
 - Name Boolean variables as questions that can be answered by yes or no. Do not use the name flag:
+
 Not Right:
 ```csharp
 var flag = false;
@@ -882,6 +886,7 @@ var isSorted = false;
 ```
 
 - Don't leave blank lines after the method declaration and after return:
+
 Not Right:
 ```csharp
 int GetOne()
@@ -901,6 +906,7 @@ int GetOne()
 ```
 
 - Don't write else if you leave the if body everywhere above
+
 Not Right:
 ```csharp
 if (a > b)
@@ -926,6 +932,7 @@ return 20;
 ```
 
 - Do not compare a bool to a constant with ==
+
 Not Right:
 ```csharp
 if (success == true)
@@ -945,6 +952,7 @@ if (!success)
 ```
 
 - The names of the methods must begin with a verb
+
 Not Right:
 ```csharp
 public static double Length()
@@ -957,7 +965,105 @@ public static double GetLength()
 
 - Observe the order of elements within the class. First fields and properties, then constructor, then public methods, then private methods.
 
-- 
+- Leave a blank line between the methods
+
+Not Right:
+```csharp
+public static void DoSomething()
+{
+    ...
+}
+public static void DoSomethingElse()
+{
+    ...
+}
+```
+
+Right:
+```csharp
+public static void DoSomething()
+{
+    ...
+}
+
+public static void DoSomethingElse()
+{
+    ...
+}
+```
+
+- Put a space after for, if, ...
+
+Not Right:
+```csharp
+if(a > b)
+    return 0;
+```
+
+Right:
+```csharp
+if (a > b)
+    return 0;
+```
+
+- Frame arithmetic, logical, and assignment operators with spaces
+
+Not Right:
+```csharp
+if (a>b) 
+    c=0; 
+```
+
+Right:
+```csharp
+if (a > b) 
+    c = 0; 
+```
+
+- Move the expressions so that the new line starts with the operator
+
+Not Right:
+```csharp
+if (longExpression &&
+    anotherExpression)
+```
+
+Right:
+```csharp
+if (longExpression
+   && anotherExpression)
+```
+
+- To write single-line properties, use =>
+
+Not Right:
+```csharp
+public int Length
+{
+    get {return bytes.Length;}
+}
+```
+
+Right:
+```csharp
+public int Length => bytes.Length;
+```
+
+- When writing a long chain of method calls, write each call on a new line
+
+Not Right:
+```csharp
+return lines.Where(...)
+    .Select(...)...
+```
+
+Right:
+```csharp
+return lines
+    .Where(...)
+    .Select(...)
+    ...
+```
 
 ## Design Patterns
 - [Don't Repeat Yourself](https://www.youtube.com/watch?v=dhnsegiPXoo&ab_channel=IAmTimCorey)
