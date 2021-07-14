@@ -14,7 +14,8 @@ namespace PlayGround
 
         private static bool ShouldFire2(bool enemyInFront, string enemyName, int robotHealth)
         {
-            return enemyInFront && ((enemyName == "boss" && robotHealth > 100) || (enemyName == "boss" && robotHealth >= 50 && robotHealth <= 100) || (enemyName != "boss"));
+            return enemyInFront && (enemyName == "boss"
+                && robotHealth >= 50 || enemyName != "boss");
         }
     }
 }
