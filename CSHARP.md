@@ -712,6 +712,8 @@ else
 
 If the divisor is 0, the second clause in the if statement would cause a run-time error. But the && operator short-circuits when the first expression is false. That is, it doesn't evaluate the second expression. The & operator would evaluate both, resulting in a run-time error when `divisor` is 0
 
+- `|` and `&` are `logical or` and `logical and`, when `||` and `&&` are `conditional logical or` and `conditional logical and`
+
 ### `new` operator
 - Use one of the concise forms of object instantiation, as shown in the following declarations. The second example shows syntax that is available starting in C# 9.
 ```csharp
