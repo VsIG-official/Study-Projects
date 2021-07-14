@@ -6,36 +6,18 @@ namespace PlayGround
 	{
 		static void Main(string[] args)
 		{
-            Console.WriteLine(MiddleOf(5, 0, 100)); // => 5
-            Console.WriteLine(MiddleOf(12, 12, 11)); // => 12
-            Console.WriteLine(MiddleOf(1, 1, 1)); // => 1
-            Console.WriteLine(MiddleOf(2, 3, 2));
-            Console.WriteLine(MiddleOf(8, 8, 8));
-            Console.WriteLine(MiddleOf(5, 0, 1));
-
-            //TestMove("a1", "d4");
-            //TestMove("f4", "e7");
-            //TestMove("a1", "a4");
+           Console.WriteLine(ShouldFire2(true, "boss", 10));
+           Console.WriteLine(ShouldFire2(true, "boss", 50));
+           Console.WriteLine(ShouldFire2(false, "boss", 50));
+           Console.WriteLine(ShouldFire2(false, "boss", 10));
         }
 
-        public static int MiddleOf(int a, int b, int c)
+        private static bool ShouldFire2(bool enemyInFront, string enemyName, int robotHealth)
         {
-            int[] numbers = { a, b, c };
-            Array.Sort(numbers);
-            return numbers[1];
+            return (enemyInFront && enemyName == "boss" && robotHealth > 100)
+    || (enemyInFront && enemyName == "boss"
+        && (robotHealth >= 50 && robotHealth <= 100))
+    || (enemyInFront && enemyName != "boss");
         }
-
-        //public static void TestMove(string from, string to)
-        //{
-        //    Console.WriteLine("{0}-{1} {2}", from, to, IsCorrectMove(from, to));
-        //}
-
-        //public static bool IsCorrectMove(string from, string to)
-        //{
-        //    int dx = Math.Abs(to[0] - from[0]); //смещение фигуры по горизонтали
-        //    int dy = Math.Abs(to[1] - from[1]); //смещение фигуры по вертикали
-
-        //    return (dx == dy && dy > 0 && dx > 0) || (dx == 0 && dy > 0) || (dy == 0 && dx > 0);
-        //}
     }
 }
