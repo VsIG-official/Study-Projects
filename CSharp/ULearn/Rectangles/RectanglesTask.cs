@@ -4,11 +4,12 @@ namespace Rectangles
 {
 	public static class RectanglesTask
 	{
+        // Left = x1, top = y1, right x2, bottom = y2
 		// Пересекаются ли два прямоугольника (пересечение только по границе также считается пересечением)
 		public static bool AreIntersected(Rectangle r1, Rectangle r2)
 		{
-			// так можно обратиться к координатам левого верхнего угла первого прямоугольника: r1.Left, r1.Top
-			return true;
+            return (r2.Right >= r1.Left && r2.Left <= r2.Right)
+                && (r2.Bottom >= r1.Top && r2.Top <= r1.Bottom);
 		}
 
 		// Площадь пересечения прямоугольников
