@@ -7,19 +7,27 @@ namespace PlayGround
     {
         static void Main(string[] args)
         {
-            WriteTextWithBorder("Menu:");
-            WriteTextWithBorder("");
-            WriteTextWithBorder(" ");
-            WriteTextWithBorder("Game Over!");
-            WriteTextWithBorder("Select level:");
+            WriteBoard(8);
+            WriteBoard(1);
+            WriteBoard(2);
+            WriteBoard(3);
+            WriteBoard(10);
         }
 
-        private static void WriteTextWithBorder(string text)
+        private static void WriteBoard(int size)
         {
-            var bar = "+" + new string('-', text.Length + 2) + "+";
-            Console.WriteLine(bar);
-            Console.WriteLine("| {0} |", text);
-            Console.WriteLine(bar);
+            string[] symbols = { "#", "." };
+
+            for (var i = 0; i < size; i++)
+            {
+                for (var j = 0; j < size; j++)
+                {
+                    int counter = (i + j) % 2;
+                    Console.Write(symbols[counter]);
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
         }
     }
 }
