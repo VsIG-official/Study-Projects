@@ -1186,6 +1186,8 @@ return lines
     ...
 ```
 
+- in `for` loop start Your `i` from 0 and end with `<`, not `i=1` and `<=`
+
 ## Design Patterns
 - [Don't Repeat Yourself](https://www.youtube.com/watch?v=dhnsegiPXoo&ab_channel=IAmTimCorey)
 > You can use Your code as .NET dll
