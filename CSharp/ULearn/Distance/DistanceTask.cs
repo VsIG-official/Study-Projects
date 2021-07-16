@@ -7,18 +7,17 @@ namespace DistanceTask
 		public static double GetDistanceToSegment(double ax, double ay,
             double bx, double by, double x, double y)
 		{
-            double fromAXtoX = x - ax;
-            double fromBXtoX = y - ay;
             double axAltitude  = bx - ax;
             double bxLeftHorizont = by - ay;
 
-            double dot = fromAXtoX * axAltitude + fromBXtoX * bxLeftHorizont;
-            double len_sq = axAltitude  * axAltitude  + bxLeftHorizont * bxLeftHorizont;
+            double dot = (x - ax) * axAltitude + (y - ay) * bxLeftHorizont;
+            double lengthOfSquare = axAltitude  * axAltitude
+                + bxLeftHorizont * bxLeftHorizont;
             double param = -1;
 
-            if (len_sq != 0)
+            if (lengthOfSquare != 0)
             {
-                param = dot / len_sq;
+                param = dot / lengthOfSquare;
             }
 
             double xx, yy;
@@ -42,6 +41,11 @@ namespace DistanceTask
             double dx = x - xx;
             double dy = y - yy;
             return Math.Sqrt(dx * dx + dy * dy);
+        }
+
+        private static void SetParametrs()
+        {
+
         }
     }
 }
