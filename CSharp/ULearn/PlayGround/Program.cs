@@ -1,21 +1,38 @@
 ﻿using System;
+using System.Text;
 
 namespace PlayGround
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
-           Console.WriteLine(ShouldFire2(true, "boss", 10));
-           Console.WriteLine(ShouldFire2(true, "boss", 50));
-           Console.WriteLine(ShouldFire2(false, "boss", 50));
-           Console.WriteLine(ShouldFire2(false, "boss", 10));
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            WriteTextWithBorder("Menu:");
+            WriteTextWithBorder("");
+            WriteTextWithBorder(" ");
+            WriteTextWithBorder("Game Over!");
+            WriteTextWithBorder("Select level:");
         }
 
-        private static bool ShouldFire2(bool enemyInFront, string enemyName, int robotHealth)
+        private static void WriteTextWithBorder(string text)
         {
-            return enemyInFront && (enemyName == "boss"
-                && robotHealth >= 50 || enemyName != "boss");
+            for (var i = 0; i < 3; i++)
+            {
+                if (i == 1)
+                {
+                    Console.WriteLine($"| {text} |");
+                }
+                else
+                {
+                    StringBuilder frame = new("++");
+                    int stringLength = text.Length + 2;
+                    for (var j = 0; j < stringLength; j++)
+                    {
+                        frame.Insert(1, "-");
+                    }
+                    Console.WriteLine(frame);
+                }
+            }
         }
     }
 }
