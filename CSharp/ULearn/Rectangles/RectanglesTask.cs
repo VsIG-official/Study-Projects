@@ -27,21 +27,18 @@ namespace Rectangles
 
 		public static int IndexOfInnerRectangle(Rectangle r1, Rectangle r2)
 		{
-            if (!AreIntersected(r1, r2))
-            {
-                return -1;
-            }
-            return GetIDOfInnerRectangle(r1, r2);
-        }
-
-        private static int GetIDOfInnerRectangle(Rectangle r1, Rectangle r2)
-        {
-            if (r1.Right >= r2.Right && r1.Bottom >= r2.Bottom
-                     && r1.Left <= r2.Left && r1.Top <= r2.Top)
+            if (IsRectInAnother(r1, r2))
             {
                 return 1;
             }
-            return 0;
+            return IsRectInAnother(r2, r1) ? 0 : -1;
         }
-	}
+
+        public static bool IsRectInAnother(Rectangle r1, Rectangle r2)
+        {
+            return AreIntersected(r1, r2) && r1.Left + r1.Width
+                >= r2.Left + r2.Width && r1.Top + r1.Height >= r2.Top + r2.Height
+                     && r1.Left <= r2.Left && r1.Top <= r2.Top;
+        }
+    }
 }
