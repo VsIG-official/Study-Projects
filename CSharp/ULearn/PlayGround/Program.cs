@@ -16,23 +16,10 @@ namespace PlayGround
 
         private static void WriteTextWithBorder(string text)
         {
-            for (var i = 0; i < 3; i++)
-            {
-                if (i == 1)
-                {
-                    Console.WriteLine($"| {text} |");
-                }
-                else
-                {
-                    StringBuilder frame = new("++");
-                    int stringLength = text.Length + 2;
-                    for (var j = 0; j < stringLength; j++)
-                    {
-                        frame.Insert(1, "-");
-                    }
-                    Console.WriteLine(frame);
-                }
-            }
+            var bar = "+" + new string('-', text.Length + 2) + "+";
+            Console.WriteLine(bar);
+            Console.WriteLine("| {0} |", text);
+            Console.WriteLine(bar);
         }
     }
 }
