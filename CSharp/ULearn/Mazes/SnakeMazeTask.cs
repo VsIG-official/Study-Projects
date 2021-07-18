@@ -2,26 +2,26 @@
 {
 	public static class SnakeMazeTask
 	{
-		public static void MoveOut(Robot robot, int width, int height)
+        private const int HeightOfReversal =5;
+
+        public static void MoveOut(Robot robot, int width, int height)
 		{
-            int timesToTurn = (height - 2) / 2;
+            int reversalAmount = (height - 2) / 2;
 
-            for (int i = 0; i < timesToTurn + 1; i++)
+            for (var i = 0; i < reversalAmount + 1; i++)
             {
-                if (i % 2 == 0)
-                {
-                    MoveTo(robot, Direction.Right, width);
-                }
-                else
-                {
-                    MoveTo(robot, Direction.Left, width);
-                }
+                MoveTo(robot, GetDirection(i), width);
 
-                if (i != timesToTurn)
+                if (i != reversalAmount)
                 {
-                    MoveTo(robot, Direction.Down, 5);
+                    MoveTo(robot, Direction.Down, HeightOfReversal);
                 }
             }
+        }
+
+        private static Direction GetDirection(int reversalAmount)
+        {
+            return reversalAmount % 2 == 0 ? Direction.Right : Direction.Left;
         }
 
         private static void MoveTo(Robot robot, Direction dir, int mazeBounds)
