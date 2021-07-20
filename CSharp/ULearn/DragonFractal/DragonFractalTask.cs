@@ -7,28 +7,39 @@ namespace Fractals
 {
 	internal static class DragonFractalTask
 	{
-		public static void DrawDragonFractal(Pixels pixels, int iterationsCount, int seed)
+        private static readonly double s_firstDegree = Math.PI * 45 / 180;
+        private static readonly double s_secondDegree = Math.PI * 135 / 180;
+
+        private static double s_x = 1.0;
+        private static double s_y = 0.0;
+
+        public static void DrawDragonFractal(Pixels pixels, int iterationsCount, int seed)
 		{
             var randGenerator = new Random(seed);
-			/*
-			Начните с точки (1, 0)
-			Создайте генератор рандомных чисел с сидом seed
-			
-			На каждой итерации:
 
-			1. Выберите случайно одно из следующих преобразований и примените его к текущей точке:
+            for (var i = 0; i < iterationsCount; i++)
+            {
+                if (randGenerator.Next() % 2 == 1)
+                {
+                    (s_x, s_y) = GetPoints(s_firstDegree);
+                }
+                else
+                {
+                    (s_x, s_y) = GetPoints(s_secondDegree, 1);
+                }
 
-				Преобразование 1. (поворот на 45° и сжатие в sqrt(2) раз):
-				x' = (x · cos(45°) - y · sin(45°)) / sqrt(2)
-				y' = (x · sin(45°) + y · cos(45°)) / sqrt(2)
-
-				Преобразование 2. (поворот на 135°, сжатие в sqrt(2) раз, сдвиг по X на единицу):
-				x' = (x · cos(135°) - y · sin(135°)) / sqrt(2) + 1
-				y' = (x · sin(135°) + y · cos(135°)) / sqrt(2)
-		
-			2. Нарисуйте текущую точку методом pixels.SetPixel(x, y)
-
-			*/
+                pixels.SetPixel(s_x, s_y);
+            }
 		}
-	}
+
+        private static (double xNew, double yNew) GetPoints(double angle, int adder = 0)
+        {
+            double xNew = (s_x * Math.Cos(angle) - s_y
+                * Math.Sin(angle)) / Math.Sqrt(2) + adder;
+            double yNew = (s_x * Math.Sin(angle) + s_y
+                * Math.Cos(angle)) / Math.Sqrt(2);
+
+            return (xNew, yNew);
+        }
+    }
 }
