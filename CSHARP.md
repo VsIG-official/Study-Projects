@@ -547,6 +547,13 @@ int x = authorName.Length;
 int? y = authorName?.Length;
 ```
 
+- Sometimes you want to either assign a variable to a result or use an alternative value, such as 3, if the variable is null. You do this using the null-coalescing operator, ??, as shown in the following code:
+```csharp
+// result will be 3 if authorName?.Length is null
+var result = authorName?.Length ?? 3;
+Console.WriteLine(result);
+```
+
 ## Language guidelines
 > The following sections describe practices that the C# team follows to prepare code examples and samples
 
