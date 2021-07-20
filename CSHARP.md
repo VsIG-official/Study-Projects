@@ -526,6 +526,27 @@ need to remain compatible with old behavior, opt out. This is the approach Micro
 using internally while it updates its own packages to use this new feature.
 • Opt-in files: Only enable the feature for individual files.
 
+### Checking for Null
+- Checking whether a nullable reference type or nullable value type variable currently contains null is important because if you do not, a NullReferenceException can be thrown, which results in an error. You should check for a null value before using a nullable variable, as shown in the following code:
+```csharp
+// check that the variable is not null before using it
+if (thisCouldBeNull != null)
+{
+ // access a member of thisCouldBeNull
+ int length = thisCouldBeNull.Length; // could throw exception
+ ...
+}
+```
+
+- If you are trying to use a `member of a variable` that might be null, use the null-conditional operator ?., as shown in the following code:
+```csharp
+string authorName = null;
+// the following throws a NullReferenceException
+int x = authorName.Length;
+// instead of throwing an exception, null is assigned to y
+int? y = authorName?.Length;
+```
+
 ## Language guidelines
 > The following sections describe practices that the C# team follows to prepare code examples and samples
 
