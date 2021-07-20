@@ -7,27 +7,17 @@ namespace PlayGround
     {
         static void Main(string[] args)
         {
-            WriteBoard(8);
-            WriteBoard(1);
-            WriteBoard(2);
-            WriteBoard(3);
-            WriteBoard(10);
+            GetFirstEvenNumbers(3);
         }
 
-        private static void WriteBoard(int size)
+        public static int[] GetFirstEvenNumbers(int count)
         {
-            string[] symbols = { "#", "." };
-
-            for (var i = 0; i < size; i++)
+            int[] arr = new int[count];
+            for (var i = 0; i < count; i++)
             {
-                for (var j = 0; j < size; j++)
-                {
-                    int counter = (i + j) % 2;
-                    Console.Write(symbols[counter]);
-                }
-                Console.WriteLine();
+                arr[i] = (i + 1) * 2;
             }
-            Console.WriteLine();
+            return arr;
         }
     }
 }
