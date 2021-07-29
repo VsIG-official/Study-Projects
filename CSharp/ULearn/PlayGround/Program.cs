@@ -7,17 +7,32 @@ namespace PlayGround
     {
         static void Main(string[] args)
         {
-            GetFirstEvenNumbers(3);
-        }
+            double[] array = new double[3];
+            array[0] = 1;
+            array[1] = 2;
+            array[2] = 3;
 
-        public static int[] GetFirstEvenNumbers(int count)
+            MaxIndex(array);
+        }
+        public static int MaxIndex(double[] array)
         {
-            int[] arr = new int[count];
-            for (var i = 0; i < count; i++)
+            var max = double.MinValue;
+            foreach (var item in array)
             {
-                arr[i] = (i + 1) * 2;
+                if (item > max)
+                {
+                    max = item;
+                }
             }
-            return arr;
+
+            for (var i = 0; i < array.Length; i++)
+            {
+                if (array[i] == max)
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
     }
 }
