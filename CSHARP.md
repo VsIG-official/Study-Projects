@@ -972,7 +972,7 @@ namespace System.Collections.Generics
 ```
 
 ### Stack vs Heap
-![Pict](https://github.com/VsIG-official/Study-Projects/Docs/pict.png)
+![Pict](https://github.com/VsIG-official/Study-Projects/blob/master/Docs/pict.png)
 
 ## [Best Practises](https://www.youtube.com/watch?v=-9b8NRqjUFM&t=474s&ab_channel=IAmTimCorey)
 - One class per file
