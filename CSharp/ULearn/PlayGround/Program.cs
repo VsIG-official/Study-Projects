@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace PlayGround
@@ -8,31 +9,24 @@ namespace PlayGround
         static void Main(string[] args)
         {
             double[] array = new double[3];
-            array[0] = 1;
-            array[1] = 2;
-            array[2] = 3;
-
-            MaxIndex(array);
+            
         }
-        public static int MaxIndex(double[] array)
+        private static string DecodeMessage(string[] lines)
         {
-            var max = double.MinValue;
-            foreach (var item in array)
-            {
-                if (item > max)
-                {
-                    max = item;
-                }
-            }
+            List<string> decodedMessage = new List<string>();
 
-            for (var i = 0; i < array.Length; i++)
+            for (var i = 0; i < lines.Length; i++)
             {
-                if (array[i] == max)
+                var currentLine = lines[i].ToString();
+
+                for (var j = 0; j < lines.Length; j++)
                 {
-                    return i;
+                    decodedMessage.Add(currentLine.Split(' ')[j]);
                 }
             }
-            return -1;
+            //decodedMessage = lines.Split(' ');
+
+            return "no";
         }
     }
 }
